@@ -48,12 +48,14 @@
             justify-content: space-evenly;
             align-items: center;
             padding: 20px;
-    }   
+        }   
         .logos img {
+            max-height: 80px;
+            width: auto;
             max-width: 30%;
             position: relative;
             z-index: 1;
-    }
+        }
         .logos img:not(:last-child)::after {
             content: "";
             position: absolute;
@@ -64,7 +66,10 @@
             width: 2px;
             background-color: #003366;
             z-index: 2;
-    }
+        }
+        .logos .last-logo {
+            height: 60%;
+        }
         .hero-image {
             width: 100%;
             height: auto;
@@ -127,7 +132,7 @@
     <div class="logos">
         <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/27b705811c776c944ac7850856ce20f9ca8263e9/Images/Logos/Main%20Schools/duke_wordmark_cropped.png" alt="Duke University">
         <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/133c1bf48941ef201c38d96e5626e4cb7cf9f778/Images/Logos/Main%20Schools/ECU_lockup_primary_Purple.jpg" alt="East Carolina University">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/133c1bf48941ef201c38d96e5626e4cb7cf9f778/Images/Logos/Main%20Schools/NCCU%20horz%20color%20logo%20TAG.jpeg" alt="North Carolina Central University">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/d157acdabd1ae0c2481f9583d98f8d6ad790127c/Images/Logos/Main%20Schools/NCCU%20vert%20color%20logo.png" alt="North Carolina Central University">
     </div>
     <div class="navigation">
         <a href="#home">Home</a>
