@@ -1,0 +1,164 @@
+<html>
+<head>
+    <title> Southeast Regional Coalition for University-Assisted Community Schools</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F2F2F2;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #003366;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+        }
+        .header img {
+            height: 90px;
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            bottom: 10px;
+            transition: all 0.3s;
+        }
+        .header img:hover {
+            transform: scale(1.1);
+        }
+        .navigation {
+            display: flex;
+            justify-content: center;
+            background-color: #003366;
+        }
+        .navigation a {
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .navigation a:hover {
+            background-color: #6699CC;
+            color: black;
+        }
+        .logos {
+            background: #FFFFFF;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 20px;
+    }   
+        .logos img {
+            max-width: 30%;
+            position: relative;
+            z-index: 1;
+    }
+        .logos img:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 80%;
+            width: 2px;
+            background-color: #003366;
+            z-index: 2;
+    }
+        .hero-image {
+            width: 100%;
+            height: auto;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+            margin: auto;
+            width: 70%;
+        }
+        .footer {
+            background-color: #003366;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+        }
+        .newsletter-signup {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        .newsletter-signup input[type="email"] {
+            padding: 10px;
+            font-size: 14px;
+            border: none;
+            margin-right: 10px;
+            border-radius: 5px;
+        }
+        .newsletter-signup input[type="submit"] {
+            padding: 10px 20px;
+            font-size: 14px;
+            border: none;
+            background-color: #003366;
+            color: #FFFFFF;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .newsletter-signup input[type="submit"]:hover {
+            background-color: #6699CC;
+        }
+        .success-message {
+            display: none;
+            color: #006633;
+            font-size: 18px;
+            margin-top: 10px;
+        }
+    </style>
+    <script>
+        function showSuccessMessage() {
+            document.getElementById('success-message').style.display = 'block';
+        }
+    </script>
+</head>
+<body>
+    <div class="header">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ba91b6eba378cb8c8689e420df0c9fff2d0c15f4/Images/Logos/bccsplogo.png" alt="Logo">
+        <h1> Southeast Regional Coalition for University-Assisted Community Schools</h1>
+    </div>
+    <div class="logos">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/27b705811c776c944ac7850856ce20f9ca8263e9/Images/Logos/Main%20Schools/duke_wordmark_cropped.png" alt="Duke University">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/133c1bf48941ef201c38d96e5626e4cb7cf9f778/Images/Logos/Main%20Schools/ECU_lockup_primary_Purple.jpg" alt="East Carolina University">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/133c1bf48941ef201c38d96e5626e4cb7cf9f778/Images/Logos/Main%20Schools/NCCU%20horz%20color%20logo%20TAG.jpeg" alt="North Carolina Central University">
+    </div>
+    <div class="navigation">
+        <a href="#home">Home</a>
+        <a href="#aboutus">About Us</a>
+        <a href="#people">People</a>
+        <a href="#work">Work</a>
+        <a href="#outputs">Outputs</a>
+        <a href="#partners">Partners</a>
+        <a href="#journal">Journal</a>
+        <a href="#news">News</a>
+        <a href="#contact">Contact</a>
+    </div>
+    <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/bff3753873fdf3e4cf1348f5c64e6d31101ed6fb/Images/ldoc1(2).jpg" alt="DUACSC 2022">
+    <div class="content">
+        <h2>Welcome!</h2>
+        <p>The Southeast Regional Coalition for University-Assisted Community Schools (SRCUACS)
+            will serve the critically important role of coalescing colleges and universities within the state and across
+            the region to enhance practice and advance policy change for the expansion and sustainability of
+            community schools. SRCUACS will act as a convener and central hub organized around six pillars:
+            Coalition Building, Storytelling, Connecting, Pipeline Development, Policy Change, and Research...</p>
+        <h2>Sign up for our newsletter!</h2>
+        <div class="newsletter-signup">
+            <form onsubmit="event.preventDefault(); showSuccessMessage();">
+                <input type="email" id="email" name="email" placeholder="Your email" required>
+                <input type="submit" value="Sign Up">
+            </form>
+        </div>
+        <p id="success-message" class="success-message">✔️ Done!</p>
+    </div>
+    <div class="footer">
+        <p>© 2023 Southeast Regional Coalition for University-Assisted Community Schools. All rights reserved.</p>
+    </div>
+</body>
+</html>
