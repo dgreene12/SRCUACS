@@ -3,6 +3,9 @@
     <title>About Us - Southeast Regional Coalition for University-Assisted Community Schools</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <style>
+        a.current {
+        color: #6699CC;
+        }
         body {
             font-family: 'Roboto', sans-serif;
             background-color: #F2F2F2;
@@ -25,6 +28,10 @@
         }
         .header img:hover {
             transform: scale(1.1);
+        }
+        .hero-image {
+            width: 100%;
+            height: auto;
         }
         .navigation {
             display: flex;
@@ -121,16 +128,15 @@
         <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/46a76358a53e123c84365ecce3e2ffe7edca7e4e/Images/Logos/Main%20Schools/ECU_lockup_primary_Purple.jpg" alt="East Carolina University">
     </div>
     <div class="navigation">
-        <a href="#home">Home</a>
-        <a href="#aboutus">About Us</a>
-        <a href="#people">People</a>
-        <a href="#work">Work</a>
-        <a href="#outputs">Outputs</a>
-        <a href="#partners">Partners</a>
-        <a href="#journal">Journal</a>
-        <a href="#news">News</a>
-        <a href="#contact">Contact</a>
+        <a href="home.html">Home</a>
+        <a href="aboutus.html" class="current">About</a>
+        <a href="people.html">People</a>
+        <a href="uacs.html">UACS</a>
+        <a href="nccommunityschoolscoalition.html">North Carolina Community Schools Coalition</a>
+        <a href="join.html">Join Our Network</a>
     </div>
+</div>
+<img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/91f7d83ae796f6abcb20f184d69b29b752676b6e/Images/Display%20Photos/nyc2.jpg" alt="Binghamton Site Visit">
     <div class="content">
         <p>This is a long introductory paragraph about us. Here we describe our organization, mission and vision.</p>
         <div class="grid">
@@ -154,7 +160,7 @@
                 <h2>Storytelling</h2>
                 <p>Our SRCUACS collaborative draws inspiration from UACS Regional Training
                     Centers’ peer-reviewed publications and related public-facing initiatives including the Netter Center at
-                    UPENN’s Universities and Community Schools Journal, the UCLA Center for Community Schooling
+                    UPenn’s Universities and Community Schools Journal, the UCLA Center for Community Schooling
                     Journal, and IUPUI’s Community School’s Forward initiative. As a regional training center, SRCUACS
                     expects to advance the work of community schools and their university partners by providing dynamic
                     vehicles for practitioner storytelling about community schools. From drawing on experiences that range
@@ -305,11 +311,9 @@
     
         gridItems.forEach((item, index) => {
             item.addEventListener("click", () => {
-                // Calculate the index of the adjacent item in the same row
                 const adjacentIndex = index % 2 === 0 ? index + 1 : index - 1;
                 const adjacentItem = gridItems[adjacentIndex];
     
-                // Determine if the item is currently expanded
                 const isExpanded = item.classList.contains('expanded');
     
                 // Handle all items
