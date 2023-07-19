@@ -38,6 +38,40 @@
         .header img:hover {
             transform: scale(1.1);
         }
+        .hero-container {
+            position: relative;
+            width: 100%; 
+            height: 95%;
+            overflow: hidden;
+        }
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .hero-overlay {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 51, 102, 0.5);
+            z-index: 1;
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 100px;
+            font-weight: bold;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+        }
         .logos {
             background: #FFFFFF;
             display: flex;
@@ -83,10 +117,6 @@
         background-color: #6699CC;
         color: black;
         }
-        .hero-image {
-            width: 100%;
-            height: auto;
-        }
         .content {
             padding: 20px;
             text-align: center;
@@ -123,6 +153,10 @@
         .person-info h4 {
             font-style: italic;
             margin-bottom: 10px;
+        }
+        .content > p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
         }
         .linkedin-btn {
             display: inline-block;
@@ -166,9 +200,12 @@
             <a href="join.html">Join Our Network</a>
         </div>
     </div>
-    <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/91f7d83ae796f6abcb20f184d69b29b752676b6e/Images/Display%20Photos/nyc2.jpg" alt="Binghamton Site Visit">
+    <div class="hero-container">
+        <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Eastway WTSD">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">People</div>
+    </div>
     <div class="content">
-        <h2>People</h2>
         <p class="intro">Meet the dedicated team that makes our work possible.</p>
         <div class="person">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/b5f53b6a627f10ad4ba3aa1abd353cd1ee1ba63b/Images/People/alec3.jpg" alt="Alec Greenwald">
