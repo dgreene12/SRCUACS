@@ -26,9 +26,39 @@
         .header img:hover {
             transform: scale(1.1);
         }
+        .hero-container {
+            position: relative;
+            width: 100%; 
+            height: 95%;
+            overflow: hidden;
+        }
         .hero-image {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .hero-overlay {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 51, 102, 0.5);
+            z-index: 1;
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 100px;
+            font-weight: bold;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
         }
         .navigation {
             display: flex;
@@ -80,6 +110,10 @@
             text-align: center;
             margin: auto;
             width: 70%;
+        }
+        .content > p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
         }
         .footer {
             background-color: #003366;
@@ -138,7 +172,11 @@
         <a href="join.html">Join Our Network</a>
     </div>
 </div>
-<img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/91f7d83ae796f6abcb20f184d69b29b752676b6e/Images/Display%20Photos/nyc2.jpg" alt="Binghamton Site Visit">
+<div class="hero-container">
+    <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c1e59503b796b51dea23a1b75e89c58204673323/Images/Display%20Photos/urgency2.jpg" alt="State of Urgency 2023">
+    <div class="hero-overlay"></div>
+    <div class="hero-text">About</div>
+</div>
     <div class="content">
         <p>This is a long introductory paragraph about us. Here we describe our organization, mission and vision.</p>
         <div class="grid">
