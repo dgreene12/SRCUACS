@@ -1,5 +1,8 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Southeast Regional Coalition for University-Assisted Community Schools</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <style>
@@ -57,23 +60,52 @@
             height: 70px;
             width: auto;
             max-width: 30%;
+        }
+        .hero-overlay {
             position: relative;
-            z-index: 1;
+            color: white;
         }
-        .logos img:not(:last-child)::after {
-            content: "";
+        .overlay-text, .overlay-subtext, .learn-more-btn {
             position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            height: 80%;
-            width: 2px;
-            background-color: #003366;
-            z-index: 2;
+            left: 50%;
+            transform: translateX(-50%);
+            text-align: center;
         }
-        .hero-image {
-            width: 100%;
-            height: auto;
+        .overlay-text {
+            top: 30%;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .overlay-subtext {
+            top: 40%;
+            font-size: 20px;
+        }
+        .learn-more-btn {
+            top: 50%;
+            padding: 10px 20px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+        .learn-more-btn:hover {
+            background-color: #6699CC;
+        }
+        .what-we-do {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 30px;
+        }
+        .box {
+            width: 23%;
+            height: 200px;
+            background-color: #6699CC;
+        }
+        .box-caption {
+            font-weight: bold;
+            margin-top: 10px;
         }
         .content {
             padding: 20px;
@@ -112,12 +144,6 @@
         .newsletter-signup input[type="submit"]:hover {
             background-color: #6699CC;
         }
-        .success-message {
-            display: none;
-            color: #006633;
-            font-size: 18px;
-            margin-top: 10px;
-        }
     </style>
     <script>
         function showSuccessMessage() {
@@ -143,25 +169,33 @@
         <a href="nccommunityschoolscoalition.html">North Carolina Community Schools Coalition</a>
         <a href="join.html">Join Our Network</a>
     </div>
-    <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/bff3753873fdf3e4cf1348f5c64e6d31101ed6fb/Images/ldoc1(2).jpg" alt="DUACSC 2022">
+    <div class="hero-overlay">
+        <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/bff3753873fdf3e4cf1348f5c64e6d31101ed6fb/Images/ldoc1(2).jpg" alt="DUACSC 2022">
+        <div class="overlay-text">University partnerships with local schools cause a 15% increase in something.</div>
+        <div class="overlay-subtext">Let's build them.</div>
+        <a href="aboutus.html" class="learn-more-btn">Learn More</a>
+    </div>
     <div class="content">
         <h2>Welcome!</h2>
-        <p>The Southeast Regional Coalition for University-Assisted Community Schools (SRCUACS)
-            will serve the critically important role of coalescing colleges and universities within the state and across
-            the region to enhance practice and advance policy change for the expansion and sustainability of
-            community schools. SRCUACS will act as a convener and central hub organized around six pillars:
-            Coalition Building, Storytelling, Connecting, Pipeline Development, Policy Change, and Research.</p>
+        <p>The Southeast Regional Coalition for University-Assisted Community Schools is a collection of universities and schools from North Carolina, South Carolina, and Georgia. Our mission is to promote the spread and success of university-assisted community schools in the southeastern region of the United States.</p>
+        <h2>What We Do</h2>
+        <div class="what-we-do">
+            <div class="box" style="background-color: #FF5733;"></div>
+            <div class="box" style="background-color: #33FF57;"></div>
+            <div class="box" style="background-color: #5733FF;"></div>
+            <div class="box" style="background-color: #FF33A1;"></div>
+        </div>
         <h2>Sign up for our newsletter!</h2>
         <div class="newsletter-signup">
-            <form onsubmit="event.preventDefault(); showSuccessMessage();">
-                <input type="email" id="email" name="email" placeholder="Your email" required>
-                <input type="submit" value="Sign Up">
-            </form>
+            <input type="email" placeholder="Your email address" required>
+            <input type="submit" value="Sign Up" onclick="showSuccessMessage()">
         </div>
-        <p id="success-message" class="success-message">✔️ Done!</p>
+        <div id="success-message" style="display: none;">
+            <p>Thank you for signing up!</p>
+        </div>
     </div>
     <div class="footer">
-        <p>© 2023 Southeast Regional Coalition for University-Assisted Community Schools. All rights reserved.</p>
+        <p>&copy; 2023 Southeast Regional Coalition for University-Assisted Community Schools. All Rights Reserved.</p>
     </div>
 </body>
 </html>

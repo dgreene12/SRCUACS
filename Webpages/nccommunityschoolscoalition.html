@@ -1,0 +1,128 @@
+<html>
+
+<head>
+    <title>North Carolina Community Schools Coalition</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F2F2F2;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #003366;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+        }
+        .header img {
+            height: 90px;
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            bottom: 10px;
+            transition: all 0.3s;
+        }
+        .header img:hover {
+            transform: scale(1.1);
+        }
+        .navigation {
+            display: flex;
+            justify-content: center;
+            background-color: #003366;
+        }
+        .navigation a {
+            color: #FFFFFF;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .navigation a:hover {
+            background-color: #6699CC;
+            color: black;
+        }
+        .navigation .current {
+            background-color: #6699CC;
+            color: black;
+        }
+        .logos {
+            background: #FFFFFF;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 20px;
+        }   
+        .logos img {
+            height: 70px;
+            width: auto;
+            max-width: 30%;
+            position: relative;
+        }
+        .logos img:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 80%;
+            width: 2px;
+            background-color: #003366;
+        }
+        .content {
+            padding: 20px;
+            text-align: center;
+            margin: auto;
+            width: 70%;
+        }
+        .footer {
+            background-color: #003366;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ba91b6eba378cb8c8689e420df0c9fff2d0c15f4/Images/Logos/bccsplogo.png" alt="Logo">
+        <h1>North Carolina Community Schools Coalition</h1>
+    </div>
+
+    <div class="logos">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/e4aca0077e4e12f0c83811babea9db383d1ef75a/Images/Logos/Main%20Schools/duke_wordmark_royalblue_00539B.jpg" alt="Duke University">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/d05035364fcb2dee5c6ea6d38a76b6ab9ca14b08/Images/Logos/Main%20Schools/NCCU%20horz%20color%20logo.png" alt="North Carolina Central University">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/46a76358a53e123c84365ecce3e2ffe7edca7e4e/Images/Logos/Main%20Schools/ECU_lockup_primary_Purple.jpg" alt="East Carolina University">
+    </div>
+
+    <div class="navigation">
+        <a href="home.html">Home</a>
+        <a href="aboutus.html">About</a>
+        <a href="people.html">People</a>
+        <a href="uacs.html">UACS</a>
+        <a href="nccommunityschoolscoalition.html" class="current">North Carolina Community Schools Coalition</a>
+        <a href="join.html">Join Our Network</a>
+    </div>
+
+    <div class="content">
+        <h2>About the Coalition</h2>
+        
+        <img src="URL_FOR_YOUR_IMAGE_1" alt="Coalition Image 1" style="width: 100%; height: auto;">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin in arcu nec purus hendrerit congue non ut libero. Aenean feugiat orci a orci pharetra, vitae ultrices ante viverra.</p>
+        
+        <img src="URL_FOR_YOUR_IMAGE_2" alt="Coalition Image 2" style="width: 100%; height: auto;">
+        <p>Maecenas at arcu at enim aliquam lacinia. Sed scelerisque, ligula a egestas vehicula, sapien orci efficitur justo, eu tempor risus ante vitae purus.</p>
+
+        <img src="URL_FOR_YOUR_IMAGE_3" alt="Coalition Image 3" style="width: 100%; height: auto;">
+        <p>Fusce tincidunt, arcu id dictum porta, sapien elit rhoncus augue, a fermentum arcu purus vitae sapien. Integer interdum ligula non justo porta, vel vestibulum nunc ornare.</p>
+    </div>
+
+    <div class="footer">
+        <p>© 2023 Southeast Regional Coalition for University-Assisted Community Schools. All rights reserved.</p>
+    </div>
+
+</body>
+
+</html>
