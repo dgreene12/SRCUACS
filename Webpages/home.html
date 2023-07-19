@@ -1,8 +1,5 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Southeast Regional Coalition for University-Assisted Community Schools</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <style>
@@ -65,30 +62,43 @@
             position: relative;
             color: white;
         }
+        .hero-overlay::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 51, 102, 0.5);
+            z-index: 1;
+        }
         .overlay-text, .overlay-subtext, .learn-more-btn {
             position: absolute;
             left: 50%;
             transform: translateX(-50%);
             text-align: center;
+            max-width: 80%;
+            z-index: 2;
         }
         .overlay-text {
-            top: 30%;
-            font-size: 24px;
+            top: 15%;
+            font-size: 50px;
             font-weight: bold;
         }
         .overlay-subtext {
-            top: 40%;
-            font-size: 20px;
+            top: 45%;
+            font-size: 50px;
         }
         .learn-more-btn {
-            top: 50%;
-            padding: 10px 20px;
+            top: 65%;
+            padding: 15px 30px;
             background-color: #003366;
             color: white;
             border: none;
             border-radius: 5px;
             cursor: pointer;
             text-decoration: none;
+            font-size: 20px;
         }
         .learn-more-btn:hover {
             background-color: #6699CC;
@@ -99,12 +109,37 @@
             margin-top: 30px;
         }
         .box {
-            width: 23%;
             height: 200px;
-            background-color: #6699CC;
+        }
+        .box-container {
+            width: 23%;
+        }
+        .box-title {
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .box img {
+        width: 100%;
+        height: auto;
+        }
+        .box-title, .box-caption {
+        font-size: 24px;
+        font-weight: bold;
+        text-align: center;
+        }
+        .box:nth-child(1) {
+        border: 5px solid #FF5733;
+        }
+        .box:nth-child(2) {
+            border: 5px solid #33FF57;
+        }
+        .box:nth-child(3) {
+            border: 5px solid #5733FF;
+        }
+        .box:nth-child(4) {
+            border: 5px solid #FFD733;
         }
         .box-caption {
-            font-weight: bold;
             margin-top: 10px;
         }
         .content {
@@ -144,6 +179,11 @@
         .newsletter-signup input[type="submit"]:hover {
             background-color: #6699CC;
         }
+        .hero-image {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
     </style>
     <script>
         function showSuccessMessage() {
@@ -170,32 +210,59 @@
         <a href="join.html">Join Our Network</a>
     </div>
     <div class="hero-overlay">
-        <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/bff3753873fdf3e4cf1348f5c64e6d31101ed6fb/Images/ldoc1(2).jpg" alt="DUACSC 2022">
+        <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/d7eb5583a36bee668eaaff950ce71ef75f960887/Images/Display%20Photos/DSC03036.jpg" alt="DUACSC 2022">
         <div class="overlay-text">University partnerships with local schools cause a 15% increase in something.</div>
         <div class="overlay-subtext">Let's build them.</div>
         <a href="aboutus.html" class="learn-more-btn">Learn More</a>
     </div>
     <div class="content">
         <h2>Welcome!</h2>
-        <p>The Southeast Regional Coalition for University-Assisted Community Schools is a collection of universities and schools from North Carolina, South Carolina, and Georgia. Our mission is to promote the spread and success of university-assisted community schools in the southeastern region of the United States.</p>
+        <p>The Southeast Regional Coalition for University-Assisted Community Schools is a group of universities, schools, community partners, and individuals that are dedicated to promoting the development and sustainability of University-Assisted Community Schools throughout the Southeast.</p>
         <h2>What We Do</h2>
         <div class="what-we-do">
-            <div class="box" style="background-color: #FF5733;"></div>
-            <div class="box" style="background-color: #33FF57;"></div>
-            <div class="box" style="background-color: #5733FF;"></div>
-            <div class="box" style="background-color: #FF33A1;"></div>
-        </div>
-        <h2>Sign up for our newsletter!</h2>
-        <div class="newsletter-signup">
-            <input type="email" placeholder="Your email address" required>
-            <input type="submit" value="Sign Up" onclick="showSuccessMessage()">
-        </div>
-        <div id="success-message" style="display: none;">
-            <p>Thank you for signing up!</p>
+            <div class="box-container">
+                <div class="box-title">Title 1</div>
+                <div class="box">
+                    <img src="URL_FOR_IMAGE_1" alt="Image 1">
+                </div>
+                <div class="box-caption">Caption 1</div>
+            </div>
+            
+            <div class="box-container">
+                <div class="box-title">Title 2</div>
+                <div class="box">
+                    <img src="URL_FOR_IMAGE_2" alt="Image 2">
+                </div>
+                <div class="box-caption">Caption 2</div>
+            </div>
+            
+            <div class="box-container">
+                <div class="box-title">Title 3</div>
+                <div class="box">
+                    <img src="URL_FOR_IMAGE_3" alt="Image 3">
+                </div>
+                <div class="box-caption">Caption 3</div>
+            </div>
+            
+            <div class="box-container">
+                <div class="box-title">Title 4</div>
+                <div class="box">
+                    <img src="URL_FOR_IMAGE_4" alt="Image 4">
+                </div>
+                <div class="box-caption">Caption 4</div>
+            </div>
         </div>
     </div>
+    </div>
+    <div class="newsletter-signup">
+        <input type="email" placeholder="Enter your email">
+        <input type="submit" value="Subscribe" onclick="showSuccessMessage()">
+    </div>
+    <div id="success-message" style="display:none; text-align:center; padding: 10px; background-color: #6699CC; color: white;">
+        Thank you for subscribing!
+    </div>
     <div class="footer">
-        <p>&copy; 2023 Southeast Regional Coalition for University-Assisted Community Schools. All Rights Reserved.</p>
+        Southeast Regional Coalition for University-Assisted Community Schools &copy; 2023
     </div>
 </body>
 </html>
