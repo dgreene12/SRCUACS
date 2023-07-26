@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southeast Regional Coalition for University-Assisted Community Schools</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    
+    <!-- AOS Library -->
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
+
+    <style>
+        /* Header Styles */
+        a.current {
+            color: #6699CC;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F2F2F2;
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #003366;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .header img {
+            height: 100px;
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            bottom: 10px;
+            transition: all 0.3s;
+        }
+
+        .header img:hover {
+            transform: scale(1.1);
+        }
+
+        .hero-container {
+            position: relative;
+            width: 100%; 
+            height: 95%;
+            overflow: hidden;
+        }
+
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        .hero-overlay {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 51, 102, 0.5);
+            z-index: 1;
+        }
+
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 100px;
+            font-weight: bold;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+        }
+
+        .logos {
+            background: #FFFFFF;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px;
+        }   
+
+        .logos img {
+            max-height: 50px;
+            width: auto;
+            max-width: 30%;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logos img:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 80%;
+            width: 2px;
+            background-color: #003366;
+            z-index: 2;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: center;
+            background-color: #003366;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        .navigation a {
+            color: #FFFFFF;
+            text-align: center;
+            padding: 18px 20px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+
+        .navigation a:hover {
+            background-color: #6699CC;
+            color: black;
+        }
+
+        .navigation .current {
+            background-color: #6699CC;
+            color: black;
+        }
+        .timeline {
+            font-family: 'Roboto', sans-serif;
+            line-height: 1.6;
+            position: relative;
+            padding: 0 100px;
+            background-color: #F2F2F2;
+        }
+        .event {
+            position: relative;
+            margin-bottom: 80px;
+            clear: both;
+        }
+        .event:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            margin-top: -8px; /* adjusted for 16px height */
+            margin-left: -8px;
+            width: 16px;
+            height: 16px;
+            background-color: #003366;
+            border-radius: 50%;
+            z-index: 1;
+        }
+
+        .event img {
+            width: 45%; /* set to same width as event content */
+            height: auto; /* maintain image aspect ratio */
+            margin-bottom: 10px; /* provide a little spacing between image and content */
+        }
+
+        .event-content {
+            background-color: #FFFFFF;
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+            width: 45%; /* same width as image */
+        }
+
+        /* Odd events */
+        .event:nth-of-type(odd) img, .event:nth-of-type(odd) .event-content {
+            float: left; /* position on the left side */
+        }
+
+        /* Even events */
+        .event:nth-of-type(even) img, .event:nth-of-type(even) .event-content {
+            float: right; /* position on the right side */
+        }
+
+        /* Clear the floats for each event */
+        .event:after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        .timeline:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 0;
+            width: 6px;
+            background-color: #003366;
+        }
+        .timeline-title {
+            font-size: 2.5em;
+            text-align: center;
+            margin-bottom: 10px;
+        }
+        .timeline-description {
+            font-size: 1.2em;
+            text-align: center;
+            margin-bottom: 50px;
+        }
+    </style>
+</head>
+    <body>
+        <div class="header">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ba91b6eba378cb8c8689e420df0c9fff2d0c15f4/Images/Logos/bccsplogo.png" alt="Logo">
+            <h1> Southeast Regional Coalition for University-Assisted Community Schools</h1>
+        </div>
+    
+        <div class="logos">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/e4aca0077e4e12f0c83811babea9db383d1ef75a/Images/Logos/Main%20Schools/duke_wordmark_royalblue_00539B.jpg" alt="Duke University">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/d05035364fcb2dee5c6ea6d38a76b6ab9ca14b08/Images/Logos/Main%20Schools/NCCU%20horz%20color%20logo.png" alt="North Carolina Central University">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/46a76358a53e123c84365ecce3e2ffe7edca7e4e/Images/Logos/Main%20Schools/ECU_lockup_primary_Purple.jpg" alt="East Carolina University">
+        </div>
+        <div class="navigation">
+            <a href="home.html">Home</a>
+            <a href="aboutus.html">About</a>
+            <a href="people.html">People</a>
+            <a href="uacs2.html" class="current">UACS</a>
+            <a href="nccommunityschoolscoalition.html">North Carolina Community Schools Coalition</a>
+            <a href="join.html">Join Our Network</a>
+        </div>
+        <div class="timeline-header">
+            <h2 class="timeline-title">Your Large Title Here</h2>
+            <p class="timeline-description">
+                Your descriptive paragraph goes here. It provides context or introduction about the timeline.
+            </p>
+        </div>
+    <div class="timeline">
+        <div class="event" data-aos="fade-up">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 1 Image">
+            <div class="event-content">
+                <h3>Event 1 Title</h3>
+                <p>Short description or details about event 1.</p>
+            </div>
+        </div>
+    
+        <div class="event" data-aos="fade-up">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 2 Image">
+            <div class="event-content">
+                <h3>Event 2 Title</h3>
+                <p>Short description or details about event 2.</p>
+            </div>
+        </div>
+    
+        <div class="event" data-aos="fade-up">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
+            <div class="event-content">
+                <h3>Event 3 Title</h3>
+                <p>Short description or details about event 3.</p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- AOS Initialization -->
+    <script>
+        AOS.init({
+          duration: 1200, // Duration of the animation
+        });
+    </script>
+    
+    </body>
+    </html>

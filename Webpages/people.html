@@ -2,6 +2,8 @@
 <head>
     <title> Southeast Regional Coalition for University-Assisted Community Schools</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.js"></script>
     <style>
         a.current {
         color: #6699CC;
@@ -11,16 +13,6 @@
             background-color: #F2F2F2;
             margin: 0;
             padding: 0;
-        }
-        .email-logo {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            background: url('https://raw.githubusercontent.com/dgreene12/SRCUACS/e073bd7a7a9bb0b547c640bb179de2b3012a827f/Images/Display%20Photos/email-icon.png') no-repeat;
-            background-size: cover;
-            margin-top: 20px;
-            margin-right: 10px !important;
         }
         .header {
             background-color: #003366;
@@ -78,10 +70,10 @@
             display: flex;
             justify-content: space-evenly;
             align-items: center;
-            padding: 20px;
+            padding: 10px;
         }   
         .logos img {
-            max-height: 70px;
+            max-height: 50px;
             width: auto;
             max-width: 30%;
             position: relative;
@@ -102,11 +94,15 @@
             display: flex;
             justify-content: center;
             background-color: #003366;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
         .navigation a {
             color: #FFFFFF;
             text-align: center;
-            padding: 14px 16px;
+            padding: 18px 20px;
             text-decoration: none;
             font-size: 17px;
         }
@@ -115,8 +111,8 @@
             color: black;
         }
         .navigation .current {
-        background-color: #6699CC;
-        color: black;
+            background-color: #6699CC;
+            color: black;
         }
         .content {
             padding: 20px;
@@ -138,47 +134,9 @@
             align-items: start;
             margin-bottom: 40px;
         }
-        .person img {
-            max-width: 30%;
-            border-radius: 50%;
-            flex: 1;
-        }
-        .person-info {
-            flex: 2;
-            padding-left: 20px;
-            align-items: center;
-        }
-        .person-info h3 {
-            font-size: 30px;
-            margin-bottom: 10px;
-        }
-        .person-info h4 {
-            font-style: italic;
-            margin-bottom: 10px;
-        }
-        .person-description {
-            max-width: 65%;
-            margin-left: auto;
-            margin-right: auto;
-        }
         .content > p {
             font-size: 1.5em;
             margin-bottom: 40px;
-        }
-        .linkedin-btn {
-            display: inline-block;
-            width: 40px;
-            height: 40px;
-            background: url('https://raw.githubusercontent.com/dgreene12/SRCUACS/9f98e9393b3aa9e68369fad1c1e4cadfcb221e2c/Images/Display%20Photos/LinkedIn_logo.png') no-repeat center center;
-            background-size: cover;
-            border-radius: 50%;
-            overflow: hidden;
-            transition: all 0.3s;
-            margin-top: 20px;
-            margin-left: 15px;
-        }
-        .linkedin-btn:hover {
-            transform: scale(1.1);
         }
         .footer {
             background-color: #003366;
@@ -186,39 +144,57 @@
             text-align: center;
             padding: 10px;
         }
-        .full-bio-btn {
-            display: inline-block;
-            margin-top: 20px;
-            margin-left: 10px;
-            padding: 10px 20px;
-            color: #FFF;
-            background-color: #6699CC;
-            border: none;
-            border-radius: 5px;
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            width: 100%;
+            margin: auto;
+        }
+        .grid-item {
+            position: relative;
             cursor: pointer;
+            transition: all 0.5s ease-in-out;
+        }
+        .grid-item img {
+            border-radius: 50%;
+            max-width: 100%;
+            transition: opacity 0.5s;
+        }
+        .grid-item:hover img {
+            opacity: 0.6;
+        }
+        .grid-item-info {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            display: none;
+        }
+        .grid-item:hover .grid-item-info {
+            display: block;
+        }
+        .grid-item-info h3 {
+            font-size: 25px;
+        }
+        .grid-item-info h4 {
             font-size: 20px;
-            text-decoration: none;
-            transition: background-color 0.3s;
         }
-        .full-bio-btn:hover {
-            background-color: #003366;
-        }
-        .button-group {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            margin-top: 20px;
-        }
-        .social-buttons {
+        .social-grid {
             display: flex;
             justify-content: center;
-        }
-        .email-logo, .linkedin-btn, .full-bio-btn {
-            margin: 5px 0; 
+            margin-top: 10px;
         }
     </style>
 </head>
 <body>
+    <script>
+        AOS.init({
+            offset: window.innerHeight / 3, 
+            duration: 600, 
+        });
+    </script>
     <div class="header">
         <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ba91b6eba378cb8c8689e420df0c9fff2d0c15f4/Images/Logos/bccsplogo.png" alt="Logo">
         <h1>Southeast Regional Coalition for University-Assisted Community Schools</h1>
@@ -233,7 +209,7 @@
             <a href="home.html">Home</a>
             <a href="aboutus.html">About</a>
             <a href="people.html" class="current">People</a>
-            <a href="uacs.html">UACS</a>
+            <a href="uacs2.html">UACS</a>
             <a href="nccommunityschoolscoalition.html">North Carolina Community Schools Coalition</a>
             <a href="join.html">Join Our Network</a>
         </div>
@@ -245,154 +221,80 @@
     </div>
     <div class="content">
         <p class="intro">Meet the dedicated team that makes our work possible.</p>
-        <div class="person">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/b5f53b6a627f10ad4ba3aa1abd353cd1ee1ba63b/Images/People/alec3.jpg" alt="Alec Greenwald">
-            <div class="person-info">
-                <h3>Alec Greenwald</h3>
-                <h4>Duke University</h4>
-                <p class="person-description">Alec Greenwald is the Associate Director for Strategic and Special Initiatives to the Dean of Academic Affairs at Duke University. 
-                    He has been a public-school teacher, parent, and activist for over 15 years. Alec has helped to lead multiple student-engaged research projects at Duke 
-                    dedicated to supporting Durham Public Schools.</p>
-            <div class="button-group">
-                <div class="social-buttons">
-                <a href="mailto:alec.greenwald@duke.edu" class="email-logo"></a>
-                <a href="https://www.linkedin.com/in/alec-greenwald-721308aa/" class="linkedin-btn" target="_blank"></a>
+        <div class="grid-container">
+
+            <div class="grid-item" data-aos="fade-up" onclick="window.location='alec.html';">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/f993646ec26437196ea11f104e8a2a0b374f6fc7/Images/People/alec3.jpg" alt="Alec Greenwald">
+                <div class="grid-item-info">
+                    <h3>Alec Greenwald</h3>
+                    <h4>Duke University</h4>
                 </div>
-                <a href="alec.html" class="full-bio-btn">Full Bio</a>
             </div>
+        
+            <div class="grid-item" data-aos="fade-up" data-aos-delay="100" onclick="window.location='amy.html';">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/f993646ec26437196ea11f104e8a2a0b374f6fc7/Images/People/anderson.jpg" alt="Amy Anderson, PhD">
+                <div class="grid-item-info">
+                    <h3>Amy Anderson, PhD</h3>
+                    <h4>Duke University</h4>
+                </div>
+            </div>
+        
+            <div class="grid-item" data-aos="fade-up" data-aos-delay="200" onclick="window.location='yolanda.html';">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/f993646ec26437196ea11f104e8a2a0b374f6fc7/Images/People/dunston3.jpg" alt="Yolanda Dunston, PhD">
+                <div class="grid-item-info">
+                    <h3>Yolanda Dunston, PhD</h3>
+                    <h4>North Carolina Central University</h4>
+                </div>
+            </div>
+        
+            <div class="grid-item" data-aos="fade-up" data-aos-delay="300" onclick="window.location='jamie.html';">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/f993646ec26437196ea11f104e8a2a0b374f6fc7/Images/People/jamie3.jpg" alt="Jamie Eaton">
+                <div class="grid-item-info">
+                    <h3>Jamie Eaton</h3>
+                    <h4>North Carolina Central University</h4>
+                </div>
+            </div>
+        
+            <div class="grid-item" data-aos="fade-up" data-aos-delay="400" onclick="window.location='jerry.html';">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/f993646ec26437196ea11f104e8a2a0b374f6fc7/Images/Logos/bccsplogo.png" alt="Jerry Johnson, EdD">
+                <div class="grid-item-info">
+                    <h3>Jerry Johnson, EdD</h3>
+                    <h4>East Carolina University</h4>
+                </div>
+            </div>
+        
+            <div class="grid-item" data-aos="fade-up" data-aos-delay="500" onclick="window.location='amys.html';">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/f993646ec26437196ea11f104e8a2a0b374f6fc7/Images/Logos/bccsplogo.png" alt="Amy Swain, PhD">
+                <div class="grid-item-info">
+                    <h3>Amy Swain, PhD</h3>
+                    <h4>East Carolina University</h4>
+                </div>
+            </div>
+        
+            <div class="grid-item" data-aos="fade-up" data-aos-delay="600" onclick="window.location='xavier.html';">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/f993646ec26437196ea11f104e8a2a0b374f6fc7/Images/People/xavier3.jpg" alt="Xavier Cason">
+                <div class="grid-item-info">
+                    <h3>Xavier Cason</h3>
+                    <h4>Durham Public Schools Foundation</h4>
+                </div>
+            </div>
+        
+            <div class="grid-item" data-aos="fade-up" data-aos-delay="700" onclick="window.location='amaya.html';">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/f993646ec26437196ea11f104e8a2a0b374f6fc7/Images/People/amaya3.jpg" alt="Amaya Jackson">
+                <div class="grid-item-info">
+                    <h3>Amaya Jackson</h3>
+                    <h4>University of North Carolina, North Carolina Central University</h4>
+                </div>
+            </div>
+        
+            <div class="grid-item" data-aos="fade-up" data-aos-delay="800" onclick="window.location='person9.html';">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/f993646ec26437196ea11f104e8a2a0b374f6fc7/Images/Logos/bccsplogo.png" alt="Person 9 Name">
+                <div class="grid-item-info">
+                    <h3>Person 9 Name</h3>
+                    <h4>Person 9 University</h4>
+                </div>
             </div>
         </div>
-        <div class="person">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/b5f53b6a627f10ad4ba3aa1abd353cd1ee1ba63b/Images/People/anderson.jpg" alt="Amy Anderson">
-            <div class="person-info">
-                <h3>Amy Anderson, PhD</h3>
-                <h4>Duke University</h4>
-                <p class="person-description">Amy Anderson is an Assistant Professor of the Practice in Duke’s Program in Education 
-                    where she teaches courses in the Foundations of Education, School Resegregation, and 
-                    Critical Studies in Education. Amy is also a Faculty Consultant for Duke Service-Learning.</p>
-                <div class="button-group">
-                    <div class="social-buttons">
-                <a href="mailto:person1@example.com" class="email-logo" target="_blank"></a>
-                <a href="https://www.linkedin.com/in/amy-anderson-03972566/" class="linkedin-btn" target="_blank"></a>
-                </div>
-                <a href="amaya.html" class="full-bio-btn">Full Bio</a>
-            </div>
-            </div>
-        </div>
-        <div class="person">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/b5f53b6a627f10ad4ba3aa1abd353cd1ee1ba63b/Images/People/dunston3.jpg" alt="Yolanda Dunston">
-            <div class="person-info">
-                <h3>Yolanda Dunston, PhD</h3>
-                <h4>North Carolina Central University</h4>
-                <p class="person-description">Yolanda Dunston is a Professor in North Carolina Central University’s School of Education.
-                    With 28 years of educator experience, she focuses her scholarly efforts on effective teaching,
-                     with emphases on K-6 literacy and distance learning for nontraditional college students.</p>
-                <div class="button-group">
-                    <div class="social-buttons">
-                <a href="mailto:person1@example.com" class="email-logo" target="_blank"></a>
-                <a href="https://www.nccu.edu/employee/ydunston" class="linkedin-btn" target="_blank"></a>
-                </div>
-                <a href="yolanda.html" class="full-bio-btn">Full Bio</a>
-                </div> 
-            </div>
-        </div>
-        <div class="person">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/b5f53b6a627f10ad4ba3aa1abd353cd1ee1ba63b/Images/People/jamie3.jpg" alt="Jamie Eaton">
-            <div class="person-info">
-                <h3>Jamie Eaton</h3>
-                <h4>North Carolina Central University</h4>
-                <p class="person-description">Jamie Eaton is an Administrative Support Associate at the University Honors Program at North Carolina Central University.
-                    Since 2018, Jamie has been a Team Lead for the Durham University-Assisted Community Schools Research Collective.</p>
-                <div class="button-group">
-                    <div class="social-buttons">
-                <a href="mailto:person1@example.com" class="email-logo" target="_blank"></a>
-                <a href="https://www.linkedin.com/in/jamiemeaton/" class="linkedin-btn" target="_blank"></a>
-                </div>
-                <a href="jamie.html" class="full-bio-btn">Full Bio</a>
-            </div> 
-            </div>
-        </div>
-        <div class="person">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ba91b6eba378cb8c8689e420df0c9fff2d0c15f4/Images/Logos/bccsplogo.png" alt="Jerry Johnson">
-            <div class="person-info">
-                <h3>Jerry Johnson, EdD</h3>
-                <h4>East Carolina University</h4>
-                <p class="person-description">Jerry Johnson is the Phoebe Moore Dail Distinguished Professor in Rural Education at East Carolina University. A former high school English
-                    teacher and principal, he has taught in educational leadership programs for 15 years and served from 2003-2008 as policy research director for the Rural School and Community Trust.</p>
-                <div class="button-group">
-                    <div class="social-buttons">
-                <a href="mailto:person1@example.com" class="email-logo" target="_blank"></a>
-                <a href="https://scholar.google.com/citations?user=99piSDsAAAAJ&hl=en" class="linkedin-btn" target="_blank"></a>
-                </div>
-                <a href="jerry.html" class="full-bio-btn">Full Bio</a>
-            </div> 
-            </div>
-        </div>
-        <div class="person">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ba91b6eba378cb8c8689e420df0c9fff2d0c15f4/Images/Logos/bccsplogo.png" alt="Amy Swain">
-            <div class="person-info">
-                <h3>Amy Swain, PhD</h3>
-                <h4>East Carolina University</h4>
-                <p class="person-description">Amy Swain is a Teaching Assistant Professor of Special Education, Foundations & Research (SEFR) at East Carolina University. 
-                    Her research focuses on the enduring legacies of plantations and white supremacy on rural education in 
-                    the Black Belt, particularly in eastern North Carolina.</p>
-                <div class="button-group">
-                    <div class="social-buttons">
-                <a href="mailto:person1@example.com" class="email-logo" target="_blank"></a>
-                <a href="https://education.ecu.edu/2021/12/01/faculty-profile-amy-swain/" class="linkedin-btn" target="_blank"></a>
-                </div>
-                <a href="amys.html" class="full-bio-btn">Full Bio</a>
-            </div> 
-            </div>
-        </div>
-        <div class="person">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/e073bd7a7a9bb0b547c640bb179de2b3012a827f/Images/People/xavier3.jpg" alt="Xavier Cason">
-            <div class="person-info">
-                <h3>Xavier Cason</h3>
-                <h4>Durham Public Schools Foundation</h4>
-                <p class="person-description">Xavier Cason is Director of Community Schools and School Partnerships at the Durham Public Schools Foundation. Xavier 
-                    previously taught in Columbus County and Durham Public Schools and served on the DPS Board of Education. He is currently a PhD student at NC State University 
-                    studying Education Evaluation and Policy Analysis.</p>
-                <div class="button-group">
-                    <div class="social-buttons">
-                <a href="mailto:person1@example.com" class="email-logo" target="_blank"></a>
-                <a href="https://www.linkedin.com/in/xavier-cason-4013511/" class="linkedin-btn" target="_blank"></a>
-                </div>
-                <a href="xavier.html" class="full-bio-btn">Full Bio</a>
-            </div> 
-            </div>
-        </div>
-        <div class="person">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/e073bd7a7a9bb0b547c640bb179de2b3012a827f/Images/People/amaya3.jpg" alt="Amaya Jackson">
-            <div class="person-info">
-                <h3>Amaya Jackson</h3>
-                <h4>University of North Carolina, North Carolina Central University</h4>
-                <p class="person-description">Amaya Jackson is a MPH Candidate at the University of North Carolina Gillings 
-                    School of Global Public Health. An alumna of North Carolina Central University, Amaya is a Project Manager
-                    for the Durham University-Assisted Community Schools Research Collective.</p>
-                <div class="button-group">
-                    <div class="social-buttons">
-                <a href="mailto:person1@example.com" class="email-logo" target="_blank"></a>
-                <a href="https://www.linkedin.com/in/amaya-jackson-5a479618b/" class="linkedin-btn" target="_blank"></a>
-                </div>
-                <a href="amaya.html" class="full-bio-btn">Full Bio</a>
-            </div> 
-            </div>
-        </div>
-        <div class="person">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ba91b6eba378cb8c8689e420df0c9fff2d0c15f4/Images/Logos/bccsplogo.png" alt="Another Person">
-            <div class="person-info">
-                <h3>Another Person</h3>
-                <h4>Duke University</h4>
-                <p>...... </p>
-                <div class="button-group">
-                    <div class="social-buttons">
-                <a href="mailto:person1@example.com" class="email-logo" target="_blank"></a>
-                <a href="https://www.linkedin.com/in/alec-greenwald-721308aa/" class="linkedin-btn" target="_blank"></a>
-                </div>
-                <a href="other.html" class="full-bio-btn">Full Bio</a>
-            </div> 
-            </div>
         </div>
     <div class="footer">
         <p>©2023 Southeast Regional Coalition for University-Assisted Community Schools</p>

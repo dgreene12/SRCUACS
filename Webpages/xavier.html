@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Southeast Regional Coalition for University-Assisted Community Schools</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #F2F2F2;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        .header {
+            background-color: #003366;
+            color: #FFFFFF;
+            padding: 20px;
+            text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .header img {
+            height: 90px;
+            position: absolute;
+            left: 20px;
+            top: 15px;
+            bottom: 10px;
+            transition: all 0.3s;
+        }
+        .header img:hover {
+            transform: scale(1.1);
+        }
+        .navigation {
+            display: flex;
+            justify-content: center;
+            background-color: #003366;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        .navigation a {
+            color: #FFFFFF;
+            text-align: center;
+            padding: 18px 20px;
+            text-decoration: none;
+            font-size: 17px;
+            
+        }
+        .navigation a:hover {
+            background-color: #6699CC;
+            color: black;
+        }
+        .navigation .current {
+            background-color: #6699CC;
+            color: black;
+        }
+        .logos {
+            background: #FFFFFF;
+            display: flex;
+            justify-content: space-evenly;
+            align-items: center;
+            padding: 10px;
+        }
+        .logos img {
+            height: 50px;
+            width: auto;
+            max-width: 30%;
+            position: relative;
+        }
+        .logos img:not(:last-child)::after {
+            content: "";
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            height: 80%;
+            width: 2px;
+            background-color: #003366;
+        }
+        .sidebar {
+            width: 250px;
+            background-color: #003366;
+            color: #FFFFFF;
+            padding: 30px;
+            position: sticky;
+            top: 10px;
+            max-height: calc(100vh - 20px);
+            overflow-y: auto;
+        }
+        .sidebar h2 {
+            font-size: 20px;
+            border-bottom: 2px solid #6699CC;
+            margin-bottom: 15px;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding-left: 0;
+            margin-top: 25px;
+        }
+        .sidebar li {
+            margin-bottom: 10px;
+        }
+        .sidebar a {
+            color: #FFFFFF;
+            text-decoration: none;
+        }
+        .sidebar a:hover {
+            text-decoration: underline;
+        }
+        .sidebar .current {
+            text-decoration: underline;
+        }
+        .bio-container {
+            flex: 1;
+            margin-left: 20px;
+        }
+        .bio-header {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+        }
+        .bio-pic {
+            width: 400px;
+            height: 400px;
+            object-fit: cover;
+            margin-right: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        .bio-details {
+            text-align: left;
+            margin-top: 20px;
+        }
+        .bio-details h1 {
+            font-size: 36px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .bio-details h2 {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        .connect {
+            text-align: right;
+        }
+        .linkedin-btn {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: url('https://raw.githubusercontent.com/dgreene12/SRCUACS/9f98e9393b3aa9e68369fad1c1e4cadfcb221e2c/Images/Display%20Photos/LinkedIn_logo.png') no-repeat center center;
+            background-size: cover;
+            border-radius: 50%;
+            overflow: hidden;
+            transition: all 0.3s;
+            margin-top: 20px;
+            margin-left: 15px;
+            border: none;
+            text-decoration: none;
+        }
+        .linkedin-btn:hover {
+            transform: scale(1.1);
+        }
+        .bio-content p {
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .main-content {
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ba91b6eba378cb8c8689e420df0c9fff2d0c15f4/Images/Logos/bccsplogo.png" alt="Logo">
+        <h1>Southeast Regional Coalition for University-Assisted Community Schools</h1>
+    </div>
+
+    <div class="logos">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/e4aca0077e4e12f0c83811babea9db383d1ef75a/Images/Logos/Main%20Schools/duke_wordmark_royalblue_00539B.jpg" alt="Duke University">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/d05035364fcb2dee5c6ea6d38a76b6ab9ca14b08/Images/Logos/Main%20Schools/NCCU%20horz%20color%20logo.png" alt="North Carolina Central University">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/46a76358a53e123c84365ecce3e2ffe7edca7e4e/Images/Logos/Main%20Schools/ECU_lockup_primary_Purple.jpg" alt="East Carolina University">
+    </div>
+
+    <div class="navigation">
+        <a href="home.html">Home</a>
+        <a href="aboutus.html">About</a>
+        <a href="people.html" class="current">People</a>
+        <a href="uacs2.html">UACS</a>
+        <a href="nccommunityschoolscoalition.html">North Carolina Community Schools Coalition</a>
+        <a href="join.html">Join Our Network</a>
+    </div>
+
+    <div class="main-content">
+        <div class="sidebar">
+            <h2>Other People</h2>
+            <ul>
+                <li><a href="alec.html">Alec Greenwald</a></li>
+                <li><a href="amy.html">Amy Anderson, PhD</a></li>
+                <li><a href="yolanda.html">Yolanda Dunston, PhD</a></li>
+                <li><a href="jamie.html">Jamie Eaton</a></li>
+                <li><a href="jerry.html">Jerry Johnson, EdD</a></li>
+                <li><a href="amys.html">Amy Swain, PhD</a></li>
+                <li><a href="xavier.html">Xavier Cason</a></li>
+                <li><a href="amaya.html">Amaya Jackson</a></li>
+                <li><a href="person9.html">Person 9</a></li>
+            </ul>
+        </div>
+        
+        <div class="bio-container">
+            <div class="bio-header">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/f993646ec26437196ea11f104e8a2a0b374f6fc7/Images/People/xavier3.jpg" alt="Person's Name" class="bio-pic">
+                <div class="bio-details">
+                    <h1>Person's Name</h1>
+                    <h2>Durham Public Schools Foundation</h2>
+                    <p>email@example.com</p>
+                    <a href="https://www.linkedin.com/in/username/" class="linkedin-btn" target="_blank"></a>
+                </div>
+            </div>
+            <div class="bio-content">
+                <p>First paragraph of the bio...</p>
+                <p>Second paragraph of the bio...</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
