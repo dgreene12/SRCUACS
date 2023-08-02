@@ -16,11 +16,11 @@
             text-align: center;
         }
         .header img {
-            height: 100px;
+            height: 160px;
             position: absolute;
-            left: 20px;
-            top: 15px;
-            bottom: 10px;
+            left: -5px;
+            top: -18px;
+            bottom: 5px;
             transition: all 0.3s;
         }
         .header img:hover {
@@ -127,39 +127,77 @@
         }
         .grid {
             display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr 1fr;
-            gap: 20px;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            margin-bottom: 60px;
+            align-items: center;
         }
         .grid-item {
-            border: 2px solid #003366;
-            border-radius: 10px;
-            padding: 20px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
-            transition: all 0.3s ease;
+            background: #592A8A;
+            border: 2px solid rgba(0, 51, 102, 0.2);
+            border-radius: 15px;
+            padding: 30px 20px;
+            box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+            transition: all 0.4s ease-out;
+            cursor: pointer;
+            position: relative;
             overflow: hidden;
+            perspective: 1000px;
+            color: #FFFFFF;
+        }
+        .grid-item:hover {
+            transform: rotateY(10deg) translateY(-5px);
+            box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
+        }
+        .grid-item:hover::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.1);
         }
         .grid-item h2 {
-            font-size: 24px;
-            font-weight: bold;
+            font-size: 26px;
+            font-weight: 600;
             margin-bottom: 20px;
+            text-align: center;
+            color: #FFFFFF;
+        }
+        .grid-item h2, .grid-item p {
+            transform: scale(0.95);
+            opacity: 0.8;
+            transition: all 0.4s ease-out;
+        }
+        .grid-item:hover h2, .grid-item:hover p {
+            transform: scale(1);
+            opacity: 1;
+        }
+        .grid-item::before {
+            content: "+";
+            font-size: 24px;
+            position: absolute;
+            bottom: 10px;
+            right: 10px;
+            color: #FFFFFF;
+            opacity: 0.7;
+            transition: transform 0.4s ease-out;
+        }
+        .grid-item.expanded::before {
+            transform: rotate(45deg);
         }
         .grid-item p {
             display: none;
-            transition: all 0.3s ease;
+            transition: opacity 0.4s ease;
+            font-size: 18px;
+            color: #FFFFFF;
         }
-        .grid-item.expanded {
-            box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-        }
-        .grid-item.expanded p {
-            display: block;
-        }
-        
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ba91b6eba378cb8c8689e420df0c9fff2d0c15f4/Images/Logos/bccsplogo.png" alt="Logo">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/b2d84fc651d6591d416705368585476f42070315/Images/Logos/srcuacslogo.png" alt="Logo">
         <h1> Southeast Regional Coalition for University-Assisted Community Schools</h1>
     </div>
     <div class="logos">
@@ -182,167 +220,33 @@
     <div class="hero-text">About</div>
 </div>
     <div class="content">
-        <p>This is a long introductory paragraph about us. Here we describe our organization, mission and vision.</p>
+        <p><strong style="color: #880023;">The Southeast Regional Coalition for University-Assisted Community Schools (SRCUACS)</strong>
+            was recently awarded as the 6th regional technical training center for university-assisted
+            community schools (UACS) by the Netter Center for Community Engagement at the University of
+            Pennsylvania.</p>
+        <p>SRCUACS will serve the critically important role of coalescing colleges and 
+            universities within the state and across the region to enhance practice and advance policy
+            change for the expansion and sustainability of community schools. SRCUACS will act as a 
+            convener and central hub organized around six pillars: Coalition Building, Storytelling,
+            Connecting, Pipeline Development, Policy Change, and Research.</p>
         <div class="grid">
             <div class="grid-item">
                 <h2>Coalition Building</h2>
-                <p>SRCUACS is a three-institution collaboration between East Carolina
-                    University, Duke University, and North Carolina Central University. Coalition building is the starting
-                    point and is foundational to this proposal. Each institution possesses unique and strategic assets necessary
-                    for broadening and deepening relationships with the diverse higher education ecosystem across North
-                    Carolina and the Southeast region. By leveraging assets and respective relationships, SRCUACS
-                    envisions an opportunity to learn across differences while also creating context-specific professional
-                    learning communities.</p>
-                <p>The goal is to build a three-institution coalition drawing from the strength of our respective institutions,
-                    namely HBCUs, rural, and urban institutions. Training and technical assistance will be provided for
-                    regional institutions interested in connecting the core mission of their colleges and universities to the six
-                    pillars: Coalition Building, Storytelling, Connecting, Pipeline Development, Policy Change, and
-                    Research. The SRCUACS will organize statewide and regional UACS leaders through monthly virtual
-                    network calls, quarterly site visits, annual symposium gatherings, and an up-to-date web presence.</p>
             </div>
             <div class="grid-item">
                 <h2>Storytelling</h2>
-                <p>Our SRCUACS collaborative draws inspiration from UACS Regional Training
-                    Centers’ peer-reviewed publications and related public-facing initiatives including the Netter Center at
-                    UPenn’s Universities and Community Schools Journal, the UCLA Center for Community Schooling
-                    Journal, and IUPUI’s Community School’s Forward initiative. As a regional training center, SRCUACS
-                    expects to advance the work of community schools and their university partners by providing dynamic
-                    vehicles for practitioner storytelling about community schools. From drawing on experiences that range
-                    from getting clarity and buy-in on community school pillars, to organizing communities and schools to
-                    identify assets and needs, to the hard work of transforming school practices, each community school has
-                    its story to tell. Centering practitioner voices and perspectives lifts up community, educator, and caregiver
-                    stories and allows others considering adopting a community school model the opportunity to learn from
-                    those immersed in values and practices of community schools.</p>
-                <p>Our team is poised to facilitate story-sharing in diverse methods across several publication formats and
-                    via diverse platforms. Leveraging a range of presentation methods creates opportunities for SRCUACS
-                    collaborators and local practitioners to participate in action research, for example, to collect oral histories
-                    of community assets that may then be disseminated through podcasts. We will use the network to gather
-                    and share basic logistical information on building a community school; feature CS practitioner action
-                    research projects; contribute to the academic scholarship on community schools; influence policy change
-                    that advances community schools in the region; and survey and create resources to effect preparation
-                    pipelines for community school educators and coordinators across our region.</p>
-                <p>As a collective partnership, SRCUACS shares an intentional focus on community schools as a means of
-                    advancing community-aware, context-specific, justice-oriented, and anti-racist education. The
-                    collaboration of a public university attending to rural community school models; an HBCU focusing on
-                    community schools as a tool for serving all students better; and a private university in close collaboration
-                    with its urban public school district means we begin this center with a rich variety of stories to tell and we
-                    anticipate being a national leader in sharing these conversations and stories across all platforms.</p>
             </div>
             <div class="grid-item">
                 <h2>Connecting</h2>
-                <p>The sustainability of localized community school initiatives relies on creating and
-                    supporting collective impact committees (CIC). In order to fully address the needs of a community, CICs
-                    should be populated by a diverse group of representatives from the business and nonprofit sectors, as well
-                    as local government and university leaders. In this way, community schools are intentional about building
-                    connections. SRCUACS believes a regional community schools training center is uniquely positioned to
-                    provide technical support for CICs in many domains, including mobilizing community resources across
-                    different sectors and developing braided funding strategies.</p>
-                <p>This current proposal brings to the forefront a commitment shared among partner institutions to explore
-                    ways that universities might connect existing institutional strengths, initiatives, and resources with local
-                    public schools in mutually beneficial ways. In its foundational stages, Duke and North Carolina Central’s
-                    partnership envisioned a merging of institutional assets (e.g., big ideas such as research and service;
-                    knowledge branches such as sciences, law/criminal justice, and teacher preparation; and auxiliary
-                    supports including speech and language clinics, writing studios, etc.) to support Durham community
-                    schools’ self-identified goals and values. The Durham partnership believes a conscious effort to leverage
-                    university resources in direct response to the schools’ findings (e.g., via the Community Schools
-                    Listening Project) would position Duke and NCCU to be better partners not only for community schools
-                    being piloted in the district, but for the school district as a whole. Similarly, ECU’s involvement in this
-                    work grew out of its commitment to schools and communities in the Eastern NC region and it’s
-                    recognition of the role of universities as “connectors” (Morse, 2004; Johnson, Thompson, & Naugle,
-                    2009) with the capacity and responsibility to link salient assets to identified needs.</p>
-                <p>SRCUACS intends to engage in asset mapping of the material, human, and organizational resources that
-                    the partner institutions have available to offer local community schools. Close examination of these assets
-                    will help the collaborative understand where duplication exists across the state and region and identify
-                    spaces for innovation. Data collected from this mapping project will result in a digital database of relevant
-                    resources found at partnering institutions, which can then be used to match local community schools'
-                    identified needs and serve as a starting point for collaborative programming. SRCUACS would create a
-                    home for this database as well as a mechanism by which university faculty and staff can continuously
-                    define and refine formalized collaborations with public school partners.</p>
             </div>
             <div class="grid-item">
                 <h2>Pipeline Development</h2>
-                <p>SRCUACS will develop and operationalize a transformative educational
-                    preparation pipeline to effectively recruit, prepare, and sustain Community School Practitioners (CSPs).
-                    SRCUACS will utilize existing partnerships with ~50 local education agencies (LEAs), including formal
-                    networks such as the Latham Clinical Schools Network, to develop a teacher residency model for state
-                    and regional educational preparation programs. Within the residency model for CSPs, teacher residents
-                    will have robust professional learning experiences in existing community schools and will be prepared
-                    onsite in a(n) university-assisted community school(s) with clinically aligned coursework.</p>
-                <p>North Carolina has significant shortages in educational professionals across licensure areas. Our partner
-                    LEAs need (a) highly qualified teachers who meet the requirements for full state licensure, (b) structures
-                    and supports that sustain a new teacher pipeline, and (c) structures and support for teacher retention. The
-                    need for expanding the pipeline and producing more education professions creates an opportunity for
-                    equipping those professionals with the knowledge, skills, and dispositions to contribute to the UACS
-                    model. Teacher residency programs are an effective, comprehensive model for educator preparation.
-                    Residency programs have been shown to expand recruitment of candidates of color to the profession and
-                    improve district goals around teacher diversity, impact, and innovation. Residencies also provide
-                    opportunities for experienced teachers to act as mentors, while developing highly effective new teachers
-                    who are able to impact student achievement and community engagement from the moment they become
-                    the teacher of record.</p>
-                <p>SRCUACS will develop organizing frameworks for curriculum and pedagogical strategies, including
-                    research- and practice-based standards that guide regional and state educational preparation programs to
-                    prepare racially diverse, historically literate teachers for service in locally situated university-assisted
-                    community schools. The development of a transformational, equity-focused CSP educator pipeline will
-                    positively influence leadership practices and community engagement. Ultimately, our goal is to ensure
-                    communities feel seen, heard, and supported by local public schools in North Carolina. As we expand
-                    with the addition of partners throughout the Southeast region, we will support those partners in achieving
-                    the same goal in their respective states.</p>
             </div>
             <div class="grid-item">
                 <h2>Policy Change</h2>
-                <p>SRCUACS will leverage its work to support policy changes that result in an
-                    increased number of community schools, more effective implementation of the UACS model, and
-                    enhanced professional preparation programs that produce individuals with the capacity to contribute to the
-                    UACS model. Policy change and ongoing support from policymakers will be essential to realizing the
-                    potential for the UACS model in North Carolina and the region. Engaging policymakers to educate them
-                    about the model and demonstrate its impact in achieving common objectives will be key, and elements of
-                    the proposed Center directly address that work.</p>
-                <p>SRCUACS will be well positioned to engage state policymakers owing to several key elements of the
-                    proposed work—specifically, diversity in the initial partner sites (e.g., sites in both urban and rural
-                    settings); the statewide network that facilitates interaction and shared learning among sites: the research
-                    agenda for the empirical work (focuses on key elements of the UACS model but is appreciative of the
-                    contextual characteristics of individual communities) and related communication plan for disseminating
-                    results (focuses on varied products and delivery models for varied audiences); and the larger networks
-                    with which SRCUACS is connected (increasing exposure and foster legitimacy with policymakers).
-                    Identifying allies in state government and communicating with policymakers about what UACS sites are
-                    doing, the results they are achieving, and how policy and policymakers can contribute will be a central
-                    and ongoing part of our work.</p>
-                <p>The statewide SRCUACS network with a central hub will facilitate communication and shared learning
-                    among community school and UACS sites. This is crucial to developing understandings of how a shared
-                    model can be effectively implemented in different settings.</p>
             </div>
             <div class="grid-item">
                 <h2>Research</h2>
-                <p>In 2018, Durham Public Schools (DPS) and the Durham Public Schools Foundation
-                    partnered to pilot four community schools as a part of the Bull City Community Schools Partnership.
-                    During this time, faculty and staff at Duke and North Carolina Central University developed the Durham
-                    University-Assisted Community Schools Research Collective (DUACSRC), an interdisciplinary research
-                    team tasked with exploring how these two universities could leverage resources necessary to address the
-                    needs of local public schools through the UACS strategy. The DUACSRC is supported by Duke’s Bass
-                    Connections and Data + programs.</p>
-                <p>The DUACSRC operates through a year-long vertical integration model, engaging undergraduate
-                    students, graduate students, faculty, staff, and community partners in action-research methods. The overall
-                    research experience is rooted in interpretive social science methodologies that help to identify and
-                    investigate needs identified by regional community schools. Their work is also informed through annual
-                    site visits to UACS sites across the US which provides undergraduate researchers and faculty/staff leaders
-                    insight into the ongoing work of CS and UACS. Each year, the DUACSRC consolidates their findings
-                    and presents resources at the Bass Connections and Data+ showcase. A model for action-research such as
-                    the one described promotes student-led advocacy and community participation through facilitating an
-                    empowering research infrastructure.</p>
-                <p>Community-based action research is a powerful tool that can support the work of these coalitions by
-                    generating data-driven insights into the effectiveness of the UACS strategy and identifying areas for
-                    improvement. Additionally, community-based action research plays an essential role in building
-                    relationships between communities, universities, and other partners. The vertical integration model offers
-                    an important infrastructure for engaging both undergraduate and graduate students, allowing them to
-                    utilize expertise from their programs of study. It will also allow for the development of practitioners who
-                    are skilled and empowered to work with their communities; expanding capacity for engaged action
-                    researchers in the field focusing on informing ongoing UACS work.</p>
-                <p>While only recently launched, the ECU partnership with Elizabeth City-Pasquotank Schools is utilizing
-                    community-based action research with approaches that closely parallel the DUACSRC work to generate
-                    insights about the UACS strategy in Elizabeth City and–more specifically–about the nuances of
-                    implementing UACS in a rural setting.</p>
-                <p>The SRCUACS will serve to better guide and connect interdisciplinary UACS teams interested in
-                    launching community-based action research projects grounded in CS inquiry and strategy.</p>
             </div>
         </div>
         <p>This is another paragraph providing more information about us.</p>

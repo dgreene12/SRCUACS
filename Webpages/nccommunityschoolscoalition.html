@@ -2,8 +2,6 @@
 <head>
     <title>Southeast Regional Coalition for University-Assisted Community Schools</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
-    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -19,11 +17,11 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .header img {
-            height: 90px;
+            height: 160px;
             position: absolute;
-            left: 20px;
-            top: 15px;
-            bottom: 10px;
+            left: -5px;
+            top: -18px;
+            bottom: 5px;
             transition: all 0.3s;
         }
         .header img:hover {
@@ -52,6 +50,40 @@
         .navigation .current {
             background-color: #6699CC;
             color: black;
+        }
+        .hero-container {
+            position: relative;
+            width: 100%; 
+            height: 95%;
+            overflow: hidden;
+        }
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .hero-overlay {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 51, 102, 0.5);
+            z-index: 1;
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 100px;
+            font-weight: bold;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
         }
         .logos {
             background: #FFFFFF;
@@ -82,18 +114,129 @@
             margin: auto;
             width: 70%;
         }
+        .content h2 {
+            text-align: center;
+            margin: auto;
+            margin-bottom: 15px;
+            font-size: 48px;
+            font-weight: bold;
+        }
+        .content p {
+            text-align: center;
+            margin: auto;
+            font-size: 25px;
+            width: 70%;
+            margin-bottom: 20px;
+        }
+        .column {
+            float: left;
+            width: 32%;
+            padding: 10px 2%;
+            box-sizing: border-box;
+        }
+        .row::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+        .bullet-section {
+            text-align: center; 
+        }
+
+        .bullet-toggle {
+            display: none;
+        }
+
+        .dropdown-container {
+            border: 2px solid #6699CC;
+            border-radius: 8px;
+            padding: 10px;
+            margin-bottom: 20px;
+            transition: box-shadow 0.3s ease, transform 0.2s ease;
+            max-width: 300px;  /* Ensure consistent width */
+            margin: 0 auto;   /* Centers the boxes */
+        }
+
+        .dropdown-container:hover {
+            box-shadow: 0 10px 20px rgba(102, 153, 204, 0.2);
+            transform: translateY(-5px);
+        }
+
+        .bullet-title {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            cursor: pointer;
+            padding-right: 5px;
+            font-size: 22px;
+        }
+
+        .arrow {
+            border: solid #6699CC;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 5px;
+            transform: rotate(45deg);
+            transition: transform 0.3s ease;
+        }
+
+        .bullet-toggle:checked + .bullet-title .arrow {
+            transform: rotate(-135deg);
+        }
+
+        .bullet-desc {
+            display: none;
+            margin-top: 15px;
+            padding-left: 20px;
+            font-size: 20px;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .bullet-toggle:checked + .bullet-title + .bullet-desc {
+            display: block;
+        }
+
+        .bullet-column {
+            display: inline-block; /* Changed from float */
+            width: 48%;
+            padding: 10px 1%;
+            box-sizing: border-box;
+            text-align: left;
+            vertical-align: top; /* Ensure tops align even if content differs */
+        }
+
+        .bullet-center {
+            margin-top: 20px; /* To separate it a bit from the top two bullet points */
+        }
+
+        .bullet-center .dropdown-container {
+            max-width: 250px; /* Making it smaller */
+        }
+
         .footer {
             background-color: #003366;
             color: #FFFFFF;
             text-align: center;
             padding: 10px;
         }
+        .section-divider {
+            border: 0;
+            height: 1px;
+            background: #000000;
+            margin: 30px auto;
+            width: 80%;
+        }
+        .members-container {
+            max-width: 100%;
+            margin: auto;
+        }
     </style>
 </head>
 
 <body>
     <div class="header">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ba91b6eba378cb8c8689e420df0c9fff2d0c15f4/Images/Logos/bccsplogo.png" alt="Logo">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/b2d84fc651d6591d416705368585476f42070315/Images/Logos/srcuacslogo.png" alt="Logo">
         <h1>Southeast Regional Coalition for University-Assisted Community Schools</h1>
     </div>
 
@@ -112,38 +255,72 @@
         <a href="join.html">Join Our Network</a>
     </div>
 
-    <div class="content">
-        <h2>About the Coalition</h2>
-        <div id="nc-map" style="width: 100%; height: 500px;"></div>
+    <div class="hero-container">
+        <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Eastway WTSD">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">North Carolina Community Schools Coalition (NCCSC)</div>
     </div>
 
+    <div class="content">
+        <h2>First Title</h2>
+        <p>Your paragraph for the first title here.</p>
+        <div class="bullet-section">
+            <div class="row">
+                <div class="bullet-column">
+                    <div class="dropdown-container">
+                        <input type="checkbox" id="bullet1" class="bullet-toggle">
+                        <label for="bullet1" class="bullet-title">Bullet Point 1<i class="arrow"></i></label>
+                        <div class="bullet-desc" data-related="bullet1">Description for bullet point 1</div>
+                    </div>
+                </div>
+                <div class="bullet-column">
+                    <div class="dropdown-container">
+                        <input type="checkbox" id="bullet2" class="bullet-toggle">
+                        <label for="bullet2" class="bullet-title">Bullet Point 2<i class="arrow"></i></label>
+                        <div class="bullet-desc" data-related="bullet2">Description for bullet point 2</div>
+                    </div>
+                </div>
+            </div>
+            <div class="bullet-center">
+                <div class="dropdown-container">
+                    <input type="checkbox" id="bullet3" class="bullet-toggle">
+                    <label for="bullet3" class="bullet-title">Bullet Point 3<i class="arrow"></i></label>
+                    <div class="bullet-desc" data-related="bullet3">Description for bullet point 3</div>
+                </div>
+            </div>
+        </div>
+    <hr class="section-divider">
+    <div class="members-container">
+    <h2>Our Members</h2>
+    <div class="row">
+        <div class="column">
+            <p><strong style="color: #880023;">Word 1</strong></p>
+            <p>Word 2</p>
+            <p>Word 3</p>
+            <p>Word 4</p>
+        </div>
+        <div class="column">
+            <p>Word 5</p>
+            <p>Word 6</p>
+            <p>Word 7</p>
+            <p>Word 8</p>
+        </div>
+        <div class="column">
+            <p>Word 9</p>
+            <p>Word 10</p>
+            <p>Word 11</p>
+            <p>Word 12</p>
+        </div>
+    </div>
+        <hr class="section-divider">
+        </div>
+            <h2>Another Large Title</h2>
+            <p>Your paragraph for the large title here.</p>
+        </div>
     <div class="footer">
         <p>© 2023 Southeast Regional Coalition for University-Assisted Community Schools</p>
     </div>
 
-    <script>
-        var map = L.map('nc-map').setView([35.7596, -79.0193], 7);
-    
-        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-            maxZoom: 19
-        }).addTo(map);
-    
-        function onEachFeature(feature, layer) {
-            layer.on({
-                click: function (e) {
-                    alert("You clicked on county: " + feature.properties.name); // Or you can open a popup with content
-                }
-            });
-        }
-    
-        fetch('SRCUACS/North_Carolina_State_and_County_Boundary_Polygons.geojson').then(function(response) {
-            return response.json();
-        }).then(function(data) {
-            L.geoJSON(data, {
-                onEachFeature: onEachFeature
-            }).addTo(map);
-        });
-        </script>
 
 </body>
 

@@ -14,13 +14,14 @@
             color: #FFFFFF;
             padding: 20px;
             text-align: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .header img {
-            height: 90px;
+            height: 160px;
             position: absolute;
-            left: 20px;
-            top: 15px;
-            bottom: 10px;
+            left: -5px;
+            top: -18px;
+            bottom: 5px;
             transition: all 0.3s;
         }
         .header img:hover {
@@ -47,8 +48,8 @@
             color: black;
         }
         .navigation .current {
-        background-color: #6699CC;
-        color: black;
+            background-color: #6699CC;
+            color: black;
         }
         .logos {
             background: #FFFFFF;
@@ -66,10 +67,11 @@
             position: relative;
             color: white;
             background-image: url('https://raw.githubusercontent.com/dgreene12/SRCUACS/d7eb5583a36bee668eaaff950ce71ef75f960887/Images/Display%20Photos/DSC03036.jpg');
-            background-position: center top;
+            background-attachment: fixed;
+            background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            height: 100%;
+            height: 600px;
             overflow: hidden;
         }
         .hero-overlay::before {
@@ -100,7 +102,7 @@
             font-size: 20px;
         }
         .learn-more-btn {
-            top: 90%;
+            top: 88%;
             padding: 15px 30px;
             background-color: #880023;
             color: white;
@@ -207,6 +209,13 @@
             height: auto;
             max-height: 100%;
         }
+        .section-divider {
+            border: 0;
+            height: 1px;
+            background: #000000;
+            margin: 30px auto;
+            width: 80%;
+        }
     </style>
     <script>
         function showSuccessMessage() {
@@ -216,7 +225,7 @@
 </head>
 <body>
     <div class="header">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ba91b6eba378cb8c8689e420df0c9fff2d0c15f4/Images/Logos/bccsplogo.png" alt="Logo">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/b2d84fc651d6591d416705368585476f42070315/Images/Logos/srcuacslogo.png" alt="Logo">
         <h1> Southeast Regional Coalition for University-Assisted Community Schools</h1>
     </div>
     <div class="logos">
@@ -225,7 +234,7 @@
         <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/46a76358a53e123c84365ecce3e2ffe7edca7e4e/Images/Logos/Main%20Schools/ECU_lockup_primary_Purple.jpg" alt="East Carolina University">
     </div>
     <div class="navigation">
-        <a href="home.html" class="current">Home</a>
+        <a href="index.html" class="current">Home</a>
         <a href="aboutus.html">About</a>
         <a href="people.html">People</a>
         <a href="uacs2.html">UACS</a>
@@ -241,7 +250,8 @@
         <a href="aboutus.html" class="learn-more-btn">Learn More</a>
     </div>
     <div class="content">
-        <p>The Southeast Regional Coalition for University-Assisted Community Schools is a group of universities, schools, community partners, and individuals that are dedicated to promoting the development and sustainability of University-Assisted Community Schools throughout the Southeast.</p>
+        <p><b>The Southeast Regional Coalition for University-Assisted Community Schools</b> is a group of universities, schools, community partners, and individuals that are dedicated to promoting the development and sustainability of University-Assisted Community Schools throughout the Southeast.</p>
+        <hr class="section-divider">
         <h2>What We Do</h2>
         <div class="what-we-do">
             <div class="box-container">
@@ -279,8 +289,8 @@
     </div>
     </div>
     <div class="newsletter-signup">
-        <input type="email" placeholder="Enter your email">
-        <input type="submit" value="Subscribe" onclick="showSuccessMessage()">
+        <input type="email" placeholder="Enter your email" required>
+        <input type="submit" value="Subscribe to our newsletter!" onclick="showSuccessMessage()">
     </div>
     <div id="success-message" style="display:none; text-align:center; padding: 10px; background-color: #6699CC; color: white;">
         Thank you for subscribing!

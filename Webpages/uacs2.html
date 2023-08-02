@@ -33,11 +33,11 @@
         }
 
         .header img {
-            height: 100px;
+            height: 160px;
             position: absolute;
-            left: 20px;
-            top: 15px;
-            bottom: 10px;
+            left: -5px;
+            top: -18px;
+            bottom: 5px;
             transition: all 0.3s;
         }
 
@@ -81,6 +81,13 @@
             z-index: 2;
             text-align: center;
             width: 100%;
+        }
+
+        .footer {
+            background-color: #003366;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 10px;
         }
 
         .logos {
@@ -200,7 +207,7 @@
             top: 0;
             left: 50%;
             transform: translateX(-50%);
-            bottom: 0;
+            bottom: -165%;  /*timeline length*/
             width: 6px;
             background-color: #003366;
         }
@@ -218,7 +225,7 @@
 </head>
     <body>
         <div class="header">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ba91b6eba378cb8c8689e420df0c9fff2d0c15f4/Images/Logos/bccsplogo.png" alt="Logo">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/b2d84fc651d6591d416705368585476f42070315/Images/Logos/srcuacslogo.png" alt="Logo">
             <h1> Southeast Regional Coalition for University-Assisted Community Schools</h1>
         </div>
     
@@ -266,6 +273,42 @@
             </div>
         </div>
     </div>
+
+        <div class="event" data-aos="fade-up">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
+                <div class="event-content">
+                    <h3>Event 4 Title</h3>
+                    <p>Short description or details about event 3.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="event" data-aos="fade-up">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
+            <div class="event-content">
+                <h3>Event 5 Title</h3>
+                <p>Short description or details about event 5.</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="event" data-aos="fade-up">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
+            <div class="event-content">
+                <h3>Event 6 Title</h3>
+                <p>Short description or details about event 6.</p>
+            </div>
+        </div>
+        </div>
+
+        <div class="event" data-aos="fade-up">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
+            <div class="event-content">
+                <h3>Event 7 Title</h3>
+                <p>Short description or details about event 7.</p>
+            </div>
+        </div>
+        </div>
     
     <!-- AOS Initialization -->
     <script>
@@ -273,6 +316,8 @@
           duration: 1200, // Duration of the animation
         });
     </script>
-    
-    </body>
-    </html>
+    <div class="footer">
+        <p>© 2023 Southeast Regional Coalition for University-Assisted Community Schools</p>
+    </div>
+</body>
+</html>

@@ -3,151 +3,230 @@
     <title> Southeast Regional Coalition for University-Assisted Community Schools</title>
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <style>
-        body {
-            font-family: 'Roboto', sans-serif;
-            background-color: #F2F2F2;
-            margin: 0;
-            padding: 0;
-        }
-        .header {
-            background-color: #003366;
-            color: #FFFFFF;
-            padding: 20px;
-            text-align: center;
-        }
-        .header img {
-            height: 90px;
-            position: absolute;
-            left: 20px;
-            top: 15px;
-            bottom: 10px;
-            transition: all 0.3s;
-        }
-        .header img:hover {
-            transform: scale(1.1);
-        }
-        .navigation {
-            display: flex;
-            justify-content: center;
-            background-color: #003366;
-            position: sticky;
-            top: 0;
-            z-index: 10;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-        }
-        .navigation a {
-            color: #FFFFFF;
-            text-align: center;
-            padding: 18px 20px;
-            text-decoration: none;
-            font-size: 17px;
-        }
-        .navigation a:hover {
-            background-color: #6699CC;
-            color: black;
-        }
-        .navigation .current {
+    body {
+        font-family: 'Roboto', sans-serif;
+        background-color: #F2F2F2;
+        margin: 0;
+        padding: 0;
+    }
+
+    .header, .navigation, .footer {
+        background-color: #003366;
+        color: #FFFFFF;
+        text-align: center;
+    }
+
+    .header {
+        padding: 20px;
+    }
+
+    .header img {
+        height: 160px;
+        position: absolute;
+        left: -5px;
+        top: -18px;
+        bottom: 5px;
+        transition: transform 0.3s;
+    }
+
+    .header img:hover {
+        transform: scale(1.1);
+    }
+
+    .navigation {
+        display: flex;
+        justify-content: center;
+        position: sticky;
+        top: 0;
+        z-index: 10;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .navigation a {
+        color: #FFFFFF;
+        padding: 18px 20px;
+        text-decoration: none;
+        font-size: 17px;
+    }
+
+    .navigation a:hover, .navigation .current {
         background-color: #6699CC;
         color: black;
-        }
-        .logos {
-            background: #FFFFFF;
-            display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            padding: 10px;
-        }   
-        .logos img {
-            height: 50px;
-            width: auto;
-            max-width: 30%;
+    }
+
+    .logos {
+        background: #FFFFFF;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .logos img {
+        height: 50px;
+        width: auto;
+        max-width: 30%;
+        position: relative;
+        z-index: 1;
+    }
+
+    .logos img:not(:last-child)::after {
+        content: "";
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 80%;
+        width: 2px;
+        background-color: #003366;
+        z-index: 2;
+    }
+
+    .hero-container {
             position: relative;
-            z-index: 1;
-        }
-        .logos img:not(:last-child)::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            height: 80%;
-            width: 2px;
-            background-color: #003366;
-            z-index: 2;
+            width: 100%; 
+            height: 95%;
+            overflow: hidden;
         }
         .hero-image {
             width: 100%;
-            height: auto;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
-        .content {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            padding: 20px;
+        .hero-overlay {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 51, 102, 0.5);
+            z-index: 1;
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 140px;
+            font-weight: bold;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
+        }   
+
+    .content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        padding: 20px;
+        text-align: center;
+        margin: auto;
+        width: 70%;
+    }
+
+    .content h2 {
             text-align: center;
             margin: auto;
-            width: 70%;
-        }
-        .footer {
-            background-color: #003366;
-            color: #FFFFFF;
-            text-align: center;
-            padding: 10px;
-        }
-        .partnership-form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 20px;
-            padding: 20px;
-            background-color: #e0e0e0;
-            border-radius: 8px;
-            margin: 20px auto;
-            max-width: 500px;
-            transition: all 0.3s;
-        }
-        .partnership-form:hover {
-            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-        }
-        .partnership-form label {
-            align-self: center;
+            margin-top: 15px;
+            margin-bottom: 15px;
+            font-size: 30px;
             font-weight: bold;
         }
-        .partnership-form input[type="text"],
-        .partnership-form input[type="email"],
-        .partnership-form input[type="tel"],
-        .partnership-form textarea {
-            width: 100%;
-            padding: 10px;
-            border-radius: 4px;
-            border: 1px solid #ccc;
-            font-family: 'Roboto', sans-serif; /* Match other text fonts */
+        .content p {
+            text-align: center;
+            margin: auto;
+            font-size: 25px;
+            width: 70%;
+            margin-bottom: 20px;
         }
-        .partnership-form input[type="submit"] {
-            padding: 10px 20px;
-            font-size: 16px;
-            border: none;
-            background-color: #003366;
-            color: #FFFFFF;
-            cursor: pointer;
-            border-radius: 4px;
-            transition: all 0.3s;
+
+    .footer {
+        padding: 10px;
+    }
+
+    .two-columns {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 20px; 
+    }
+
+    .column {
+        flex-basis: 48%; 
+        max-width: 48%;
+        box-sizing: border-box;
+    }
+
+    .newsletter-form, .partnership-form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+        padding: 20px;
+        background-color: #e0e0e0;
+        border-radius: 8px;
+        margin: 20px auto;
+        max-width: 500px;
+        transition: all 0.3s;
+    }
+
+    .newsletter-form:hover, .partnership-form:hover {
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .newsletter-form label, .partnership-form label {
+        align-self: center;
+        font-weight: bold;
+    }
+
+    .newsletter-form input[type="email"], .partnership-form input, .partnership-form textarea {
+        width: 100%;
+        padding: 10px;
+        border-radius: 4px;
+        border: 1px solid #ccc;
+        font-family: 'Roboto', sans-serif;
+    }
+
+    .newsletter-form input[type="submit"], .partnership-form input[type="submit"] {
+        padding: 10px 20px;
+        font-size: 16px;
+        border: none;
+        background-color: #003366;
+        color: #FFFFFF;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: all 0.3s;
+    }
+
+    .newsletter-form input[type="submit"]:hover, .partnership-form input[type="submit"]:hover {
+        background-color: #6699CC;
+    }
+
+    .success-message {
+        display: none;
+        color: #006633;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+
+    .icon-checkmark {
+        font-size: 50px;
+        color: green;
+        display: none;
+    }
+
+    .section-divider {
+            border: 0;
+            height: 1px;
+            background: #000000;
+            margin: 30px auto;
+            width: 80%;
         }
-        .partnership-form input[type="submit"]:hover {
-            background-color: #6699CC;
-        }
-        .success-message {
-            display: none;
-            color: #006633;
-            font-size: 18px;
-            margin-top: 20px;
-        }
-        .icon-checkmark {
-            font-size: 50px;
-            color: green;
-            display: none;
-        }
+
     </style>
     <script>
         function showSuccessMessage() {
@@ -159,7 +238,7 @@
 </head>
 <body>
     <div class="header">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ba91b6eba378cb8c8689e420df0c9fff2d0c15f4/Images/Logos/bccsplogo.png" alt="Logo">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/b2d84fc651d6591d416705368585476f42070315/Images/Logos/srcuacslogo.png" alt="Logo">
         <h1> Southeast Regional Coalition for University-Assisted Community Schools</h1>
     </div>
     <div class="logos">
@@ -175,33 +254,61 @@
         <a href="nccommunityschoolscoalition.html">North Carolina Community Schools Coalition</a>
         <a href="join.html" class="current">Join Our Network</a>
     </div>
+
+    <div class="hero-container">
+        <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Eastway WTSD">
+        <div class="hero-overlay"></div>
+        <div class="hero-text">Join Our Network</div>
+    </div>
+
     <div class="content">
-        <h1>Join Our Network</h1>
         <p>We're excited to build strong, meaningful partnerships with organizations that share our values and goals. If you're interested in working with us, we'd love to hear from you!</p>
-        <form class="partnership-form" action="/joinusbackend" method="post" onsubmit="event.preventDefault(); showSuccessMessage();">
-            <label for="org-name">Organization Name:</label>
-            <input type="text" id="org-name" name="org-name" required>
+
+        <hr class="section-divider">
+
+        <div class="two-columns">
+
+            <div class="column">
+                <h2>Work with us</h2>
+                <form class="partnership-form" action="/joinusbackend" method="post" onsubmit="event.preventDefault(); showSuccessMessage();">
+                    <label for="org-name">Organization Name: [optional]</label>
+                    <input type="text" id="org-name" name="org-name">
             
-            <label for="contact-name">Contact Name:</label>
-            <input type="text" id="contact-name" name="contact-name" required>
+                <label for="contact-name">Contact Name:</label>
+                <input type="text" id="contact-name" name="contact-name" required>
 
-            <label for="contact-email">Contact Email:</label>
-            <input type="email" id="contact-email" name="contact-email" required>
+                <label for="contact-email">Contact Email:</label>
+                <input type="email" id="contact-email" name="contact-email" required>
 
-            <label for="contact-phone">Contact Phone:</label>
-            <input type="tel" id="contact-phone" name="contact-phone">
+                <label for="contact-phone">Contact Phone:</label>
+                <input type="tel" id="contact-phone" name="contact-phone">
 
-            <label for="interest">Briefly describe your interest in partnering with us:</label>
-            <textarea id="interest" name="interest" rows="4" required></textarea>
+                <label for="interest">Briefly describe your interest in partnering with us:</label>
+                <textarea id="interest" name="interest" rows="4" required></textarea>
 
-            <input type="submit" value="Submit">
-        </form>
+                <input type="submit" value="Submit">
+            </form>
         <div class="icon-checkmark">✔️</div>
         <div id="success-message" class="success-message">
             <h2>Thank you for submitting!</h2>
             <p>We'll be in contact soon.</p>
-            </div>
         </div>
+    </div>
+        <div class="column">
+            <h2>Sign up for our Newsletter</h2>
+            <form class="newsletter-form" action="/newsletterbackend" method="post">
+                <label for="newsletter-email">Email:</label>
+                <input type="email" id="newsletter-email" name="newsletter-email" required>
+                <input type="submit" value="Sign Up">
+            </form>
+            <div class="icon-checkmark">✔️</div>
+        <div id="success-message" class="success-message">
+            <h2>Thank you for submitting!</h2>
+            <p>We'll be in contact soon.</p>
+        </div>
+        </div>
+    </div>
+    </div>
     <div class="footer">
         <p>© 2023 Southeast Regional Coalition for University-Assisted Community Schools</p>
     </div>
