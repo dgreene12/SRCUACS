@@ -1,7 +1,11 @@
 <html lang="en">
 <head>
+    <meta charset="UTF-8">
     <title> Southeast Regional Coalition for University-Assisted Community Schools</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -12,20 +16,20 @@
         .header {
             background-color: #003366;
             color: #FFFFFF;
-            padding: 20px;
-            text-align: center;
+            padding: 120px 60px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
         .header img {
-            height: 160px;
+            height: 240px;
             position: absolute;
-            left: -5px;
-            top: -18px;
-            bottom: 5px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
             transition: all 0.3s;
         }
         .header img:hover {
-            transform: scale(1.1);
+            transform: translate(-50%, -50%) scale(1.1);
         }
         .navigation {
             display: flex;
@@ -71,7 +75,7 @@
             background-position: center;
             background-size: cover;
             background-repeat: no-repeat;
-            height: 600px;
+            height: 800px;
             overflow: hidden;
         }
         .hero-overlay::before {
@@ -129,6 +133,10 @@
         }
         .box-container {
             width: 23%;
+            transition: transform 0.3s;
+        }
+        .box-container:hover {
+            transform: translateY(-10px);
         }
         .box-title {
             font-weight: bold;
@@ -138,21 +146,24 @@
         width: 100%;
         height: auto;
         }
+        .box img:hover {
+            transform: scale(1.05);
+        }
         .box-title, .box-caption {
         font-size: 24px;
         font-weight: bold;
         text-align: center;
         }
-        .box:nth-child(1) {
+        .box-container:nth-child(1) .box {
         border: 5px solid #FF5733;
         }
-        .box:nth-child(2) {
-            border: 5px solid #33FF57;
-        }
-        .box:nth-child(3) {
+        .box-container:nth-child(2) .box {
             border: 5px solid #5733FF;
         }
-        .box:nth-child(4) {
+        .box-container:nth-child(3) .box {
+            border: 5px solid #5733FF;
+        }
+        .box-container:nth-child(4) .box {
             border: 5px solid #FFD733;
         }
         .box-caption {
@@ -163,6 +174,9 @@
             text-align: center;
             margin: auto;
             width: 70%;
+            background: rgba(255,255,255,0.8);
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
         .content > p {
             font-size: 1.5em;
@@ -176,7 +190,8 @@
             background-color: #003366;
             color: #FFFFFF;
             text-align: center;
-            padding: 10px;
+            padding: 20px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
         }
         .newsletter-signup {
             display: flex;
@@ -212,7 +227,7 @@
         .section-divider {
             border: 0;
             height: 1px;
-            background: #000000;
+            background: linear-gradient(270deg, transparent, #000000, transparent);
             margin: 30px auto;
             width: 80%;
         }
@@ -225,8 +240,7 @@
 </head>
 <body>
     <div class="header">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/b2d84fc651d6591d416705368585476f42070315/Images/Logos/srcuacslogo.png" alt="Logo">
-        <h1> Southeast Regional Coalition for University-Assisted Community Schools</h1>
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
     </div>
     <div class="logos">
         <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/e4aca0077e4e12f0c83811babea9db383d1ef75a/Images/Logos/Main%20Schools/duke_wordmark_royalblue_00539B.jpg" alt="Duke University">
@@ -249,11 +263,14 @@
             University of Pennsylvania</div>
         <a href="aboutus.html" class="learn-more-btn">Learn More</a>
     </div>
-    <div class="content">
-        <p><b>The Southeast Regional Coalition for University-Assisted Community Schools</b> is a group of universities, schools, community partners, and individuals that are dedicated to promoting the development and sustainability of University-Assisted Community Schools throughout the Southeast.</p>
+    <div class="content" data-aos="fade-up" data-aos-delay="300">
+        <p><b>The Southeast Regional Coalition for University-Assisted Community Schools (SRCUACS)</b> is a group of universities, schools, community partners, and individuals that are dedicated to promoting the development and sustainability of University-Assisted Community Schools throughout the Southeast.</p>
+        <hr class="section-divider">
+        <h2>What are community schools?</h2>
+        <p> Text text text</p>
         <hr class="section-divider">
         <h2>What We Do</h2>
-        <div class="what-we-do">
+        <div class="what-we-do" data-aos="fade-up" data-aos-delay="300">
             <div class="box-container">
                 <div class="box-title">Title 1</div>
                 <div class="box">
@@ -287,16 +304,19 @@
             </div>
         </div>
     </div>
-    </div>
     <div class="newsletter-signup">
         <input type="email" placeholder="Enter your email" required>
         <input type="submit" value="Subscribe to our newsletter!" onclick="showSuccessMessage()">
     </div>
+</div>
     <div id="success-message" style="display:none; text-align:center; padding: 10px; background-color: #6699CC; color: white;">
         Thank you for subscribing!
     </div>
     <div class="footer">
         <p>© 2023 Southeast Regional Coalition for University-Assisted Community Schools</p>
     </div>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

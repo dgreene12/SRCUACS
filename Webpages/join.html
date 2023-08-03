@@ -1,6 +1,8 @@
 <html>
 <head>
+    <meta charset="UTF-8">
     <title> Southeast Regional Coalition for University-Assisted Community Schools</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <style>
     body {
@@ -17,21 +19,23 @@
     }
 
     .header {
-        padding: 20px;
-    }
-
-    .header img {
-        height: 160px;
-        position: absolute;
-        left: -5px;
-        top: -18px;
-        bottom: 5px;
-        transition: transform 0.3s;
-    }
-
-    .header img:hover {
-        transform: scale(1.1);
-    }
+            background-color: #003366;
+            color: #FFFFFF;
+            padding: 120px 60px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .header img {
+            height: 240px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s;
+        }
+        .header img:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
 
     .navigation {
         display: flex;
@@ -87,6 +91,7 @@
             width: 100%; 
             height: 95%;
             overflow: hidden;
+            margin-bottom: 20px;
         }
         .hero-image {
             width: 100%;
@@ -126,6 +131,8 @@
         text-align: center;
         margin: auto;
         width: 70%;
+        box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.05);
+        background-color: #FBFBFB;
     }
 
     .content h2 {
@@ -135,24 +142,29 @@
             margin-bottom: 15px;
             font-size: 30px;
             font-weight: bold;
+            background-color: #FBFBFB;
+            border-radius: 4px;
         }
         .content p {
             text-align: center;
             margin: auto;
-            font-size: 25px;
-            width: 70%;
+            font-size: 20px;
+            width: 75%;
             margin-bottom: 20px;
+            line-height: 1.5;
         }
 
     .footer {
-        padding: 10px;
+        margin-top: 20px;
+        padding: 20px;
+        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
     }
 
     .two-columns {
         display: flex;
         justify-content: space-between;
         flex-wrap: wrap;
-        gap: 20px; 
+        gap: 30px; 
     }
 
     .column {
@@ -161,7 +173,7 @@
         box-sizing: border-box;
     }
 
-    .newsletter-form, .partnership-form {
+    .newsletter-form, .partnership-form, .contact-info {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -172,6 +184,7 @@
         margin: 20px auto;
         max-width: 500px;
         transition: all 0.3s;
+        box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
     }
 
     .newsletter-form:hover, .partnership-form:hover {
@@ -192,13 +205,13 @@
     }
 
     .newsletter-form input[type="submit"], .partnership-form input[type="submit"] {
-        padding: 10px 20px;
-        font-size: 16px;
+        padding: 12px 25px;
+        font-size: 17px;
         border: none;
-        background-color: #003366;
+        background-color: #880023;
         color: #FFFFFF;
         cursor: pointer;
-        border-radius: 4px;
+        border-radius: 6px;
         transition: all 0.3s;
     }
 
@@ -222,7 +235,7 @@
     .section-divider {
             border: 0;
             height: 1px;
-            background: #000000;
+            background: linear-gradient(270deg, transparent, #000000, transparent);
             margin: 30px auto;
             width: 80%;
         }
@@ -238,8 +251,7 @@
 </head>
 <body>
     <div class="header">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/b2d84fc651d6591d416705368585476f42070315/Images/Logos/srcuacslogo.png" alt="Logo">
-        <h1> Southeast Regional Coalition for University-Assisted Community Schools</h1>
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
     </div>
     <div class="logos">
         <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/e4aca0077e4e12f0c83811babea9db383d1ef75a/Images/Logos/Main%20Schools/duke_wordmark_royalblue_00539B.jpg" alt="Duke University">
@@ -256,7 +268,7 @@
     </div>
 
     <div class="hero-container">
-        <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Eastway WTSD">
+        <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/d5ac69cf1a01545d41cf07a39837478b106bb55a/Images/Display%20Photos/ncconference.jpeg" alt="Eastway WTSD">
         <div class="hero-overlay"></div>
         <div class="hero-text">Join Our Network</div>
     </div>
@@ -269,21 +281,21 @@
         <div class="two-columns">
 
             <div class="column">
-                <h2>Work with us</h2>
+                <h2>Work with us!</h2>
                 <form class="partnership-form" action="/joinusbackend" method="post" onsubmit="event.preventDefault(); showSuccessMessage();">
-                    <label for="org-name">Organization Name: [optional]</label>
+                    <label for="org-name">Organization Name [optional]</label>
                     <input type="text" id="org-name" name="org-name">
             
-                <label for="contact-name">Contact Name:</label>
+                <label for="contact-name">Contact Name</label>
                 <input type="text" id="contact-name" name="contact-name" required>
 
-                <label for="contact-email">Contact Email:</label>
+                <label for="contact-email">Contact Email</label>
                 <input type="email" id="contact-email" name="contact-email" required>
 
-                <label for="contact-phone">Contact Phone:</label>
+                <label for="contact-phone">Contact Phone</label>
                 <input type="tel" id="contact-phone" name="contact-phone">
 
-                <label for="interest">Briefly describe your interest in partnering with us:</label>
+                <label for="interest">Briefly describe your interest in partnering with us!</label>
                 <textarea id="interest" name="interest" rows="4" required></textarea>
 
                 <input type="submit" value="Submit">
@@ -295,9 +307,9 @@
         </div>
     </div>
         <div class="column">
-            <h2>Sign up for our Newsletter</h2>
+            <h2>Sign up for our newsletter!</h2>
             <form class="newsletter-form" action="/newsletterbackend" method="post">
-                <label for="newsletter-email">Email:</label>
+                <label for="newsletter-email">Email</label>
                 <input type="email" id="newsletter-email" name="newsletter-email" required>
                 <input type="submit" value="Sign Up">
             </form>
@@ -305,6 +317,11 @@
         <div id="success-message" class="success-message">
             <h2>Thank you for submitting!</h2>
             <p>We'll be in contact soon.</p>
+        </div>
+            <div class=".contact-info">
+                <h2>Inquiries</h2>
+                <p>For inquiries or media relations, please contact Alec Greenwald at alec.greenwald@duke.edu.</p>
+            </div>
         </div>
         </div>
     </div>

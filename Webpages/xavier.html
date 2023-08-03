@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Southeast Regional Coalition for University-Assisted Community Schools</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <style>
         body {
@@ -16,20 +17,20 @@
         .header {
             background-color: #003366;
             color: #FFFFFF;
-            padding: 20px;
-            text-align: center;
+            padding: 120px 60px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
         .header img {
-            height: 160px;
+            height: 240px;
             position: absolute;
-            left: -5px;
-            top: -18px;
-            bottom: 5px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
             transition: all 0.3s;
         }
         .header img:hover {
-            transform: scale(1.1);
+            transform: translate(-50%, -50%) scale(1.1);
         }
         .navigation {
             display: flex;
@@ -172,12 +173,18 @@
         .main-content {
             display: flex;
         }
+        .footer {
+            background-color: #003366;
+            color: #FFFFFF;
+            text-align: center;
+            padding: 20px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+        }
     </style>
 </head>
 <body>
     <div class="header">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/b2d84fc651d6591d416705368585476f42070315/Images/Logos/srcuacslogo.png" alt="Logo">
-        <h1>Southeast Regional Coalition for University-Assisted Community Schools</h1>
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
     </div>
 
     <div class="logos">
@@ -226,6 +233,9 @@
                 <p>Second paragraph of the bio...</p>
             </div>
         </div>
+    </div>
+    <div class="footer">
+        <p>© 2023 Southeast Regional Coalition for University-Assisted Community Schools</p>
     </div>
 </body>
 </html>

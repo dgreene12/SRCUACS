@@ -1,6 +1,8 @@
 <html>
 <head>
+    <meta charset="UTF-8">
     <title>Southeast Regional Coalition for University-Assisted Community Schools</title>
+    <link rel="icon" href="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <style>
         body {
@@ -12,20 +14,20 @@
         .header {
             background-color: #003366;
             color: #FFFFFF;
-            padding: 20px;
-            text-align: center;
+            padding: 120px 60px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
         }
         .header img {
-            height: 160px;
+            height: 240px;
             position: absolute;
-            left: -5px;
-            top: -18px;
-            bottom: 5px;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
             transition: all 0.3s;
         }
         .header img:hover {
-            transform: scale(1.1);
+            transform: translate(-50%, -50%) scale(1.1);
         }
         .navigation {
             display: flex;
@@ -79,7 +81,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            font-size: 100px;
+            font-size: 50px;
             font-weight: bold;
             z-index: 2;
             text-align: center;
@@ -113,6 +115,11 @@
             text-align: center;
             margin: auto;
             width: 70%;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            margin-top: 20px;
+            border-radius: 5px;
         }
         .content h2 {
             text-align: center;
@@ -134,6 +141,13 @@
             padding: 10px 2%;
             box-sizing: border-box;
         }
+        .column p {
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+        .column p:hover {
+            color: #6699CC;
+        }
         .row::after {
             content: "";
             clear: both;
@@ -141,6 +155,7 @@
         }
         .bullet-section {
             text-align: center; 
+            padding: 20px 0;
         }
 
         .bullet-toggle {
@@ -152,13 +167,14 @@
             border-radius: 8px;
             padding: 10px;
             margin-bottom: 20px;
-            transition: box-shadow 0.3s ease, transform 0.2s ease;
-            max-width: 300px;  /* Ensure consistent width */
+            transition: box-shadow 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+            max-width: 300px;
             margin: 0 auto;   /* Centers the boxes */
         }
 
         .dropdown-container:hover {
             box-shadow: 0 10px 20px rgba(102, 153, 204, 0.2);
+            border-color: #003366;
             transform: translateY(-5px);
         }
 
@@ -171,13 +187,17 @@
             font-size: 22px;
         }
 
+        .bullet-title:hover .arrow {
+            transform: rotate(-90deg);
+        }
+
         .arrow {
             border: solid #6699CC;
             border-width: 0 3px 3px 0;
             display: inline-block;
             padding: 5px;
             transform: rotate(45deg);
-            transition: transform 0.3s ease;
+            transition: all 0.3s; 
         }
 
         .bullet-toggle:checked + .bullet-title .arrow {
@@ -198,46 +218,48 @@
         }
 
         .bullet-column {
-            display: inline-block; /* Changed from float */
+            display: inline-block;
             width: 48%;
             padding: 10px 1%;
             box-sizing: border-box;
             text-align: left;
-            vertical-align: top; /* Ensure tops align even if content differs */
+            vertical-align: top;
         }
 
         .bullet-center {
-            margin-top: 20px; /* To separate it a bit from the top two bullet points */
+            margin-top: 20px;
         }
 
         .bullet-center .dropdown-container {
-            max-width: 250px; /* Making it smaller */
+            max-width: 250px;
         }
 
         .footer {
             background-color: #003366;
             color: #FFFFFF;
             text-align: center;
-            padding: 10px;
+            margin-top: 20px;
+            padding: 20px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
         }
         .section-divider {
             border: 0;
             height: 1px;
-            background: #000000;
+            background: linear-gradient(270deg, transparent, #000000, transparent);
             margin: 30px auto;
             width: 80%;
         }
         .members-container {
             max-width: 100%;
             margin: auto;
+            padding: 20px;
         }
     </style>
 </head>
 
 <body>
     <div class="header">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/b2d84fc651d6591d416705368585476f42070315/Images/Logos/srcuacslogo.png" alt="Logo">
-        <h1>Southeast Regional Coalition for University-Assisted Community Schools</h1>
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
     </div>
 
     <div class="logos">
@@ -258,7 +280,7 @@
     <div class="hero-container">
         <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Eastway WTSD">
         <div class="hero-overlay"></div>
-        <div class="hero-text">North Carolina Community Schools Coalition (NCCSC)</div>
+        <div class="hero-text"><h1>North Carolina Community Schools Coalition (NCCSC)</h1></div>
     </div>
 
     <div class="content">
