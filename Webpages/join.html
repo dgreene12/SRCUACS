@@ -282,7 +282,7 @@
 
             <div class="column">
                 <h2>Work with us!</h2>
-                <form class="partnership-form" action="/joinusbackend" method="post" onsubmit="event.preventDefault(); showSuccessMessage();">
+                <form class="partnership-form" name="partnership-form" method="POST" data-netlify="true">
                     <label for="org-name">Organization Name [optional]</label>
                     <input type="text" id="org-name" name="org-name">
             
@@ -308,7 +308,7 @@
     </div>
         <div class="column">
             <h2>Sign up for our newsletter!</h2>
-            <form class="newsletter-form" action="/newsletterbackend" method="post">
+            <form class="newsletter-form" name="newsletter-form" method="POST" data-netlify="true">
                 <label for="newsletter-email">Email</label>
                 <input type="email" id="newsletter-email" name="newsletter-email" required>
                 <input type="submit" value="Sign Up">

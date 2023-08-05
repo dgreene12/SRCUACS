@@ -4,6 +4,8 @@
     <title>Southeast Regional Coalition for University-Assisted Community Schools</title>
     <link rel="icon" href="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <style>
         body {
             font-family: 'Roboto', sans-serif;
@@ -124,7 +126,7 @@
         .content h2 {
             text-align: center;
             margin: auto;
-            margin-bottom: 15px;
+            margin-bottom: 45px;
             font-size: 48px;
             font-weight: bold;
         }
@@ -168,7 +170,7 @@
             padding: 10px;
             margin-bottom: 20px;
             transition: box-shadow 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
-            max-width: 300px;
+            max-width: 500px;
             margin: 0 auto;   /* Centers the boxes */
         }
 
@@ -185,6 +187,7 @@
             cursor: pointer;
             padding-right: 5px;
             font-size: 22px;
+            font-weight: 900;
         }
 
         .bullet-title:hover .arrow {
@@ -211,6 +214,8 @@
             font-size: 20px;
             opacity: 0.9;
             line-height: 1.6;
+            text-align: left;
+            max-width: 600px;
         }
 
         .bullet-toggle:checked + .bullet-title + .bullet-desc {
@@ -231,7 +236,7 @@
         }
 
         .bullet-center .dropdown-container {
-            max-width: 250px;
+            max-width: 400px;
         }
 
         .footer {
@@ -253,6 +258,17 @@
             max-width: 100%;
             margin: auto;
             padding: 20px;
+        }
+        .member {
+            margin-bottom: 50px !important;
+        }
+        .member::before {
+            content: "•";
+            color: #880023;
+            display: inline-block;
+            width: 1em;
+            margin-left: -1.5em;
+            position: relative;
         }
     </style>
 </head>
@@ -283,66 +299,81 @@
         <div class="hero-text"><h1>North Carolina Community Schools Coalition (NCCSC)</h1></div>
     </div>
 
-    <div class="content">
-        <h2>First Title</h2>
-        <p>Your paragraph for the first title here.</p>
-        <div class="bullet-section">
+    <div class="content" data-aos="fade-up" data-aos-delay="100">
+        <h2>Our Mission</h2>
+        <p>The North Carolina Community School Coalition (NCCSC), guided by the Whole School,
+            Whole Community, Whole Child Framework and the four pillars of community schools,
+            aims to improve the academic, mental, and physical health of North Carolina
+            through three strategic priorities:</p>
+        <div class="bullet-section" data-aos="fade-up" data-aos-delay="300">
             <div class="row">
                 <div class="bullet-column">
                     <div class="dropdown-container">
                         <input type="checkbox" id="bullet1" class="bullet-toggle">
-                        <label for="bullet1" class="bullet-title">Bullet Point 1<i class="arrow"></i></label>
-                        <div class="bullet-desc" data-related="bullet1">Description for bullet point 1</div>
+                        <label for="bullet1" class="bullet-title">Community Schools<i class="arrow"></i></label>
+                        <div class="bullet-desc" data-related="bullet1">The integration of cross-sector partnerships
+                            and programming in NC schools guided by the shared leadership of students, guardians,
+                            teachers, and staff.</div>
                     </div>
                 </div>
                 <div class="bullet-column">
                     <div class="dropdown-container">
                         <input type="checkbox" id="bullet2" class="bullet-toggle">
-                        <label for="bullet2" class="bullet-title">Bullet Point 2<i class="arrow"></i></label>
-                        <div class="bullet-desc" data-related="bullet2">Description for bullet point 2</div>
+                        <label for="bullet2" class="bullet-title">Regional Implementation Partners<i class="arrow"></i></label>
+                        <div class="bullet-desc" data-related="bullet2">The creation of three Implementation Partners
+                            located initially in Eastern, Central and Western NC. Regional Implementation Partners will
+                            support school districts and individual schools in implementing the Community School model
+                            while expanding the impact and reach of community schools within the area.</div>
                     </div>
                 </div>
             </div>
             <div class="bullet-center">
                 <div class="dropdown-container">
                     <input type="checkbox" id="bullet3" class="bullet-toggle">
-                    <label for="bullet3" class="bullet-title">Bullet Point 3<i class="arrow"></i></label>
-                    <div class="bullet-desc" data-related="bullet3">Description for bullet point 3</div>
+                    <label for="bullet3" class="bullet-title">State Implementation Partners<i class="arrow"></i></label>
+                    <div class="bullet-desc" data-related="bullet3">State Implementation Partners will increase capacity
+                        of each Regional Implementation Partner, facilitate cross region learning, and support statewide
+                        educational equity efforts.</div>
                 </div>
             </div>
         </div>
     <hr class="section-divider">
-    <div class="members-container">
+    <div class="members-container" data-aos="fade-up" data-aos-delay="500">
     <h2>Our Members</h2>
     <div class="row">
         <div class="column">
-            <p><strong style="color: #880023;">Word 1</strong></p>
-            <p>Word 2</p>
-            <p>Word 3</p>
-            <p>Word 4</p>
+            <p class="member">ABC Science Collaborative at the Duke Clinical Research Institution (PI)</p>
+            <p class="member"><strong style="color: #880023;">SRCUACS</strong></p>
+            <p class="member">North Carolina Community Schools Coalition, Inc.</p>
+            <p class="member">NC Child</p>
         </div>
         <div class="column">
-            <p>Word 5</p>
-            <p>Word 6</p>
-            <p>Word 7</p>
-            <p>Word 8</p>
+            <p class="member">Public School Forum of NC</p>
+            <p class="member">United Way of Asheville and Buncombe County</p>
+            <p class="member">Rural Education Institute at East Carolina University</p>
+            <p class="member">Student U</p>
         </div>
         <div class="column">
-            <p>Word 9</p>
-            <p>Word 10</p>
-            <p>Word 11</p>
-            <p>Word 12</p>
+            <p class="member">NC Department of Public Instruction</p>
+            <p class="member">North Carolina Association of Educators</p>
+            <p class="member">National Education Association</p>
+            <!-- <p class="member">Word 12</p> -->
         </div>
     </div>
         <hr class="section-divider">
         </div>
-            <h2>Another Large Title</h2>
-            <p>Your paragraph for the large title here.</p>
+            <h2 data-aos="fade-up" data-aos-delay="50">Funding</h2>
+            <p data-aos="fade-down" data-aos-delay="100">SRCUACS, in collaboration with all NCCSC partners,
+                is in the process of applying for major grants that would support improving academic, mental health,
+                and physical health outcomes for children across North Carolina.</p>
+            </div>
         </div>
     <div class="footer">
         <p>© 2023 Southeast Regional Coalition for University-Assisted Community Schools</p>
     </div>
-
+    <script>
+        AOS.init();
+    </script>
 
 </body>
 
