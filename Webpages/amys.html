@@ -15,11 +15,23 @@
             line-height: 1.6;
         }
         .header {
-            background-color: #003366;
+            background-image: url('https://raw.githubusercontent.com/dgreene12/SRCUACS/e7153d56a033c9dcdab223dc5aec624b116fa11c/Images/Display%20Photos/jordangraduation2.jpg');
+            background-size: cover;
+            background-position: center;
             color: #FFFFFF;
             padding: 120px 60px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: relative;
+        }
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 51, 102, 0.5); /* change color and opacity as needed */
+            z-index: 0;
         }
         .header img {
             height: 240px;
@@ -220,7 +232,7 @@
         
         <div class="bio-container">
             <div class="bio-header">
-                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/f993646ec26437196ea11f104e8a2a0b374f6fc7/Images/Logos/bccsplogo.png" alt="Person's Name" class="bio-pic">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/e24e19c8330b44a31d8a6c59688f2a436d12d2a4/Images/People/amys3.png" alt="Amy Swain, PhD" class="bio-pic">
                 <div class="bio-details">
                     <h1>Amy Swain, PhD</h1>
                     <h2>East Carolina University</h2>

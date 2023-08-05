@@ -19,11 +19,23 @@
     }
 
     .header {
-            background-color: #003366;
+            background-image: url('https://raw.githubusercontent.com/dgreene12/SRCUACS/e7153d56a033c9dcdab223dc5aec624b116fa11c/Images/Display%20Photos/jordangraduation2.jpg');
+            background-size: cover;
+            background-position: center;
             color: #FFFFFF;
             padding: 120px 60px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: relative;
+        }
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 51, 102, 0.5); /* change color and opacity as needed */
+            z-index: 0;
         }
         .header img {
             height: 240px;
@@ -268,7 +280,7 @@
     </div>
 
     <div class="hero-container">
-        <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/d5ac69cf1a01545d41cf07a39837478b106bb55a/Images/Display%20Photos/ncconference.jpeg" alt="Eastway WTSD">
+        <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/520f5dc1b314fd0c18988d024e983e536f2b8774/Images/Display%20Photos/sm1.jpg" alt="Eastway WTSD">
         <div class="hero-overlay"></div>
         <div class="hero-text">Join Our Network</div>
     </div>

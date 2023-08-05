@@ -14,11 +14,23 @@
             padding: 0;
         }
         .header {
-            background-color: #003366;
+            background-image: url('https://raw.githubusercontent.com/dgreene12/SRCUACS/e7153d56a033c9dcdab223dc5aec624b116fa11c/Images/Display%20Photos/jordangraduation2.jpg');
+            background-size: cover;
+            background-position: center;
             color: #FFFFFF;
             padding: 120px 60px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: relative;
+        }
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 51, 102, 0.5); /* change color and opacity as needed */
+            z-index: 0;
         }
         .header img {
             height: 240px;
@@ -160,29 +172,35 @@
         .box img {
         width: 100%;
         height: auto;
+        
         }
         .box img:hover {
             transform: scale(1.05);
         }
-        .box-title, .box-caption {
-        font-size: 24px;
+        .box-title {
+        font-size: 28px;
         font-weight: bold;
         text-align: center;
         }
         .box-container:nth-child(1) .box {
-        border: 5px solid #FF5733;
+            border: 5px solid #003366;
+            overflow: hidden;
         }
         .box-container:nth-child(2) .box {
-            border: 5px solid #5733FF;
+            border: 5px solid #880023;
+            overflow: hidden;
         }
         .box-container:nth-child(3) .box {
-            border: 5px solid #5733FF;
+            border: 5px solid #592A8A;
+            overflow: hidden;
         }
         .box-container:nth-child(4) .box {
-            border: 5px solid #FFD733;
+            border: 5px solid #FFA60E;
+            overflow: hidden;
         }
         .box-caption {
             margin-top: 10px;
+            font-size: 18px;
         }
         .content {
             padding: 20px;
@@ -294,7 +312,7 @@
         <h2>What We Do</h2>
         <div class="what-we-do" data-aos="fade-up" data-aos-delay="100">
             <div class="box-container">
-                <div class="box-title">Title 1</div>
+                <div class="box-title">Support</div>
                 <div class="box">
                     <img src="URL_FOR_IMAGE_1" alt="Image 1">
                 </div>
@@ -302,38 +320,32 @@
             </div>
             
             <div class="box-container">
-                <div class="box-title">Title 2</div>
+                <div class="box-title">Prepare</div>
                 <div class="box">
-                    <img src="URL_FOR_IMAGE_2" alt="Image 2">
+                    <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/0f2e57ba03896cce0c3017c3e7b4e860c51c9b0c/Images/Display%20Photos/nccueducation.jpg" alt="Prepare">
                 </div>
                 <div class="box-caption">Caption 2</div>
             </div>
             
             <div class="box-container">
-                <div class="box-title">Title 3</div>
+                <div class="box-title">Research</div>
                 <div class="box">
-                    <img src="URL_FOR_IMAGE_3" alt="Image 3">
+                    <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/0f2e57ba03896cce0c3017c3e7b4e860c51c9b0c/Images/Display%20Photos/research1.jpg" alt="Research">
                 </div>
                 <div class="box-caption">Caption 3</div>
             </div>
             
             <div class="box-container">
-                <div class="box-title">Title 4</div>
+                <div class="box-title">Connect</div>
                 <div class="box">
-                    <img src="URL_FOR_IMAGE_4" alt="Image 4">
+                    <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/520f5dc1b314fd0c18988d024e983e536f2b8774/Images/Display%20Photos/sm2.jpg" alt="Sound Machine">
                 </div>
                 <div class="box-caption">Caption 4</div>
             </div>
         </div>
-    </div>
-    <div class="newsletter-signup">
-        <input type="email" placeholder="Enter your email" required>
-        <input type="submit" value="Subscribe to our newsletter!" onclick="showSuccessMessage()">
+        <p>and more!</p>
     </div>
 </div>
-    <div id="success-message" style="display:none; text-align:center; padding: 10px; background-color: #6699CC; color: white;">
-        Thank you for subscribing!
-    </div>
     <div class="footer">
         <p>© 2023 Southeast Regional Coalition for University-Assisted Community Schools</p>
     </div>

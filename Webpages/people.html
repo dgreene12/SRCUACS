@@ -17,11 +17,23 @@
             padding: 0;
         }
         .header {
-            background-color: #003366;
+            background-image: url('https://raw.githubusercontent.com/dgreene12/SRCUACS/e7153d56a033c9dcdab223dc5aec624b116fa11c/Images/Display%20Photos/jordangraduation2.jpg');
+            background-size: cover;
+            background-position: center;
             color: #FFFFFF;
             padding: 120px 60px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: relative;
+        }
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 51, 102, 0.5); /* change color and opacity as needed */
+            z-index: 0;
         }
         .header img {
             height: 240px;
@@ -221,7 +233,7 @@
     <div class="hero-container">
         <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Eastway WTSD">
         <div class="hero-overlay"></div>
-        <div class="hero-text">People</div>
+        <div class="hero-text"><h1>People</h1></div>
     </div>
     <div class="content">
         <p class="intro">Meet the dedicated team that makes our work possible.</p>
@@ -244,7 +256,7 @@
             </div>
         
             <div class="grid-item" data-aos="fade-up" data-aos-delay="200" onclick="window.location='yolanda.html';">
-                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/f993646ec26437196ea11f104e8a2a0b374f6fc7/Images/People/dunston3.jpg" alt="Yolanda Dunston, PhD">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/e24e19c8330b44a31d8a6c59688f2a436d12d2a4/Images/People/dunston3.jpg" alt="Yolanda Dunston, PhD">
                 <div class="grid-item-info">
                     <h3>Yolanda Dunston, PhD</h3>
                     <h4>North Carolina Central University</h4>
@@ -268,7 +280,7 @@
             </div>
         
             <div class="grid-item" data-aos="fade-up" data-aos-delay="500" onclick="window.location='amys.html';">
-                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Amy Swain, PhD">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/e24e19c8330b44a31d8a6c59688f2a436d12d2a4/Images/People/amys3.png" alt="Amy Swain, PhD">
                 <div class="grid-item-info">
                     <h3>Amy Swain, PhD</h3>
                     <h4>East Carolina University</h4>
