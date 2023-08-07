@@ -14,3 +14,19 @@
 /yolanda                        /yolanda.html    200
 /person9                        /person9.html    200
 /*                              /index.html   200
+
+/home.html                      /home        301
+/aboutus.html                   /about       301
+/people.html                    /people      301
+/uacs2.html                     /uacs        301
+/nccommunityschoolscoalition.html /nccsc      301
+/join.html                      /join        301
+/alec.html                      /alec        301
+/amaya.html                     /amaya       301
+/amy.html                       /amya        301
+/amys.html                      /amys        301
+/jamie.html                     /jamie       301
+/jerry.html                     /jerry       301
+/xavier.html                    /xavier      301
+/yolanda.html                   /yolanda     301
+/person9.html                   /person9     301
