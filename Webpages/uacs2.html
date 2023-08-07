@@ -179,9 +179,9 @@
             margin-left: -8px;
             width: 16px;
             height: 16px;
-            background-color: #003366;
+            background-color: rgba(0, 51, 102, 0.05);
             border-radius: 50%;
-            z-index: 1;
+            z-index: 3;
         }
 
         .event img {
@@ -196,6 +196,11 @@
             padding: 10px;
             border-radius: 5px;
             width: 45%; /* same width as image */
+        }
+
+        .event-content h3 {
+            font-size: 30px;
+            font-weight: bold;
         }
 
         /* Odd events */
@@ -229,10 +234,65 @@
             text-align: center;
             margin-bottom: 10px;
         }
-        .timeline-description {
-            font-size: 1.2em;
+        .content {
+            padding: 20px;
             text-align: center;
-            margin-bottom: 50px;
+            margin: auto;
+            width: 70%;
+            overflow: hidden;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
+            margin-top: 20px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        .content h2 {
+            text-align: center;
+            margin: auto;
+            margin-bottom: 45px;
+            font-size: 40px;
+            font-weight: bold;
+        }
+        .content p {
+            text-align: center;
+            margin: auto;
+            font-size: 23px;
+            max-width: 80%;
+            margin-bottom: 20px;
+        }
+        .hero-container {
+            position: relative;
+            width: 100%; 
+            height: 95%;
+            overflow: hidden;
+        }
+        .hero-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .hero-overlay {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(0, 51, 102, 0.5);
+            z-index: 1;
+        }
+        .hero-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 50px;
+            font-weight: bold;
+            z-index: 2;
+            text-align: center;
+            width: 100%;
         }
     </style>
 </head>
@@ -254,82 +314,137 @@
             <a href="nccommunityschoolscoalition.html">North Carolina Community Schools Coalition</a>
             <a href="join.html">Join Our Network</a>
         </div>
-        <div class="timeline-header">
-            <h2 class="timeline-title">Your Large Title Here</h2>
-            <p class="timeline-description">
-                Your descriptive paragraph goes here. It provides context or introduction about the timeline.
-            </p>
+        <div class="hero-container">
+            <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/41bc6d387565b4ed77d59014e3c7948ebc397a1d/Images/Display%20Photos/eveningtoshine.jpg" alt="Evening to Shine">
+            <div class="hero-overlay"></div>
+            <div class="hero-text"><h1>University-Assisted Community Schools</h1></div>
+        </div>
+        <div class="content">
+            <p>
+                <b style ="color: #880023">A university-assisted community school</b> is a model of partnership between universities and public schools.
+                These innovative partnerships, grounded in the philosophy of education pioneer John Dewey, aim to transform
+                local schools into central neighborhood establishments that inspire cooperation, deliver a host of services,
+                and tackle pressing challenges faced by schools and communities in today's ever-changing global landscape
+                (Harkavy, Hartley, Hodges & Weeks, 2013).</p>
+            <p>
+                The UACS model has a multifaceted mission: to enhance student achievement, minimize absenteeism,
+                boost graduation rates, and promote active community participation. It is built on the belief that
+                schools can act as community centers and education is a shared responsibility.</p>
+            <p>
+                However, for public schools to effectively fulfill this role, careful coordination across local, state, and
+                federal government levels, along with engagement from nongovernmental agencies, is crucial. We must also
+                strategically leverage the vast resources and expertise that higher educational institutions possess to
+                support student learning, strengthen families, and rejuvenate communities. Doing so can provide the
+                substantial support necessary for community schools to thrive, and to embrace the expanded roles we envision
+                for them in the fabric of American society.</p>
+            <p>
+                Over the past half-century, university-assisted community schools have made remarkable strides across
+                the United States, a success documented by scholars in all regions (Jim Grim, Monica A. Medina & Nicole
+                Y. Oglesby, 2020;  xxxxxxx). As the newest regional technical training center for university-assisted
+                community schools, SRCUACS aims to catalyze the further expansion of this innovative model throughout
+                the Southeast region. We are dedicated to empowering universities and their partner schools with the
+                necessary tools and support to establish community schools within their respective localities, thus
+                continuing the transformative impact of this educational model.</p>       
+            <p>
+                For the history of the UACS movement, see the timeline below.
+                </p>          
         </div>
     <div class="timeline">
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 1 Image">
             <div class="event-content">
-                <h3>Event 1 Title</h3>
-                <p>Short description or details about event 1.</p>
+                <h3>1960s-70s</h3>
+                <p>The federal government introduced various initiatives to strengthen the connection between universities and their
+                    communities, including the establishment of Urban-Grant Universities and the development of Community Action
+                    Programs. During this time, the idea of the "communiversity" also emerged, emphasizing the importance of reciprocal
+                    and mutually beneficial partnerships between universities and local communities.</p>
             </div>
         </div>
     
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 2 Image">
             <div class="event-content">
-                <h3>Event 2 Title</h3>
-                <p>Short description or details about event 2.</p>
+                <h3>1994-2004</h3>
+                <p>23 universities, including the Netter Center at the University of Pennsylvania, and 75 other institutions
+                    received funding from foundations and the federal government to promote the expansion of the
+                    university-assisted community schools model.</p>
             </div>
         </div>
     
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
             <div class="event-content">
-                <h3>Event 3 Title</h3>
-                <p>Short description or details about event 3.</p>
+                <h3>2008</h3>
+                <p>University of Oklahoma-Tulsa selected as the site of first regional training center for university-assisted
+                    community schools, establishing the Higher Education Forum of Oklahoma.</p>
             </div>
         </div>
 
         <div class="event" data-aos="fade-up">
                 <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
                 <div class="event-content">
-                    <h3>Event 4 Title</h3>
-                    <p>Short description or details about event 4.</p>
+                    <h3>2011</h3>
+                    <p> Indiana University—Purdue University Indianapolis (IUPUI) selected as the site of the second regional training
+                        center for university-assisted community schools, establishing the Midwest Center for University-Assisted Community Schools.
+                        There are now over 215 community schools in Indiana, with 77 in Indianapolis. IUPUI publishes their academic journal on community-engaged
+                        research, <i>ENGAGE!</i>, three times per year.
+                    </p>
                 </div>
             </div>
 
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
             <div class="event-content">
-                <h3>Event 5 Title</h3>
-                <p>Short description or details about event 5.</p>
+                <h3>2014</h3>
+                <p>University of Connecticut selected as the site of third regional training center, establishing the
+                    New England University-Assisted Community School Collaborative. Now known as CommPACT Community Schools Collaborative,
+                    there are currently 4 CommPACT-affiliated community schools across Connecticut.  </p>
             </div>
         </div>
 
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
             <div class="event-content">
-                <h3>Event 6 Title</h3>
-                <p>Short description or details about event 6.</p>
+                <h3>2015</h3>
+                <p>University-Assisted Community Schools Network formed as a partnership between the Netter Center (University of Pennsylvania),
+                    Rutgers University-Camden, and the Coalition for Community Schools. There are now over 70 universities in the network.
+                </p>
             </div>
         </div>
 
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
             <div class="event-content">
-                <h3>Event 7 Title</h3>
-                <p>Short description or details about event 7.</p>
+                <h3>2017</h3>
+                <p>UCLA selected as the site of fourth regional training center, establishing the UCLA Center for Community Schooling.
+                    They operate two community schools in Los Angeles— Mann UCLA Community School and RFK UCLA Community School.
+                    At least once a year, they publish an issue of the <i>Community Schooling</i>, a journal highlighting work in the
+                    community schools space across the country.
+                </p>
             </div>
         </div>
 
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
             <div class="event-content">
-                <h3>Event 8 Title</h3>
-                <p>Short description or details about event 8.</p>
+                <h3>2020</h3>
+                <p>Binghamton University (SUNY) selected as the site of fifth regional training center, 
+                    supporting programs across New York and New Jersey. Binghamton recently received
+                    two five-year grants from the U.S. Department of Education, totaling $9,300,000, 
+                    to expand mental health services in New York’s Southern Tier as part of its
+                    Mental Health Service Provider Demonstration Grant Program. For those interested in
+                    furthering their knowledge on community schools, Binghamton offers an online Community Schools
+                    Certificate.</p>
             </div>
         </div>
 
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
             <div class="event-content">
-                <h3>Event 9 Title</h3>
-                <p>Short description or details about event 9.</p>
+                <h3>2023</h3>
+                <p>Duke, NCCU, and ECU selected as the site of sixth regional training center, forming
+                    the Southern Regional Coalition for University-Assisted Community Schools.
+                </p>
             </div>
         </div>
 
