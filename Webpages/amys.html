@@ -191,9 +191,14 @@
         .footer {
             background-color: #003366;
             color: #FFFFFF;
-            text-align: center;
-            padding: 20px;
+            padding: 10px;
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer img{
+            max-height: 200px;
         }
         @media only screen and (max-width: 480px) {
         .header {
@@ -242,8 +247,8 @@
             top: 20px;
             right: 30px;
             z-index: 20;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             margin-top: 15px;
         }
 
@@ -353,7 +358,9 @@
 </head>
 <body>
     <div class="header">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        <a href="index.html">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        </a>
         <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
     </div>
 
@@ -398,13 +405,29 @@
                 </div>
             </div>
             <div class="bio-content">
-                <p>First paragraph of the bio...</p>
-                <p>Second paragraph of the bio...</p>
+                <p>Dr. Amy Swain is a mother, scholar, and storyteller. She is a Teaching Assistant Professor at East Carolina University,
+                    where she teaches courses in the social foundations of education. She also proudly serves as a faculty associate
+                    with the Rural Education Institute in the College of Education at ECU. Her research focuses on the enduring
+                    legacies of racial capitalism and settler colonialism on rural education in the Black Belt, particularly in
+                    eastern North Carolina, and she specializes in rural education, racial equity, and transformative justice. Her
+                    work has been published in <i>The Rural Educator</i>, <i>Theory and Practice in Education</i>, <i>Educational
+                    Studies</i>, <i>Qualitative Inquiry</i>, and <i>The Urban Review</i>.</p>
+                <p>Over the last two decades, Swain has worked in and with public schools in beloved community where
+                    love and justice are centralized as living practices. A former elementary, middle, and high
+                    school teacher, Swain’s experiences in the classroom have taught her that our students must have
+                    an opportunity to learn in schools where human dignity is magnified and protected if we are to
+                    live free. It is toward this end that Swain works to build beloved community for all.</p>
+                <p>She holds a B.A. in English and Philosophy from East Carolina University, an M.A. in Culture,
+                    Curriculum, and Change from the University of North Carolina at Chapel Hill, and a PhD in
+                    Culture, Curriculum, and Change from the University of North Carolina at Chapel Hill. She is a
+                    native of eastern North Carolina and lives in Martin County, North Carolina. Faith is the
+                    foundation of her life, and on that she is raising two beautifully strong and tender young men.
+                    She loves to draw and eat jellybeans.</p>
             </div>
         </div>
     </div>
     <div class="footer">
-        <p>© 2023 Southeast Regional Coalition for University-Assisted Community Schools</p>
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
     </div>
     <script>
         function toggleMenu() {

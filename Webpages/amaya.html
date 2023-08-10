@@ -191,9 +191,14 @@
         .footer {
             background-color: #003366;
             color: #FFFFFF;
-            text-align: center;
-            padding: 20px;
+            padding: 10px;
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer img{
+            max-height: 200px;
         }
         @media only screen and (max-width: 480px) {
         .header {
@@ -242,8 +247,8 @@
             top: 20px;
             right: 30px;
             z-index: 20;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             margin-top: 15px;
         }
 
@@ -353,7 +358,9 @@
 </head>
 <body>
     <div class="header">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        <a href="index.html">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        </a>
         <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
     </div>
 
@@ -392,7 +399,7 @@
                 <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/94f001d6b6250f6f3f0e6d2060d410a07a7658bb/Images/People/amaya32.jpg" alt="Amaya Jackson" class="bio-pic">
                 <div class="bio-details">
                     <h1>Amaya Jackson</h1>
-                    <h2>University of North Carolina, North Carolina Central University</h2>
+                    <h2>UNC-Chapel Hill, North Carolina Central University</h2>
                     <p>amayajacks99@gmail.com</p>
                     <a href="https://www.linkedin.com/in/amaya-jackson-5a479618b/" class="linkedin-btn" target="_blank"></a>
                 </div>
@@ -403,7 +410,7 @@
                     Biological Honors and Alpha Kappa Alpha Sorority, Inc., and was a member of the inaugural team of the <a href="http://sites.duke.edu/uacs" target="_blank">Durham University-Assisted Community Schools Research Collective (DUACSRC)</a>.
                     In 2019, a transformative study abroad experience focused on health disparities led her to pursue a Master of Public Health at UNC - Chapel Hill,
                     concentrating in Health Equity, Social Justice, and Human Rights which she is completing as she applies to medical school.
-                    As a graduate student, she has transitioned into the role of Project Manager for the BCUACS team. Amaya is driven by her goal
+                    As a graduate student, she has transitioned into the role of Project Manager for the DUACSRC team. Amaya is driven by her goal
                     to integrate her educational background, work experience, research endeavors, and community involvement to make
                     positive equitable impacts and advance her career.</p>
 
@@ -411,7 +418,7 @@
         </div>
     </div>
     <div class="footer">
-        <p>© 2023 Southeast Regional Coalition for University-Assisted Community Schools</p>
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
     </div>
     <script>
         function toggleMenu() {

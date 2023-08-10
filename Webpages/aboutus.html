@@ -147,9 +147,14 @@
         .footer {
             background-color: #003366;
             color: #FFFFFF;
-            text-align: center;
-            padding: 20px;
+            padding: 10px;
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer img{
+            max-height: 200px;
         }
         .grid {
             display: grid;
@@ -278,8 +283,8 @@
             top: 20px;
             right: 30px;
             z-index: 20;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             margin-top: 15px;
         }
 
@@ -361,7 +366,9 @@
 </head>
 <body>
     <div class="header">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        <a href="index.html">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        </a>
         <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
     </div>
     <div class="logos">
@@ -404,8 +411,8 @@
             <div class="grid-item">
                 <h2>Storytelling</h2>
                 <p>SRCUACS draws inspiration from UACS Regional Training Centers’ peer-reviewed publications
-                    and related public-facing initiatives including UPenn’s <a href="https://www.nettercenter.upenn.edu/about-center/publications-resources/universities-and-community-schools-journal" target="_blank" style="color: white;"><i>Universities and Community Schools
-                    Journal</i></a>, UCLA’s <a href="https://communityschooling.gseis.ucla.edu/journal/" target="_blank" style="color: white;"><i>Community Schooling Journal</i></a>, and IUPUI’s <a href="https://engage.iupui.edu/research/community-engaged-research/engage-journal.html" target="_blank" style="color: white;"><i>ENGAGE! Journal</i></a>.<br><br> 
+                    and related public-facing initiatives including UPenn’s <i>Universities and Community Schools
+                    Journal</i>, UCLA’s <i>Community Schooling Journal</i>, and IUPUI’s <i>ENGAGE! Journal</i>.<br><br> 
                     SRCUACS expects to advance the work of community schools and their university partners
                     by providing dynamic vehicles for practitioner storytelling. Stay tuned for our online
                     publication in Fall 2024!</p> 
@@ -415,11 +422,7 @@
                 <p>SRCUACS intends to engage in asset mapping of the material, human, and organizational resources
                     that the partner institutions have available to offer local community schools. Close examination
                     of these assets will help the collaborative understand where duplication exists across the state
-                    and region and identify spaces for innovation.<br><br> Data collected from this mapping project will result
-                    in a digital database of relevant resources found at partnering institutions, which can then be used
-                    to match local community schools' identified needs and serve as a starting point for collaborative
-                    programming. SRCUACS would create a home for this database as well as a mechanism by which university
-                    faculty and staff can continuously define and refine formalized collaborations with public school partners.</p>
+                    and region and identify spaces for innovation.</p>
             </div>
             <div class="grid-item">
                 <h2>Pipeline Development</h2>
@@ -459,15 +462,17 @@
                         April 3, 2024<br>
                         May 1, 2024<br>
                         <br>
-                        <a href="srcuacs.ics" target="_blank">[Add these dates to your calendar!]</a><br>
-                        (For Google Calendar, you can manually import this .ics file)
+                        https://duke.zoom.us/j/93059763129
+                        <br>
+                        <br>
+                        <a href="https://duke.zoom.us/meeting/tJctcuCvqDgrGN1Mj8a24ZBgyISXBV78yxog/ics?icsToken=98tyKuCrrj4jHdKWsRuORowqAo_4Xe3wpnZcjY0MsRW9AnIHWCHxL8txCpBJR4DJ" target="_blank">[Add these dates to your calendar!]</a><br>
                     </li>
                 </ul>
     </div>
 </div>
-    <div class="footer">
-        <p>© 2023 Southeast Regional Coalition for University-Assisted Community Schools</p>
-    </div>
+<div class="footer">
+    <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+</div>
     <script>
         const gridItems = Array.from(document.querySelectorAll(".grid-item"));
     

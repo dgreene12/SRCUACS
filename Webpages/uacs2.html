@@ -98,9 +98,14 @@
         .footer {
             background-color: #003366;
             color: #FFFFFF;
-            text-align: center;
-            padding: 20px;
+            padding: 10px;
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer img{
+            max-height: 200px;
         }
 
         .logos {
@@ -311,8 +316,8 @@
             top: 20px;
             right: 30px;
             z-index: 20;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             margin-top: 15px;
         }
         .navigation {
@@ -398,7 +403,9 @@
 </head>
     <body>
         <div class="header">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+            <a href="index.html">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+            </a>
             <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
         </div>
     
@@ -481,7 +488,9 @@
                     <h3>2011</h3>
                     <p> Indiana University—Purdue University Indianapolis (IUPUI) selected as the site of the second regional training
                         center for university-assisted community schools, establishing the Midwest Center for University-Assisted
-                        Community Schools. There are now over 215 community schools in Indiana, with 77 in Indianapolis.
+                        Community Schools. There are now over 215 community schools in Indiana, with 77 in Indianapolis. IUPUI publishes
+                        their academic journal on community-engaged research, <a href="https://engage.iupui.edu/research/community-engaged-research/engage-journal.html"
+                        target="_blank"><i>ENGAGE! Journal</i></a>, three times per year.
                     </p>
                 </div>
             </div>
@@ -502,6 +511,8 @@
                 <h3>2015</h3>
                 <p>University-Assisted Community Schools Network formed as a partnership between the Netter Center (University of Pennsylvania),
                     Rutgers University-Camden, and the Coalition for Community Schools. There are now over 70 universities in the network.
+                    The Netter Center publishes an academic journal, <a href="https://www.nettercenter.upenn.edu/about-center/publications-resources/universities-and-community-schools-journal" target="_blank"><i>Universities and Community Schools
+                    Journal</i></a>.
                 </p>
             </div>
         </div>
@@ -512,8 +523,20 @@
                 <h3>2017</h3>
                 <p>UCLA selected as the site of fourth regional training center, establishing the UCLA Center for Community Schooling.
                     They operate two community schools in Los Angeles— Mann UCLA Community School and RFK UCLA Community School.
-                    At least once a year, they publish an issue of the <i>Community Schooling</i>, a journal highlighting work in the
-                    community schools space across the country.
+                    At least once a year, they publish an issue of the <a href="https://communityschooling.gseis.ucla.edu/journal/" target="_blank"><i>Community Schooling Journal</i></a>,
+                    a research journal highlighting work in the community schools space across the country.
+                </p>
+            </div>
+        </div>
+
+        <div class="event" data-aos="fade-up">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/REI2.jpeg" alt="REI">
+            <div class="event-content">
+                <h3>2017</h3>
+                <p>The Rural Education Institute at East Carolina University was formed to initiate and facilitate partnerships
+                    and research-driven innovations that enhance holistic development and opportunities for PreK-16 students
+                    and their families in rural communities. REI also collaborates with stakeholders towards positive transformation in
+                    families and schools.
                 </p>
             </div>
         </div>
@@ -543,10 +566,11 @@
         </div>
 
         <div class="event" data-aos="fade-up">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/REI2.jpeg" alt="REI">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/297198722eee37230b7367c0f4bc68e1eb028506/Images/Display%20Photos/pwmlogo.jpg" alt="P.W. Moore Elementary">
             <div class="event-content">
                 <h3>2022</h3>
-                <p>The Rural Education Institute at East Carolina University formed.
+                <p>The Rural Education Institute at ECU partnered with Elizabeth City-Pasquotank Public Schools (ECPPS) to establish
+                    the first rural UACS at P.W. Moore Elementary.
                 </p>
             </div>
         </div>
@@ -562,15 +586,12 @@
         </div>
 
         </div> <!--closes timeline class-->
-    <div class="footer">
-        <p>© 2023 Southeast Regional Coalition for University-Assisted Community Schools</p>
-    </div>
+        <div class="footer">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        </div>
 
     <script>
         AOS.init({
-            offset: 100,
-            anchorPlacement: 'top-bottom',
-            once: true
         });
         function toggleMenu() {
             var navigation = document.querySelector('.navigation');

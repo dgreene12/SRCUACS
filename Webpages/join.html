@@ -163,11 +163,18 @@
             line-height: 1.5;
         }
 
-    .footer {
-        margin-top: 20px;
-        padding: 20px;
-        box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
-    }
+        .footer {
+            background-color: #003366;
+            color: #FFFFFF;
+            padding: 10px;
+            box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer img{
+            max-height: 200px;
+        }
 
     .two-columns {
         display: flex;
@@ -248,7 +255,13 @@
             margin: 30px auto;
             width: 80%;
         }
-
+    .large-font {
+        font-size: 24px;
+    }
+    .large-font ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
         @media only screen and (max-width: 480px) {
         .header {
             background-image: url('https://raw.githubusercontent.com/dgreene12/SRCUACS/e7153d56a033c9dcdab223dc5aec624b116fa11c/Images/Display%20Photos/jordangraduation2.jpg');
@@ -294,8 +307,8 @@
             top: 20px;
             right: 30px;
             z-index: 20;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             margin-top: 15px;
         }
         .navigation {
@@ -409,7 +422,9 @@
 </head>
 <body>
     <div class="header">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        <a href="index.html">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        </a>
         <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
     </div>
     <div class="logos">
@@ -480,15 +495,32 @@
             <p>We'll be in contact soon.</p>
         </div>
             <div class=".contact-info">
-                <h2>Inquiries</h2>
-                <p>For inquiries or media relations, please contact Alec Greenwald at alec.greenwald@duke.edu.</p>
+        <h2>Monthly Network Calls<br>(Noon - 1PM EST)</h2>
+            <div class="large-font">  
+                <ul>
+                    <li>
+                        October 4, 2023<br>
+                        November 1, 2023<br>
+                        December 6, 2023<br>
+                        February 7, 2024<br>
+                        March 6, 2024<br>
+                        April 3, 2024<br>
+                        May 1, 2024<br>
+                        <br>
+                        https://duke.zoom.us/j/93059763129
+                        <br>
+                        <br>
+                        <a href="https://duke.zoom.us/meeting/tJctcuCvqDgrGN1Mj8a24ZBgyISXBV78yxog/ics?icsToken=98tyKuCrrj4jHdKWsRuORowqAo_4Xe3wpnZcjY0MsRW9AnIHWCHxL8txCpBJR4DJ" target="_blank">[Add these dates to your calendar!]</a><br>
+                    </li>
+                </ul>
+    </div>
             </div>
         </div>
         </div>
     </div>
     </div>
     <div class="footer">
-        <p>© 2023 Southeast Regional Coalition for University-Assisted Community Schools</p>
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
     </div>
     <script>
     function toggleMenu() {

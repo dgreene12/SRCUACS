@@ -134,6 +134,7 @@
             position: relative;
             box-shadow: 0 0 15px rgba(0, 0, 0, 0.05);
             margin-top: 20px;
+            margin-bottom: 20px;
             border-radius: 5px;
         }
         .content h2 {
@@ -269,10 +270,14 @@
         .footer {
             background-color: #003366;
             color: #FFFFFF;
-            text-align: center;
-            margin-top: 20px;
-            padding: 20px;
+            padding: 10px;
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer img{
+            max-height: 200px;
         }
         .section-divider {
             border: 0;
@@ -347,8 +352,8 @@
             top: 20px;
             right: 30px;
             z-index: 20;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             margin-top: 15px;
         }
         .navigation {
@@ -407,7 +412,7 @@
         }
         .content li {
             display: block;
-            text-align: left;
+            text-align: center;
             margin: 10px 0;
         }
         .column {
@@ -438,7 +443,9 @@
 
 <body>
     <div class="header">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        <a href="index.html">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        </a>
         <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
     </div>
 
@@ -543,35 +550,41 @@
     <h2>Our Members</h2>
     <div class="row">
         <div class="column">
-            <p class="member"><a href="https://abcsciencecollaborative.org/" target="_blank">ABC Science Collaborative at the Duke Clinical Research Institute [PI]</a></p>
+            <p class="member"><a href="https://abcsciencecollaborative.org/" target="_blank">ABC Science Collaborative</a></p>
             <p class="member"><strong style="color: #880023;">SRCUACS</strong></p>
             <p class="member">North Carolina Community Schools Coalition, Inc.</p>
             <p class="member"><a href="https://www.dpi.nc.gov/" target="_blank">NC Department of Public Instruction</a></p>
+            <p class="member"><a href="https://www.dpsnc.net/" target="_blank">Durham Public Schools</a></p>
+            <p class="member"><a href="https://www.vcs.k12.nc.us/" target="_blank">Vance County Schools</a></p>
         </div>
         <div class="column">
             <p class="member"><a href="https://www.ncforum.org/" target="_blank">Public School Forum of NC</a></p>
             <p class="member"><a href="https://www.unitedwayabc.org/" target="_blank">United Way of Asheville and Buncombe County</a></p>
             <p class="member"><a href="https://education.ecu.edu/rei/" target="_blank">Rural Education Institute at East Carolina University</a></p>
             <p class="member"><a href="https://studentudurham.org/" target="_blank">Student U</a></p>
+            <p class="member"><a href="https://www.orangecountyfirst.com/" target="_blank">Orange County School District</a></p>
+            <p class="member"><a href="https://www.ashevillecityschools.net/" target="_blank">Asheville City Schools</a></p>
         </div>
         <div class="column">
             <p class="member"><a href="https://ncchild.org/" target="_blank">NC Child</a></p>
             <p class="member"><a href="https://www.ncae.org/" target="_blank">North Carolina Association of Educators</a></p>
             <p class="member"><a href="https://www.nea.org/" target="_blank">National Education Association</a></p>
-            <p class="member">North Carolina Lead Education Agencies and Community-Based Organizations</p>
+            <p class="member"><a href="https://www.bullcityschools.org/" target="_blank">Durham Public Schools Foundation</a></p>
+            <p class="member"><a href="https://www.buncombeschools.org/" target="_blank">Buncombe County Schools</a></p>
+            <p class="member"><a href="https://www.ecpps.k12.nc.us/" target="_blank">Elizabeth City-Pasquotank Public Schools</a></p>
         </div>
     </div>
         <hr class="section-divider">
         </div>
             <h2>Funding</h2>
             <p>SRCUACS, in collaboration with all NCCSC partners, is in the process
-                of applying for major grants that would support improving academic, mental health, and physical health outcomes
-                for children across North Carolina.</p>
+                of securing and sustaining funding to support improving academic,
+                mental health, and physical health outcomes for children across North Carolina.</p>
             </div>
         </div>
-    <div class="footer">
-        <p>© 2023 Southeast Regional Coalition for University-Assisted Community Schools</p>
-    </div>
+        <div class="footer">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        </div>
     <script>
         AOS.init();
         function toggleMenu() {

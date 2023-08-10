@@ -13,6 +13,4 @@
 /xavier                         /xavier.html    200
 /yolanda                        /yolanda.html   200
 /person9                        /person9.html   200
-
-/*.html                         /:splat         301
 /*                              /index.html     200

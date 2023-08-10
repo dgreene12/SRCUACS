@@ -155,9 +155,14 @@
         .footer {
             background-color: #003366;
             color: #FFFFFF;
-            text-align: center;
-            padding: 20px;
+            padding: 10px;
             box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .footer img{
+            max-height: 200px;
         }
         .grid-container {
             display: grid;
@@ -248,8 +253,8 @@
             top: 20px;
             right: 30px;
             z-index: 20;
-            width: 50px;
-            height: 50px;
+            width: 40px;
+            height: 40px;
             margin-top: 15px;
         }
         .navigation {
@@ -360,7 +365,9 @@
         });
     </script>
     <div class="header">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        <a href="index.html">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        </a>
         <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
     </div>
     <div class="logos">
@@ -445,7 +452,7 @@
                 <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/94f001d6b6250f6f3f0e6d2060d410a07a7658bb/Images/People/amaya32.jpg" alt="Amaya Jackson">
                 <div class="grid-item-info">
                     <h3>Amaya Jackson</h3>
-                    <h4>University of North Carolina, North Carolina Central University</h4>
+                    <h4>UNC-Chapel Hill, North Carolina Central University</h4>
                 </div>
             </div>
         
@@ -458,9 +465,9 @@
             <!--</div>-->
         </div>
         </div>
-    <div class="footer">
-        <p>©2023 Southeast Regional Coalition for University-Assisted Community Schools</p>
-    </div>
+        <div class="footer">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        </div>
     <script>
         function toggleMenu() {
             var navigation = document.querySelector('.navigation');
