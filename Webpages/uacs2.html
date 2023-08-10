@@ -42,7 +42,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0, 51, 102, 0.5); /* change color and opacity as needed */
+            background: rgba(0, 51, 102, 0.9);
             z-index: 0;
         }
         .header img {
@@ -88,7 +88,7 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            font-size: 100px;
+            font-size: 50px;
             font-weight: bold;
             z-index: 2;
             text-align: center;
@@ -106,29 +106,25 @@
         .logos {
             background: #FFFFFF;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
             padding: 10px;
         }   
-
         .logos img {
-            max-height: 50px;
+            height: 50px;
             width: auto;
-            max-width: 30%;
-            position: relative;
-            z-index: 1;
+            margin: 0 4%;
         }
-
-        .logos img:not(:last-child)::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            height: 80%;
-            width: 2px;
-            background-color: #003366;
-            z-index: 2;
+        .logos img:nth-child(1) {
+            margin-right: 6%;
+            margin-left: 10%;
+        }
+        .logos img:nth-child(2) {
+            margin: 0 15%;
+            height: 58px;
+        }
+        .logos img:nth-child(3) {
+            margin-left: 2%;
         }
 
         .navigation {
@@ -260,27 +256,38 @@
             max-width: 80%;
             margin-bottom: 20px;
         }
-        .hero-container {
+
+        @media only screen and (max-width: 480px) {
+        .header {
+            background-image: url('https://raw.githubusercontent.com/dgreene12/SRCUACS/e7153d56a033c9dcdab223dc5aec624b116fa11c/Images/Display%20Photos/jordangraduation2.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #FFFFFF;
+            padding: 60px 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             position: relative;
-            width: 100%; 
-            height: 95%;
-            overflow: hidden;
         }
-        .hero-image {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            display: block;
-        }
-        .hero-overlay {
+        .header::before {
             content: "";
             position: absolute;
             top: 0;
+            bottom: 0;
             left: 0;
             right: 0;
-            bottom: 0;
-            background-color: rgba(0, 51, 102, 0.5);
-            z-index: 1;
+            background: rgba(0, 51, 102, 0.9);
+            z-index: 0;
+        }
+        .header img {
+            height: 120px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s;
+            z-index: 10;
+        }
+        .header img:hover {
+            transform: translate(-50%, -50%) scale(1.1);
         }
         .hero-text {
             position: absolute;
@@ -288,23 +295,117 @@
             left: 50%;
             transform: translate(-50%, -50%);
             color: white;
-            font-size: 50px;
+            font-size: 18px;
             font-weight: bold;
             z-index: 2;
             text-align: center;
             width: 100%;
         }
+        .hamburger-menu {
+            background-color: white;
+            color: #003366;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            z-index: 20;
+            width: 50px;
+            height: 50px;
+            margin-top: 15px;
+        }
+        .navigation {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: #003366;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+        .navigation a {
+            display: block;
+            padding: 10px 20px;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-bottom: 1px solid #1a4f7a;
+            transition: background-color 0.3s ease;
+        }
+        .navigation a:hover {
+            background-color: #1a4f7a;
+        }
+        .logos {
+            background: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        }   
+        .logos img {
+            height: 20px;
+            width: auto;
+            margin: 0 2%;
+        }
+        .logos img:nth-child(1) {
+            margin-right: 12%;
+            margin-left: 13%;
+        }
+        .logos img:nth-child(2) {
+            margin: 0 10%;
+            height: 22px;
+        }
+        .logos img:nth-child(3) {
+            margin-right: 10%;
+        }
+        .timeline {
+            padding: 0 15px;
+        }
+        .content {
+            width: 95%;
+            padding: 10px;
+        }
+        .content h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+        .content p {
+            font-size: 18px;
+            max-width: 95%;
+        }
+        .event img, .event .event-content {
+            width: 100%;
+            float: none;
+            margin-bottom: 20px;
+        }
+        .event-content h3 {
+            font-size: 22px;
+            text-align: center;
+        }
+        .event-content p {
+            font-size: 18px;
+            text-align: center;
+        }
+        .event:before {
+            margin-top: -6px;
+            margin-left: -6px;
+            width: 12px;
+            height: 12px;
+        }
+    }
     </style>
 </head>
     <body>
         <div class="header">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+            <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
         </div>
     
         <div class="logos">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/e4aca0077e4e12f0c83811babea9db383d1ef75a/Images/Logos/Main%20Schools/duke_wordmark_royalblue_00539B.jpg" alt="Duke University">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/d05035364fcb2dee5c6ea6d38a76b6ab9ca14b08/Images/Logos/Main%20Schools/NCCU%20horz%20color%20logo.png" alt="North Carolina Central University">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/46a76358a53e123c84365ecce3e2ffe7edca7e4e/Images/Logos/Main%20Schools/ECU_lockup_primary_Purple.jpg" alt="East Carolina University">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/d05035364fcb2dee5c6ea6d38a76b6ab9ca14b08/Images/Logos/Main%20Schools/NCCU%20horz%20color%20logo.png" alt="North Carolina Central University">
         </div>
         <div class="navigation">
             <a href="index.html">Home</a>
@@ -317,62 +418,56 @@
         <div class="hero-container">
             <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/41bc6d387565b4ed77d59014e3c7948ebc397a1d/Images/Display%20Photos/eveningtoshine.jpg" alt="Evening to Shine">
             <div class="hero-overlay"></div>
-            <div class="hero-text"><h1>University-Assisted Community Schools</h1></div>
+            <div class="hero-text"><h1>University-Assisted<br>Community Schools</h1></div>
         </div>
         <div class="content">
             <p>
-                <b style ="color: #880023">A university-assisted community school</b> is a model of partnership between universities and public schools.
-                These innovative partnerships, grounded in the philosophy of education pioneer John Dewey, aim to transform
-                local schools into central neighborhood establishments that inspire cooperation, deliver a host of services,
-                and tackle pressing challenges faced by schools and communities in today's ever-changing global landscape
-                (Harkavy, Hartley, Hodges & Weeks, 2013).</p>
+                A <a href="https://www.nettercenter.upenn.edu/what-we-do/university-assisted-community-schools" target="_blank"><b style ="color: #880023">University-Assisted Community School (UACS)</b></a> is a community school 
+                in which universities serve as the lead partner in providing broadly based, sustained support.
+                Academic partnerships connect the university’s and school’s curricula through a common focus on helping
+                to solve local community-identified problems. This approach is designed to simultaneously improve community
+                wellbeing and advances research, teaching, and learning (K-16+).
             <p>
-                The UACS model has a multifaceted mission: to enhance student achievement, minimize absenteeism,
-                boost graduation rates, and promote active community participation. It is built on the belief that
-                schools can act as community centers and education is a shared responsibility.</p>
+                UACS, as well as community schools in general, are comprehensive neighborhood centers built on partnerships
+                that educate, engage, activate and serve students, their families, and other members of the community. For
+                neighborhood schools to function as community schools, they need additional human resources and support.
+                Universities are particularly well-suited to be a lead partner in the creation, growth, and ongoing
+                development of community schools, including providing academic, human, and material resources.</p>
             <p>
-                However, for public schools to effectively fulfill this role, careful coordination across local, state, and
-                federal government levels, along with engagement from nongovernmental agencies, is crucial. We must also
-                strategically leverage the vast resources and expertise that higher educational institutions possess to
-                support student learning, strengthen families, and rejuvenate communities. Doing so can provide the
-                substantial support necessary for community schools to thrive, and to embrace the expanded roles we envision
-                for them in the fabric of American society.</p>
-            <p>
-                Over the past half-century, university-assisted community schools have made remarkable strides across
-                the United States, a success documented by scholars in all regions (Jim Grim, Monica A. Medina & Nicole
-                Y. Oglesby, 2020;  xxxxxxx). As the newest regional technical training center for university-assisted
-                community schools, SRCUACS aims to catalyze the further expansion of this innovative model throughout
-                the Southeast region. We are dedicated to empowering universities and their partner schools with the
-                necessary tools and support to establish community schools within their respective localities, thus
-                continuing the transformative impact of this educational model.</p>       
+                As the newest regional technical training center for university-assisted community schools, SRCUACS
+                aims to catalyze the further expansion of this innovative model throughout the Southeastern United
+                States. We are dedicated to empowering universities and their partner schools with the necessary
+                tools and support to establish community schools within their respective localities, thus continuing
+                the transformative impact of this educational model.</p>
             <p>
                 For the history of the UACS movement, see the timeline below.
                 </p>          
         </div>
     <div class="timeline">
         <div class="event" data-aos="fade-up">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 1 Image">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/backpacks.jpg" alt="Backpacks!">
             <div class="event-content">
                 <h3>1960s-70s</h3>
-                <p>The federal government introduced various initiatives to strengthen the connection between universities and their
-                    communities, including the establishment of Urban-Grant Universities and the development of Community Action
-                    Programs. During this time, the idea of the "communiversity" also emerged, emphasizing the importance of reciprocal
-                    and mutually beneficial partnerships between universities and local communities.</p>
+                <p>The federal government introduced various initiatives to strengthen the connection between
+                    universities and their communities, including the establishment of Urban-Grant Universities
+                    and the development of Community Action Programs. During this time, the idea of the
+                    "communiversity" also emerged, emphasizing the importance of reciprocal and mutually beneficial
+                    partnerships between universities and local communities.</p>
             </div>
         </div>
     
         <div class="event" data-aos="fade-up">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 2 Image">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/nettercenter3.jpeg" alt="Netter Center">
             <div class="event-content">
                 <h3>1994-2004</h3>
-                <p>23 universities, including the Netter Center at the University of Pennsylvania, and 75 other institutions
+                <p>23 universities, including the <a src="http://www.nettercenter.upenn.edu/" target="_blank">Netter Center at the University of Pennsylvania</a>, and 75 other institutions
                     received funding from foundations and the federal government to promote the expansion of the
                     university-assisted community schools model.</p>
             </div>
         </div>
     
         <div class="event" data-aos="fade-up">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/support2.jpg" alt="Instruction">
             <div class="event-content">
                 <h3>2008</h3>
                 <p>University of Oklahoma-Tulsa selected as the site of first regional training center for university-assisted
@@ -381,19 +476,18 @@
         </div>
 
         <div class="event" data-aos="fade-up">
-                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/iupuics.jpeg" alt="IUPUI">
                 <div class="event-content">
                     <h3>2011</h3>
                     <p> Indiana University—Purdue University Indianapolis (IUPUI) selected as the site of the second regional training
-                        center for university-assisted community schools, establishing the Midwest Center for University-Assisted Community Schools.
-                        There are now over 215 community schools in Indiana, with 77 in Indianapolis. IUPUI publishes their academic journal on community-engaged
-                        research, <i>ENGAGE!</i>, three times per year.
+                        center for university-assisted community schools, establishing the Midwest Center for University-Assisted
+                        Community Schools. There are now over 215 community schools in Indiana, with 77 in Indianapolis.
                     </p>
                 </div>
             </div>
 
         <div class="event" data-aos="fade-up">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/commpact2.png" alt="UCONN CommPACT">
             <div class="event-content">
                 <h3>2014</h3>
                 <p>University of Connecticut selected as the site of third regional training center, establishing the
@@ -403,7 +497,7 @@
         </div>
 
         <div class="event" data-aos="fade-up">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/uacsnn.png" alt="UACS Network">
             <div class="event-content">
                 <h3>2015</h3>
                 <p>University-Assisted Community Schools Network formed as a partnership between the Netter Center (University of Pennsylvania),
@@ -413,7 +507,7 @@
         </div>
 
         <div class="event" data-aos="fade-up">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/ucla3.jpeg" alt="UCLA">
             <div class="event-content">
                 <h3>2017</h3>
                 <p>UCLA selected as the site of fourth regional training center, establishing the UCLA Center for Community Schooling.
@@ -425,21 +519,40 @@
         </div>
 
         <div class="event" data-aos="fade-up">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/df45bd66995a15ba14a955e1b8a3c09e7c49d5ec/Images/Display%20Photos/duacsrc.jpg" alt="DUACSRC">
             <div class="event-content">
-                <h3>2020</h3>
-                <p>Binghamton University (SUNY) selected as the site of fifth regional training center, 
-                    supporting programs across New York and New Jersey. Binghamton recently received
-                    two five-year grants from the U.S. Department of Education, totaling $9,300,000, 
-                    to expand mental health services in New York’s Southern Tier as part of its
-                    Mental Health Service Provider Demonstration Grant Program. For those interested in
-                    furthering their knowledge on community schools, Binghamton offers an online Community Schools
-                    Certificate.</p>
+                <h3>2019</h3>
+                <p>The <a src="sites.duke.edu/uacs" target="_blank"> Durham University-Assisted Community Schools Research Collective</a> 
+                    is established in partnership with Duke University, North Carolina Central University, and the
+                    Durham Public Schools Foundation. The collective engages undergraduate students in
+                    action-research projects rooted in the community schools and university-assisted community schools strategies. 
+                </p>
             </div>
         </div>
 
         <div class="event" data-aos="fade-up">
-            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Event 3 Image">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/binghamtonpic.jpeg" alt="Binghamton Community Schools">
+            <div class="event-content">
+                <h3>2020</h3>
+                <p>Binghamton University (SUNY) selected as the site of fifth regional training center, supporting programs
+                    across New York and New Jersey. Binghamton recently received two five-year grants from the U.S. Department
+                    of Education, totaling $9,300,000, to expand mental health services in New York’s Southern Tier as part of
+                    its Mental Health Service Provider Demonstration Grant Program. For those interested in furthering their
+                    knowledge on community schools, Binghamton offers an online <a src="https://www.binghamton.edu/tlel/academics/community-schools-online-cert.html" target="_blank">Community Schools Program</a>.</p>
+            </div>
+        </div>
+
+        <div class="event" data-aos="fade-up">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/REI2.jpeg" alt="REI">
+            <div class="event-content">
+                <h3>2022</h3>
+                <p>The Rural Education Institute at East Carolina University formed.
+                </p>
+            </div>
+        </div>
+
+        <div class="event" data-aos="fade-up">
+            <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="SRCUACS Logo">
             <div class="event-content">
                 <h3>2023</h3>
                 <p>Duke, NCCU, and ECU selected as the site of sixth regional training center, forming
@@ -459,6 +572,14 @@
             anchorPlacement: 'top-bottom',
             once: true
         });
+        function toggleMenu() {
+            var navigation = document.querySelector('.navigation');
+            if (navigation.style.display === "block") {
+                navigation.style.display = "none";
+            } else {
+                navigation.style.display = "block";
+            }
+        }
     </script>  
 </body>
 </html>

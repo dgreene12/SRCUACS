@@ -2,6 +2,7 @@
 <head>
     <title> Southeast Regional Coalition for University-Assisted Community Schools</title>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="https://cdn.rawgit.com/michalsnik/aos/2.1.1/dist/aos.css" rel="stylesheet">
@@ -32,7 +33,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: rgba(0, 51, 102, 0.5); /* change color and opacity as needed */
+            background: rgba(0, 51, 102, 0.9);
             z-index: 0;
         }
         .header img {
@@ -83,27 +84,25 @@
         .logos {
             background: #FFFFFF;
             display: flex;
-            justify-content: space-evenly;
+            justify-content: center;
             align-items: center;
             padding: 10px;
         }   
         .logos img {
-            max-height: 50px;
+            height: 50px;
             width: auto;
-            max-width: 30%;
-            position: relative;
-            z-index: 1;
+            margin: 0 4%;
         }
-        .logos img:not(:last-child)::after {
-            content: "";
-            position: absolute;
-            right: 0;
-            top: 50%;
-            transform: translateY(-50%);
-            height: 80%;
-            width: 2px;
-            background-color: #003366;
-            z-index: 2;
+        .logos img:nth-child(1) {
+            margin-right: 6%;
+            margin-left: 10%;
+        }
+        .logos img:nth-child(2) {
+            margin: 0 15%;
+            height: 58px;
+        }
+        .logos img:nth-child(3) {
+            margin-left: 2%;
         }
         .navigation {
             display: flex;
@@ -203,6 +202,154 @@
             justify-content: center;
             margin-top: 10px;
         }
+
+        @media only screen and (max-width: 480px) {
+        .header {
+            background-image: url('https://raw.githubusercontent.com/dgreene12/SRCUACS/e7153d56a033c9dcdab223dc5aec624b116fa11c/Images/Display%20Photos/jordangraduation2.jpg');
+            background-size: cover;
+            background-position: center;
+            color: #FFFFFF;
+            padding: 60px 30px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: rgba(0, 51, 102, 0.9);
+            z-index: 0;
+        }
+        .header img {
+            height: 120px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            transition: all 0.3s;
+            z-index: 10;
+        }
+        .header img:hover {
+            transform: translate(-50%, -50%) scale(1.1);
+        }
+        .hero-text {
+            font-size: 36px;
+        }
+        .hamburger-menu {
+            background-color: white;
+            color: #003366;
+            border: none;
+            font-size: 30px;
+            cursor: pointer;
+            position: absolute;
+            top: 20px;
+            right: 30px;
+            z-index: 20;
+            width: 50px;
+            height: 50px;
+            margin-top: 15px;
+        }
+        .navigation {
+            display: none;
+            position: absolute;
+            top: 60px;
+            left: 0;
+            width: 100%;
+            background-color: #003366;
+            z-index: 10;
+            transition: all 0.3s ease;
+        }
+        .navigation a {
+            display: block;
+            padding: 10px 20px;
+            color: #FFFFFF;
+            text-decoration: none;
+            border-bottom: 1px solid #1a4f7a;
+            transition: background-color 0.3s ease;
+        }
+        .navigation a:hover {
+            background-color: #1a4f7a;
+        }
+        .logos {
+            background: #FFFFFF;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 5px;
+        }   
+        .logos img {
+            height: 20px;
+            width: auto;
+            margin: 0 2%;
+        }
+        .logos img:nth-child(1) {
+            margin-right: 12%;
+            margin-left: 13%;
+        }
+        .logos img:nth-child(2) {
+            margin: 0 10%;
+            height: 22px;
+        }
+        .logos img:nth-child(3) {
+            margin-right: 10%;
+        }
+        .content {
+            padding: 10px;
+            width: 95%;
+        }
+
+        .content h2 {
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
+
+        .content p.intro {
+            margin-bottom: 20px;
+        }
+
+        .person {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .content > p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 15px;
+        }
+
+        .grid-item img {
+            width: 80%;
+            margin: 0 auto;
+        }
+
+        .grid-item-info {
+            font-size: 0.8em;
+        }
+
+        .grid-item-info h3 {
+            font-size: 24px;
+        }
+
+        .grid-item-info h4 {
+            font-size: 18px;
+        }
+
+        .social-grid {
+            flex-wrap: wrap;
+            gap: 5px;
+        }
+    }
+    
     </style>
 </head>
 <body>
@@ -214,14 +361,14 @@
     </script>
     <div class="header">
         <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
     </div>
     <div class="logos">
         <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/e4aca0077e4e12f0c83811babea9db383d1ef75a/Images/Logos/Main%20Schools/duke_wordmark_royalblue_00539B.jpg" alt="Duke University">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/d05035364fcb2dee5c6ea6d38a76b6ab9ca14b08/Images/Logos/Main%20Schools/NCCU%20horz%20color%20logo.png" alt="North Carolina Central University">
         <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/46a76358a53e123c84365ecce3e2ffe7edca7e4e/Images/Logos/Main%20Schools/ECU_lockup_primary_Purple.jpg" alt="East Carolina University">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/d05035364fcb2dee5c6ea6d38a76b6ab9ca14b08/Images/Logos/Main%20Schools/NCCU%20horz%20color%20logo.png" alt="North Carolina Central University">
     </div>
     <div class="navigation">
-        <div class="navigation">
             <a href="index.html">Home</a>
             <a href="aboutus.html">About</a>
             <a href="people.html" class="current">People</a>
@@ -229,7 +376,6 @@
             <a href="nccommunityschoolscoalition.html">North Carolina Community Schools Coalition</a>
             <a href="join.html">Join Our Network</a>
         </div>
-    </div>
     <div class="hero-container">
         <img class="hero-image" src="https://raw.githubusercontent.com/dgreene12/SRCUACS/ff42e2e43e5b9b50aa521d260f05dfd6685671a4/Images/Display%20Photos/walkingschoolbus.jpg" alt="Eastway WTSD">
         <div class="hero-overlay"></div>
@@ -248,7 +394,7 @@
             </div>
         
             <div class="grid-item" data-aos="fade-up" data-aos-delay="100" onclick="window.location='amy.html';">
-                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/f993646ec26437196ea11f104e8a2a0b374f6fc7/Images/People/anderson.jpg" alt="Amy Anderson, PhD">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/cc619c532098d2c282c10cf46f0781195c66b491/Images/People/amya333.jpeg" alt="Amy Anderson, PhD">
                 <div class="grid-item-info">
                     <h3>Amy Anderson, PhD</h3>
                     <h4>Duke University</h4>
@@ -272,7 +418,7 @@
             </div>
         
             <div class="grid-item" data-aos="fade-up" data-aos-delay="400" onclick="window.location='jerry.html';">
-                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Jerry Johnson, EdD">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/94f001d6b6250f6f3f0e6d2060d410a07a7658bb/Images/People/jerry3.jpg" alt="Jerry Johnson, EdD">
                 <div class="grid-item-info">
                     <h3>Jerry Johnson, EdD</h3>
                     <h4>East Carolina University</h4>
@@ -288,7 +434,7 @@
             </div>
         
             <div class="grid-item" data-aos="fade-up" data-aos-delay="600" onclick="window.location='xavier.html';">
-                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/f993646ec26437196ea11f104e8a2a0b374f6fc7/Images/People/xavier3.jpg" alt="Xavier Cason">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/3a71c62aca51548f76ee4e2ca93483f447fb9988/Images/People/xavier33.jpeg" alt="Xavier Cason">
                 <div class="grid-item-info">
                     <h3>Xavier Cason</h3>
                     <h4>Durham Public Schools Foundation</h4>
@@ -296,24 +442,34 @@
             </div>
         
             <div class="grid-item" data-aos="fade-up" data-aos-delay="700" onclick="window.location='amaya.html';">
-                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/f993646ec26437196ea11f104e8a2a0b374f6fc7/Images/People/amaya3.jpg" alt="Amaya Jackson">
+                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/94f001d6b6250f6f3f0e6d2060d410a07a7658bb/Images/People/amaya32.jpg" alt="Amaya Jackson">
                 <div class="grid-item-info">
                     <h3>Amaya Jackson</h3>
                     <h4>University of North Carolina, North Carolina Central University</h4>
                 </div>
             </div>
         
-            <div class="grid-item" data-aos="fade-up" data-aos-delay="800" onclick="window.location='person9.html';">
-                <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Person 9 Name">
-                <div class="grid-item-info">
-                    <h3>Person 9 Name</h3>
-                    <h4>Person 9 University</h4>
-                </div>
-            </div>
+            <!--<div class="grid-item" data-aos="fade-up" data-aos-delay="800" onclick="window.location='person9.html';">-->
+                <!--<img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Person 9 Name">-->
+                <!--<div class="grid-item-info">-->
+                    <!--<h3>Person 9 Name</h3>-->
+                    <!--<h4>Person 9 University</h4>-->
+                <!--</div>-->
+            <!--</div>-->
         </div>
         </div>
     <div class="footer">
         <p>©2023 Southeast Regional Coalition for University-Assisted Community Schools</p>
     </div>
+    <script>
+        function toggleMenu() {
+            var navigation = document.querySelector('.navigation');
+            if (navigation.style.display === "block") {
+                navigation.style.display = "none";
+            } else {
+                navigation.style.display = "block";
+            }
+        }
+        </script>
 </body>
 </html>
