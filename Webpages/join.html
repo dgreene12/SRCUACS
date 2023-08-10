@@ -147,7 +147,7 @@
     .content h2 {
             text-align: center;
             margin: auto;
-            margin-top: 15px;
+            margin-top: 25px;
             margin-bottom: 15px;
             font-size: 30px;
             font-weight: bold;
@@ -189,7 +189,7 @@
         box-sizing: border-box;
     }
 
-    .newsletter-form, .partnership-form, .contact-info {
+    .partnership-form, .contact-info {
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -203,11 +203,11 @@
         box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.05);
     }
 
-    .newsletter-form:hover, .partnership-form:hover {
+    .partnership-form:hover {
         box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     }
 
-    .newsletter-form label, .partnership-form label {
+    .partnership-form label {
         align-self: center;
         font-weight: bold;
     }
@@ -220,7 +220,7 @@
         font-family: 'Roboto', sans-serif;
     }
 
-    .newsletter-form input[type="submit"], .partnership-form input[type="submit"] {
+    .partnership-form input[type="submit"] {
         padding: 12px 25px;
         font-size: 17px;
         border: none;
@@ -231,21 +231,8 @@
         transition: all 0.3s;
     }
 
-    .newsletter-form input[type="submit"]:hover, .partnership-form input[type="submit"]:hover {
+    .partnership-form input[type="submit"]:hover {
         background-color: #6699CC;
-    }
-
-    .success-message {
-        display: none;
-        color: #006633;
-        font-size: 18px;
-        margin-top: 20px;
-    }
-
-    .icon-checkmark {
-        font-size: 50px;
-        color: green;
-        display: none;
     }
 
     .section-divider {
@@ -261,6 +248,18 @@
     .large-font ul {
         list-style-type: none;
         padding-left: 0;
+    }
+    .newsletter-btn {
+        position: relative;
+        margin-top: 50px;
+        padding: 15px 30px;
+        background-color: #880023;
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        text-decoration: none;
+        font-size: 20px;
     }
         @media only screen and (max-width: 480px) {
         .header {
@@ -379,13 +378,13 @@
         max-width: 100%; /* Set max-width to 100% */
     }
 
-    .newsletter-form, .partnership-form, .contact-info {
+    .partnership-form, .contact-info {
         padding: 10px; /* Reduce padding for form elements */
         margin: 10px 0; /* Adjust margin for smaller screens */
         max-width: 100%; /* Allow forms to expand to full width */
     }
 
-    .newsletter-form label, .partnership-form label {
+    .partnership-form label {
         font-size: 16px; /* Adjust font size for labels */
     }
 
@@ -393,7 +392,7 @@
         font-size: 14px; /* Adjust font size for inputs and textarea */
     }
 
-    .newsletter-form input[type="submit"], .partnership-form input[type="submit"] {
+    .partnership-form input[type="submit"] {
         font-size: 15px; /* Adjust font size for submit buttons */
     }
 
@@ -483,18 +482,9 @@
     </div>
         <div class="column">
             <h2>Sign up for our newsletter!</h2>
-            <form class="newsletter-form" name="newsletter-form" method="POST" data-netlify="true">
-                <input type="hidden" name="form-name" value="newsletter-form" />
-                <label for="newsletter-email">Email</label>
-                <input type="email" id="newsletter-email" name="newsletter-email" required>
-                <input type="submit" value="Sign Up">
-            </form>
-            <div class="icon-checkmark">✔️</div>
-        <div id="success-message" class="success-message">
-            <h2>Thank you for submitting!</h2>
-            <p>We'll be in contact soon.</p>
-        </div>
-            <div class=".contact-info">
+            <br>
+            <a href="https://duke.qualtrics.com/jfe/form/SV_4Zbq8OGZfuGRSce" target="_blank" class="newsletter-btn">Click here!</a>
+            <hr class="section-divider">
         <h2>Monthly Network Calls<br>(Noon - 1PM EST)</h2>
             <div class="large-font">  
                 <ul>
@@ -514,7 +504,6 @@
                     </li>
                 </ul>
     </div>
-            </div>
         </div>
         </div>
     </div>
