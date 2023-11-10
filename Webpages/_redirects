@@ -10,7 +10,7 @@
 /join                            /join.html      200
 /alec.html                       /alec      301!
 /alec                            /alec.html      200
-/amaya.html                       /amaya     301!
+/amaya.html                      /amaya     301!
 /amaya                           /amaya.html     200
 /amy.html                        /amya      301!
 /amya                            /amy.html       200
@@ -24,7 +24,9 @@
 /xavier                          /xavier.html    200
 /yolanda.html                    /yolanda   301!
 /yolanda                         /yolanda.html   200
-/person9.html                    /person9   301!
-/person9                         /person9.html   200
+/christian.html                  /christian   301!
+/christian                       /christian.html   200
+/drew.html                       /drew   301!
+/drew                            /drew.html   200
 /*                               /index.html     200
 
