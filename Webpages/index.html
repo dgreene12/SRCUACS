@@ -311,6 +311,18 @@
             margin: 30px auto;
             width: 80%;
         }
+        .home-title {
+            position: absolute;
+            top: 5%;
+            width: 70%;
+            right: 5%;
+            font-size: 55px;
+            font-weight: bold;
+        }
+        .logo-img {
+            position: absolute;
+            left: 13%;
+        }
         @media only screen and (max-width: 480px) {
         .header {
             background-image: url('https://raw.githubusercontent.com/dgreene12/SRCUACS/e7153d56a033c9dcdab223dc5aec624b116fa11c/Images/Display%20Photos/jordangraduation2.jpg');
@@ -491,10 +503,11 @@
 </head>
 <body>
     <div class="header">
-        <a href="index.html">
+        <p class="home-title">Southeast Regional Coalition for
+            <br> University-Assisted Community Schools</p>
+        <a href="index.html" class="logo-img" >
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
         </a>
-        <p left="20%" class="overlay-text">Southeast Regional Coalition for University-Assisted Coalition</p>
         <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
     </div>
     <div class="logos">

@@ -269,7 +269,18 @@
             margin: 30px auto;
             width: 80%;
         }
-
+        .home-title {
+            position: absolute;
+            top: 5%;
+            width: 70%;
+            right: 5%;
+            font-size: 55px;
+            font-weight: bold;
+        }
+        .logo-img {
+            position: absolute;
+            left: 13%;
+        }
         @media only screen and (max-width: 480px) {
         .header {
             background-image: url('https://raw.githubusercontent.com/dgreene12/SRCUACS/e7153d56a033c9dcdab223dc5aec624b116fa11c/Images/Display%20Photos/jordangraduation2.jpg');
@@ -411,7 +422,9 @@
 </head>
     <body>
         <div class="header">
-            <a href="index.html">
+            <p class="home-title">Southeast Regional Coalition for
+                <br> University-Assisted Community Schools</p>
+            <a href="index.html" class="logo-img" >
                 <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
             </a>
             <button class="hamburger-menu" onclick="toggleMenu()">☰</button>
@@ -464,32 +477,32 @@
                 </p>          
         </div>
     <div class="timeline">
+
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/f2320551e08a4e2d34131dd8c809f3ba67aecb8f/Images/Display%20Photos/hullhouse.png" alt="Hull House">
             
             <div class="event-content">
-                <h3>1902</h3>
+                <h3>1902 - Dewey's Vision for Community Schools</h3>
                 <p>The concept of community schools originates from Jane Addams' Hull House opened in 1889 in Chicago, which provided comprehensive services
                     to support immigrants. Influenced by Victorian-era English settlement houses, its multifaceted
                     approach addressed societal issues holistically. John Dewey expanded on this, promoting schools as community centers.
                     By the early 20th century, many schools integrated services like healthcare and recreational activities, laying the
                     foundation for community schools as we see them today (<a href="https://www.aft.org/sites/default/files/enduringappeal.pdf" target="_blank">Benson, Harkavy, Johanek, & Puckett 2009</a>).</p>
-                <p>In 1902, inspired by Hull House and settlement houses in other cities, Dewey presented a significant, prescient address,
-                    “The School as Social Centre,” at a <a href="https://www.nea.org/" target="_blank">National Education Association</a> conference (Dewey, “School as Social Centre” 80–93).
-                    Viewed in historical perspective, the talk clearly anticipated some of the community school movements that episodically
-                    rose and fell in the United States after 1902 and are now strongly rising again (“Coalition for Community Schools”).
-                    The current community school movement builds on and extends Dewey’s idea that since public schools “belong” to all members of
-                    the community, they should “serve” all members of the community—and are particularly well-suited to function as neighborhood “hubs” or “centers,”
-                    around which local partnerships can be generated and developed. When they play that innovative role, schools function as community institutions
-                    par excellence, providing a decentralized, democratic, community-based response to rapidly changing community problems.
-                    In the process, they help young people learn and develop skills through action-oriented, collaborative, real-world problem solving.</p>
             </div>
         </div>
+
+        <div class="event" data-aos="fade-up">
+            <img src="/Images/Display Photos/rosenwald.jpg" alt="The Rosenwald School">
+            <div class="event-content">
+                <h3>1913 - The Rosenwald School</h3>
+                <p>Philanthropist Julius Rosenwald and Booker T. Washington, president of the Tuskegee Institute, partnered with Black communities across the rural South to develop the first public schools for Black students in the country.  The “Rosenwald School” model was scaled to meet the needs of more than 5,000 school communities across the nation.</p>
+            </div>
+        </div>  
     
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c1869ce59c5c564cd730a116684663ef43d03426/Images/Display%20Photos/leauacs.jpeg" alt="Netter Center">
             <div class="event-content">
-                <h3>1985-1992</h3>
+                <h3>1985-1992 - The Spread of Community Schools</h3>
                 <p>In the vanguard of the modern community schools movement, Ira Harkavy and his University of
                     Pennsylvania colleagues began university-school-community collaborations in West Philadelphia in 1985,
                     leading to the transformation of a local middle school into a university-assisted community school by 1989.
@@ -503,7 +516,7 @@
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/nettercenter3.jpeg" alt="Netter Center">
             <div class="event-content">
-                <h3>1993-2004</h3>
+                <h3>1993-2004 - The Netter Center</h3>
                 <p>Through private foundation and federal grant funding, the <a href="http://www.nettercenter.upenn.edu/" target="_blank">Netter Center at the University of Pennsylvania</a>
                     supported expansion of the university-community school model at 23 universities as well as provided training and technical assistance to an additional 75 universities.</p>
             </div>
@@ -512,7 +525,7 @@
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/support2.jpg" alt="Instruction">
             <div class="event-content">
-                <h3>2008</h3>
+                <h3>2008 - First Regional Training Center</h3>
                 <p>University of Oklahoma-Tulsa selected as the site of the first regional training center for university-assisted
                     community schools, establishing the Higher Education Forum of Oklahoma.</p>
             </div>
@@ -521,7 +534,7 @@
         <div class="event" data-aos="fade-up">
                 <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/iupuics.jpeg" alt="IUPUI">
                 <div class="event-content">
-                    <h3>2011</h3>
+                    <h3>2011 - The Midwest Center for University-Assisted Community Schools</h3>
                     <p> Indiana University—Purdue University Indianapolis (IUPUI) selected as the site of the second regional
                         training center for university-assisted community schools, established the Midwest Center for
                         University-Assisted Community Schools now the Family, School and Neighborhood Engagement division
@@ -535,7 +548,7 @@
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/commpact2.png" alt="UCONN CommPACT">
             <div class="event-content">
-                <h3>2014</h3>
+                <h3>2014 - CommPact Community Schools Collaborative</h3>
                 <p>University of Connecticut selected as the site of the third regional training center, establishing the
                     New England University-Assisted Community School Collaborative. Now known as CommPACT Community Schools Collaborative,
                     there are currently 4 CommPACT-affiliated community schools across Connecticut.  </p>
@@ -545,7 +558,7 @@
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/uacsnn.png" alt="UACS Network">
             <div class="event-content">
-                <h3>2015</h3>
+                <h3>2015 - Expansion of the UACS Network</h3>
                 <p>University-Assisted Community Schools Network formed as a partnership between the Netter Center (University of Pennsylvania),
                     Rutgers University-Camden, and the Coalition for Community Schools. There are now over 70 universities in the network.
                 </p>
@@ -555,7 +568,7 @@
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/ucla3.jpeg" alt="UCLA">
             <div class="event-content">
-                <h3>2017</h3>
+                <h3>2017 - UCLA Center for Community Schooling</h3>
                 <p>UCLA selected as the site of the fourth regional training center, establishing the UCLA Center for Community Schooling.
                     They partner with two community schools in Los Angeles Unified School Distrct— Mann UCLA Community School and RFK UCLA Community School. At least twice a year, they publish an issue of the
                     <a href="https://communityschooling.gseis.ucla.edu/journal/" target="_blank"><i>Community Schooling Journal</i></a>,
@@ -569,7 +582,7 @@
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/REI2.jpeg" alt="REI">
             <div class="event-content">
-                <h3>2017</h3>
+                <h3>2017 - Rural Education Institute at ECU</h3>
                 <p>The Rural Education Institute at East Carolina University (ECU) was formed to initiate and facilitate partnerships
                     and research-driven innovations that enhance holistic development and opportunities for PreK-16 students
                     and their families in rural communities. REI also collaborates with stakeholders towards positive transformation in
@@ -581,7 +594,7 @@
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/df45bd66995a15ba14a955e1b8a3c09e7c49d5ec/Images/Display%20Photos/duacsrc.jpg" alt="DUACSRC">
             <div class="event-content">
-                <h3>2019</h3>
+                <h3>2019 - Durham University-Assisted Community Schools Research Collective</h3>
                 <p>The <a src="sites.duke.edu/uacs" target="_blank"> Durham University-Assisted Community Schools Research Collective</a> 
                     is established in partnership with Duke University, North Carolina Central University (NCCU), and the
                     Durham Public Schools Foundation. The collective engages undergraduate students in
@@ -593,7 +606,7 @@
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/75fa5b25322943b1bb05937a9583297709df1f40/Images/Display%20Photos/binghamtonpic.jpeg" alt="Binghamton Community Schools">
             <div class="event-content">
-                <h3>2020</h3>
+                <h3>2020 - Binghamton University</h3>
                 <p>Binghamton University (SUNY) selected as the site of the fifth regional training center, supporting programs
                     across New York and New Jersey. Binghamton recently received two five-year grants from the U.S. Department
                     of Education, totaling $9,300,000, to expand mental health services in New York’s Southern Tier as part of
@@ -606,7 +619,7 @@
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/297198722eee37230b7367c0f4bc68e1eb028506/Images/Display%20Photos/pwmlogo.jpg" alt="P.W. Moore Elementary">
             <div class="event-content">
-                <h3>2022</h3>
+                <h3>2022 - First Rural UACS</h3>
                 <p>The Rural Education Institute at ECU partnered with Elizabeth City-Pasquotank Public Schools (ECPPS) to establish
                     the first rural UACS at P.W. Moore Elementary.
                 </p>
@@ -616,7 +629,7 @@
         <div class="event" data-aos="fade-up">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="SRCUACS Logo">
             <div class="event-content">
-                <h3>2023</h3>
+                <h3>2023 - Formation of SRCUACS</h3>
                 <p>Duke, NCCU, and ECU selected as the site of sixth regional training center, forming
                     the Southern Regional Coalition for University-Assisted Community Schools.
                 </p>
@@ -626,7 +639,7 @@
         <div class="event" data-aos="fade-up">
             <img src="https://github.com/dgreene12/SRCUACS/blob/main/Images/Display%20Photos/nccsc.jpg?raw=true" alt="North Carolina Community Schools Coalition Logo", width="600">
             <div class="event-content">
-                <h3>2024</h3>
+                <h3>2024 - SRCUACS Receives Statewide Partnership</h3>
                 <p>The Southeast Regional Coalition for University-Assisted Community Schools becomes a statewide partner 
                     with the North Carolina Community Schools Coalition.
                 </p>

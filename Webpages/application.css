@@ -1,0 +1,356 @@
+html, body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #F2F2F2;
+    margin: 0;
+    padding: 0;
+}
+.header {
+    background-image: url('https://raw.githubusercontent.com/dgreene12/SRCUACS/e7153d56a033c9dcdab223dc5aec624b116fa11c/Images/Display%20Photos/jordangraduation2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 120px 60px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 51, 102, 0.9);
+    z-index: 0;
+}
+.header img {
+    height: 240px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+}
+.header img:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+.hero-container {
+    position: relative;
+    width: 100%; 
+    height: 95%;
+    overflow: hidden;
+}
+.hero-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+.hero-overlay {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 51, 102, 0.5);
+    z-index: 1;
+}
+.hero-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 100px;
+    font-weight: bold;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
+}
+.navigation {
+    display: flex;
+    justify-content: center;
+    background-color: #003366;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+.navigation a {
+    color: #FFFFFF;
+    text-align: center;
+    padding: 18px 20px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.navigation a:hover {
+    background-color: #6699CC;
+    color: black;
+}
+.navigation .current {
+    background-color: #6699CC;
+    color: black;
+}
+.logos {
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}   
+.logos img {
+    height: 50px;
+    width: auto;
+    margin: 0 4%;
+}
+.logos img:nth-child(1) {
+    margin-right: 6%;
+    margin-left: 10%;
+}
+.logos img:nth-child(2) {
+    margin: 0 15%;
+    height: 58px;
+}
+.logos img:nth-child(3) {
+    margin-left: 2%;
+}
+.large-font {
+    font-size: 24px;
+}
+.large-font ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+.content {
+    padding: 20px;
+    text-align: center;
+    margin: auto;
+    width: 70%;
+}
+.content > p {
+    font-size: 1.5em;
+    margin-bottom: 40px;
+}
+.content > h2 {
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+.footer {
+    background-color: #003366;
+    color: #FFFFFF;
+    padding: 10px;
+    box-shadow: 0 -4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.footer img{
+    max-height: 200px;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-bottom: 60px;
+    align-items: center;
+}
+.grid-item {
+    background: #592A8A;
+    border: 2px solid rgba(0, 51, 102, 0.2);
+    border-radius: 15px;
+    padding: 30px 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.4s ease-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    perspective: 1000px;
+    color: #FFFFFF;
+}
+.grid-item:hover {
+    transform: rotateY(10deg) translateY(-5px);
+    box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
+}
+.grid-item:hover::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.1);
+}
+.grid-item h2 {
+    font-size: 35px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #FFFFFF;
+}
+.grid-item h2, .grid-item p {
+    transform: scale(0.95);
+    opacity: 0.8;
+    transition: all 0.4s ease-out;
+}
+.grid-item:hover h2, .grid-item:hover p {
+    transform: scale(1);
+    opacity: 1;
+}
+.grid-item:hover p {
+    display: block;
+}
+.grid-item::before {
+    content: "+";
+    font-size: 24px;
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    color: #FFFFFF;
+    opacity: 0.7;
+    transition: transform 0.4s ease-out;
+}
+.grid-item.expanded::before {
+    transform: rotate(45deg);
+}
+.grid-item p {
+    display: none;
+    transition: opacity 0.4s ease;
+    font-size: 18px;
+    color: #FFFFFF;
+    margin-top: 10px;
+}
+.section-divider {
+    border: 0;
+    height: 1px;
+    background: linear-gradient(270deg, transparent, #000000, transparent);
+    margin: 30px auto;
+    width: 80%;
+}
+
+@media only screen and (max-width: 480px) {
+.header {
+    background-image: url('https://raw.githubusercontent.com/dgreene12/SRCUACS/e7153d56a033c9dcdab223dc5aec624b116fa11c/Images/Display%20Photos/jordangraduation2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: #FFFFFF;
+    padding: 60px 30px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+.header::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 51, 102, 0.9);
+    z-index: 0;
+}
+.header img {
+    height: 120px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+    z-index: 10;
+}
+.header img:hover {
+    transform: translate(-50%, -50%) scale(1.1);
+}
+
+.hero-text {
+    font-size: 60px;
+}
+
+.hamburger-menu {
+    background-color: white;
+    color: #003366;
+    border: none;
+    font-size: 30px;
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 20;
+    width: 40px;
+    height: 40px;
+    margin-top: 15px;
+}
+
+.navigation {
+    display: none;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #003366;
+    z-index: 10;
+    transition: all 0.3s ease;
+}
+
+.navigation a {
+    display: block;
+    padding: 10px 20px;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-bottom: 1px solid #1a4f7a;
+    transition: background-color 0.3s ease;
+}
+
+.navigation a:hover {
+    background-color: #1a4f7a;
+}
+
+.logos {
+    background: #FFFFFF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}   
+.logos img {
+    height: 20px;
+    width: auto;
+    margin: 0 2%;
+}
+.logos img:nth-child(1) {
+    margin-right: 12%;
+    margin-left: 13%;
+}
+.logos img:nth-child(2) {
+    margin: 0 10%;
+    height: 22px;
+}
+.logos img:nth-child(3) {
+    margin-right: 10%;
+}
+
+.content {
+    padding: 20px;
+    width: 90%;
+}
+
+.content > p, .content > h2 {
+    font-size: 24px;
+}
+
+.grid {
+    grid-template-columns: 1fr;
+}
+
+.grid-item {
+    padding: 20px 10px;
+}
+
+.grid-item h2 {
+    font-size: 28px;
+}
+
+.grid-item p {
+    font-size: 16px;
+}
+    
+}
