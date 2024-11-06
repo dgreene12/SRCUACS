@@ -164,7 +164,7 @@
             align-items: center;
         }
         .grid-item {
-            background: #592A8A;
+            background: #173c9e;
             border: 2px solid rgba(0, 51, 102, 0.2);
             border-radius: 15px;
             padding: 30px 20px;
@@ -176,11 +176,11 @@
             perspective: 1000px;
             color: #FFFFFF;
         }
-        .grid-item:hover {
+        /* .grid-item:hover {
             transform: rotateY(10deg) translateY(-5px);
             box-shadow: 0px 15px 25px rgba(0, 0, 0, 0.1);
-        }
-        .grid-item:hover::after {
+        } */
+        /* .grid-item:hover::after {
             content: "";
             position: absolute;
             top: 0;
@@ -188,7 +188,7 @@
             right: 0;
             bottom: 0;
             background: rgba(0, 0, 0, 0.1);
-        }
+        } */
         .grid-item h2 {
             font-size: 35px;
             font-weight: 600;
@@ -196,19 +196,19 @@
             text-align: center;
             color: #FFFFFF;
         }
-        .grid-item h2, .grid-item p {
+        /* .grid-item h2, .grid-item p {
             transform: scale(0.95);
             opacity: 0.8;
             transition: all 0.4s ease-out;
-        }
-        .grid-item:hover h2, .grid-item:hover p {
+        } */
+        /* .grid-item:hover h2, .grid-item:hover p {
             transform: scale(1);
             opacity: 1;
-        }
-        .grid-item:hover p {
+        } */
+        /* .grid-item:hover p {
             display: block;
-        }
-        .grid-item::before {
+        } */
+        /* .grid-item::before {
             content: "+";
             font-size: 24px;
             position: absolute;
@@ -217,17 +217,17 @@
             color: #FFFFFF;
             opacity: 0.7;
             transition: transform 0.4s ease-out;
-        }
+        } */
         .grid-item.expanded::before {
             transform: rotate(45deg);
         }
-        .grid-item p {
+        /* .grid-item p {
             display: none;
             transition: opacity 0.4s ease;
             font-size: 18px;
             color: #FFFFFF;
             margin-top: 10px;
-        }
+        } */
         .section-divider {
             border: 0;
             height: 1px;
@@ -246,6 +246,20 @@
         .logo-img {
             position: absolute;
             left: 13%;
+        }
+        .grid-parent {
+            display: flex;
+        }
+        .grid-leftchild {
+            flex: 0 0 20%;
+            padding: 0.5rem;
+        }
+        .grid-rightchild {
+            flex: 0 0 80%;
+        }
+        .grid-img {
+            width: 100%;
+            height: auto;
         }
         @media only screen and (max-width: 480px) {
         .header {
@@ -403,61 +417,55 @@
 </div>
     <div class="content">
         <p><strong style="color: #880023;">The Southeast Regional Coalition for University-Assisted Community Schools (SRCUACS)</strong>
-            was awarded as the sixth regional training center for university-assisted community schools (UACS) by the
+            was awarded as a regional training center for university-assisted community schools (UACS) by the
             Netter Center for Community Partnerships at the University of Pennsylvania.</p>
         <p>SRCUACS will serve the critically important role of consolidating colleges and 
             universities within the state and across the region to enhance practice and advance policy
             change for the expansion and sustainability of community schools. SRCUACS will act as a 
-            convener and central hub organized around six elements: Coalition Building, Storytelling,
+            convener and central hub organized around six foundational principles: Coalition Building, Storytelling,
             Connecting, Pipeline Development, Policy Change, and Research.</p>
         <div class="grid">
             <div class="grid-item">
-                <h2>Coalition Building</h2>
-                <p>SRCUACS is a three-institution collaboration between East Carolina University, Duke University,
-                    and North Carolina Central University. North Carolina and the Southeastern United States is home
-                    to a robust and diverse higher education ecosystem. By leveraging collective assets, SRCUACS
-                    envisions an opportunity to learn across differences while also creating context-specific
-                    professional learning communities. Join our network calls to broaden and deepen our coalition!</p>
+                <div class="grid-parent">
+                    <div class="grid-leftchild"><img src="/Images/principles/coalition.png" class="grid-img" alt="Coalition Building Icon"></div>
+                    <div class="grid-rightchild"><h2>Coalition Building</h2></div>
+                </div>
+                <p>Leverage collective assets and build context-specific professional learning communities </p>
             </div>
             <div class="grid-item">
-                <h2>Storytelling</h2>
-                <p>SRCUACS draws inspiration from UACS Regional Training Centers’ peer-reviewed publications
-                    and related public-facing initiatives including UPenn’s <i>Universities and Community Schools
-                    Journal</i>, UCLA’s <i>Community Schooling Journal</i>, and IUPUI’s <i>ENGAGE! Journal</i>.<br><br> 
-                    SRCUACS expects to advance the work of community schools and their university partners
-                    by providing dynamic vehicles for practitioner storytelling. Stay tuned for our online
-                    publication in Fall 2024!</p> 
+                <div class="grid-parent">
+                    <div class="grid-leftchild"><img src="/Images/principles/storytelling.png" class="grid-img" alt="Coalition Building Icon"></div>
+                    <div class="grid-rightchild"><h2>Storytelling</h2></div>
+                </div>
+                <p>Provide vehicles for dynamic practitioner storytelling</p> 
             </div>
             <div class="grid-item">
-                <h2>Connecting</h2>
-                <p>SRCUACS engages in asset mapping of the material, human, and organizational resources
-                    that the partner institutions have available to offer local community schools. Close examination
-                    of these assets will help the collaborative understand where duplication exists across the state
-                    and region and identify spaces for innovation.</p>
+                <div class="grid-parent">
+                    <div class="grid-leftchild"><img src="/Images/principles/connecting.png" class="grid-img" alt="Coalition Building Icon"></div>
+                    <div class="grid-rightchild"><h2>Connecting</h2></div>
+                </div>
+                <p>Asset mapping and identifying spaces for innovation</p>
             </div>
             <div class="grid-item">
-                <h2>Pipeline Development</h2>
-                <p>SRCUACS will develop and operationalize a transformative educational preparation pipeline to
-                    effectively recruit, prepare, and sustain community school practitioners. SRCUACS will develop
-                    organizing frameworks for sharing curriculum and pedagogical strategies, including research- and
-                    practice-based standards that guide regional and state educational preparation programs to prepare
-                    racially diverse, historically literate teachers for service in locally situated university-assisted
-                    community schools.</p>
+                <div class="grid-parent">
+                    <div class="grid-leftchild"><img src="/Images/principles/pipeline.png" class="grid-img" alt="Coalition Building Icon"></div>
+                    <div class="grid-rightchild"><h2>Pipeline Development</h2></div>
+                </div>
+                <p>Recruit, prepare, and sustain community schools practitioners</p>
             </div>
             <div class="grid-item">
-                <h2>Policy Change</h2>
-                <p>Policy change and ongoing support from policymakers will be essential to 
-                    realizing the potential for the UACS model in North Carolina and the region. SRCUACS will leverage its work to support
-                    policy changes that result in an increased number of community schools, more effective implementation of the UACS model,
-                    and enhanced professional preparation programs that produce individuals with the capacity to contribute to the UACS model.</p>
+                <div class="grid-parent">
+                    <div class="grid-leftchild"><img src="/Images/principles/policy.png" class="grid-img" alt="Coalition Building Icon"></div>
+                    <div class="grid-rightchild"><h2>Policy Change</h2></div>
+                </div>
+                <p>Support policy changes for sustained UACS partnerships</p>
             </div>
             <div class="grid-item">
-                <h2>Research</h2>
-                <p>Community-based action research plays an essential role in building relationships between public-school
-                    communities, higher education institutions, and other partners. Action research is a powerful tool that
-                    can support the work of community school and UACS coalitions by generating data-driven insights into
-                    the effectiveness of the strategy and identifying areas for improvement. 
-                </p>
+                <div class="grid-parent">
+                    <div class="grid-leftchild"><img src="/Images/principles/research.png" class="grid-img" alt="Coalition Building Icon"></div>
+                    <div class="grid-rightchild"><h2>Research</h2></div>
+                </div>
+                <p>Address questions identified by local community schools</p>
             </div>
         </div>
         <hr class="section-divider">
@@ -485,36 +493,36 @@
     <script>
         const gridItems = Array.from(document.querySelectorAll(".grid-item"));
     
-        gridItems.forEach((item, index) => {
-            item.addEventListener("click", () => {
-                const adjacentIndex = index % 2 === 0 ? index + 1 : index - 1;
-                const adjacentItem = gridItems[adjacentIndex];
+        // gridItems.forEach((item, index) => {
+        //     item.addEventListener("click", () => {
+        //         const adjacentIndex = index % 2 === 0 ? index + 1 : index - 1;
+        //         const adjacentItem = gridItems[adjacentIndex];
     
-                const isExpanded = item.classList.contains('expanded');
+        //         const isExpanded = item.classList.contains('expanded');
     
-                // Handle all items
-                gridItems.forEach((otherItem, otherIndex) => {
-                    // Clear any previous expansion
-                    otherItem.classList.remove('expanded');
+        //         // Handle all items
+        //         gridItems.forEach((otherItem, otherIndex) => {
+        //             // Clear any previous expansion
+        //             otherItem.classList.remove('expanded');
     
-                    let otherItemParagraphs = otherItem.querySelectorAll("p"); // Get all paragraphs in the other items
-                    otherItemParagraphs.forEach(paragraph => {
-                        paragraph.style.display = "none";
-                    });
+        //             let otherItemParagraphs = otherItem.querySelectorAll("p"); // Get all paragraphs in the other items
+        //             otherItemParagraphs.forEach(paragraph => {
+        //                 paragraph.style.display = "none";
+        //             });
     
-                    // If the current item was not previously expanded, expand it and its adjacent item
-                    if (otherItem === item && !isExpanded) {
-                        otherItem.classList.add('expanded');
-                        otherItemParagraphs.forEach(paragraph => {
-                            paragraph.style.display = "block";
-                        });
-                    }
-                    if (otherItem === adjacentItem && !isExpanded) {
-                        otherItem.classList.add('expanded');
-                    }
-                });
-            });
-        });
+        //             // If the current item was not previously expanded, expand it and its adjacent item
+        //             if (otherItem === item && !isExpanded) {
+        //                 otherItem.classList.add('expanded');
+        //                 otherItemParagraphs.forEach(paragraph => {
+        //                     paragraph.style.display = "block";
+        //                 });
+        //             }
+        //             if (otherItem === adjacentItem && !isExpanded) {
+        //                 otherItem.classList.add('expanded');
+        //             }
+        //         });
+        //     });
+        // });
 
         function toggleMenu() {
             var navigation = document.querySelector('.navigation');
