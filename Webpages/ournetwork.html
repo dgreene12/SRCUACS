@@ -29,7 +29,7 @@
     <div class="hero-text"><h1>Our Network</h1></div>
 </div>
     <div class="content">
-        <img src="/Images/Display Photos/southeast.jpg" alt="Southeast Region" usemap="#image-map" style="display: block; max-width: 100%; height: auto;">
+        <img src="/Images/Display Photos/southeast.jpg" alt="Southeast Region" usemap="#image-map" style="display: block; max-width: 100%; height: auto; margin: 0 auto;">
 
         <!-- Define the image map with specific coordinates for the shape -->
         <map name="image-map">
@@ -46,14 +46,223 @@
 
         <script>
             function ncFunction() {
-                // Smoothly scrolls to the North Carolina header
-                document.getElementById("north-carolina").scrollIntoView({ behavior: "smooth" });
+                // Get the element
+                const element = document.getElementById("north-carolina");
+                // Scroll to the element, but add some offset to center it on the screen
+                const offset = 100; // Adjust this value for more or less space above the element
+                const elementPosition = element.getBoundingClientRect().top;
+                const offsetPosition = elementPosition + window.pageYOffset - offset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: "smooth"
+                });
             }
         </script>
+          
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>State School Information</title>
+            <style>
+                body {
+                    font-family: Arial, sans-serif;
+                }
+                .state {
+                    border: 1px solid #ccc;
+                    margin: 10px;
+                    padding: 10px;
+                    cursor: pointer;
+                    transition: all 0.3s ease-out;
+                    overflow: hidden;
+                }
+                .state:hover {
+                    background-color: #f0f0f0;
+                }
+                .school-list {
+                    max-height: 0;
+                    overflow: hidden;
+                    margin-top: 10px;
+                    padding-left: 20px;
+                    transition: max-height 0.3s ease-out;
+                }
+                .school {
+                    border: 1px solid #ccc;
+                    padding: 5px;
+                    margin: 5px 0;
+                    cursor: pointer;
+                    transition: background-color 0.3s;
+                }
+                .school:hover {
+                    background-color: #f0f0f0;
+                }
+                .info-box {
+                    max-height: 0;
+                    overflow: hidden;
+                    margin-top: 5px;
+                    padding: 0 10px;
+                    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
+                    background-color: #f9f9f9;
+                }
+                .info-box span {
+                    display: block;
+                    padding: 10px 0;
+                }
+            </style>
+        </head>
+        <body>
+        
+        <h1>State School Information</h1>
+        
+        <div class="state" id="north-carolina" onclick="toggleSchools(this)">
+            <h2>North Carolina</h2>
+            <div class="school-list">
+                <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">Duke</div>
+                <div class="info-box" onclick="event.stopPropagation();">
+                    <span>Information for School A</span>
+                </div>
+                <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">University of North Carolina Chapel</div>
+                <div class="info-box" onclick="event.stopPropagation();">
+                    <span>Information for School B</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="state" onclick="toggleSchools(this)">
+            <h2>Texas</h2>
+            <div class="school-list">
+                <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School C</div>
+                <div class="info-box" onclick="event.stopPropagation();">
+                    <span>Information for School C</span>
+                </div>
+                <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School D</div>
+                <div class="info-box" onclick="event.stopPropagation();">
+                    <span>Information for School D</span>
+                </div>
+            </div>
+        </div>
+        
+        <script>
+        function calculateTotalHeight(element) {
+            const style = window.getComputedStyle(element);
+            return element.scrollHeight + 
+                parseInt(style.marginTop || 0) + 
+                parseInt(style.marginBottom || 0) + 
+                parseInt(style.paddingTop || 0) + 
+                parseInt(style.paddingBottom || 0);
+        }
 
-        <h1 id="north-carolina">North Carolina</h1>
-        <p>North Carolina is super duper awesome</p>
+        function getAllVisibleHeight(schoolList) {
+            let totalHeight = 0;
+            const children = Array.from(schoolList.children);
+            
+            for (let element of children) {
+                if (element.classList.contains('info-box')) {
+                    const computedStyle = window.getComputedStyle(element);
+                    const isOpen = computedStyle.maxHeight !== '0px';
+                    if (isOpen) {
+                        // Get the content height for open info boxes
+                        const content = element.querySelector('span');
+                        const contentHeight = content ? content.offsetHeight : 0;
+                        totalHeight += contentHeight + 20; // Add padding
+                    }
+                } else {
+                    totalHeight += element.offsetHeight;
+                }
+            }
+            
+            // Add school list's own spacing
+            const style = window.getComputedStyle(schoolList);
+            totalHeight += parseInt(style.marginTop || 0) + 
+                        parseInt(style.marginBottom || 0) + 
+                        parseInt(style.paddingTop || 0) + 
+                        parseInt(style.paddingBottom || 0);
+            
+            return totalHeight;
+        }
 
+        function adjustStateHeight(stateDiv) {
+            const schoolList = stateDiv.querySelector('.school-list');
+            const totalHeight = getAllVisibleHeight(schoolList);
+            schoolList.style.maxHeight = `${totalHeight}px`;
+            stateDiv.style.maxHeight = `${stateDiv.querySelector('h2').offsetHeight + totalHeight + 40}px`;
+        }
+
+        function toggleSchools(stateDiv) {
+            const schoolList = stateDiv.querySelector('.school-list');
+            const allStates = document.querySelectorAll('.state');
+            
+            // Reset all other states
+            allStates.forEach(state => {
+                if (state !== stateDiv) {
+                    const otherList = state.querySelector('.school-list');
+                    otherList.style.maxHeight = '0';
+                    state.style.maxHeight = state.querySelector('h2').offsetHeight + 20 + 'px';
+                }
+            });
+
+            // Check if we're opening or closing
+            const isOpen = schoolList.style.maxHeight !== '0px';
+            
+            if (isOpen) {
+                // Closing the school list
+                schoolList.style.maxHeight = '0';
+                stateDiv.style.maxHeight = stateDiv.querySelector('h2').offsetHeight + 20 + 'px';
+            } else {
+                // Opening the school list
+                const totalHeight = getAllVisibleHeight(schoolList);
+                schoolList.style.maxHeight = `${totalHeight}px`;
+                
+                // Set state height to accommodate header + school list + padding
+                const stateHeight = stateDiv.querySelector('h2').offsetHeight + totalHeight + 40;
+                stateDiv.style.maxHeight = `${stateHeight}px`;
+            }
+        }
+
+        function toggleInfo(schoolDiv) {
+            event.preventDefault();
+            const infoBox = schoolDiv.nextElementSibling;
+            const stateDiv = schoolDiv.closest('.state');
+            const schoolList = stateDiv.querySelector('.school-list');
+            
+            if (!infoBox || !stateDiv) return;
+            
+            const content = infoBox.querySelector('span');
+            const contentHeight = content ? content.offsetHeight : 0;
+            const isOpen = infoBox.style.maxHeight !== '0px';
+            
+            // Toggle info box
+            infoBox.style.maxHeight = isOpen ? '0' : `${contentHeight + 20}px`;
+            infoBox.style.padding = isOpen ? '0 10px' : '10px 10px';
+            
+            // Use setTimeout to ensure the transition has started
+            setTimeout(() => {
+                const totalHeight = getAllVisibleHeight(schoolList);
+                schoolList.style.maxHeight = `${totalHeight}px`;
+                stateDiv.style.maxHeight = `${stateDiv.querySelector('h2').offsetHeight + totalHeight + 40}px`;
+            }, 50);
+        }
+
+        // Initialize on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set initial heights for all states
+            document.querySelectorAll('.state').forEach(state => {
+                state.style.maxHeight = state.querySelector('h2').offsetHeight + 20 + 'px';
+            });
+            
+            // Initialize all school lists and info boxes
+            document.querySelectorAll('.school-list').forEach(list => {
+                list.style.maxHeight = '0';
+            });
+            
+            document.querySelectorAll('.info-box').forEach(box => {
+                box.style.maxHeight = '0';
+                box.style.padding = '0 10px';
+            });
+        });
+        </script>
+        </body>
+        
     </div>
 </div>
 <div class="footer">
