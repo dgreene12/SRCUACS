@@ -45,11 +45,13 @@
         </style>
 
         <script>
+            
             function ncFunction() {
-                // Get the element
+                // Get the North Carolina element
                 const element = document.getElementById("north-carolina");
-                // Scroll to the element, but add some offset to center it on the screen
-                const offset = 100; // Adjust this value for more or less space above the element
+                
+                // Scroll to the element with offset
+                const offset = 100;
                 const elementPosition = element.getBoundingClientRect().top;
                 const offsetPosition = elementPosition + window.pageYOffset - offset;
 
@@ -57,6 +59,28 @@
                     top: offsetPosition,
                     behavior: "smooth"
                 });
+
+                // Wait for scroll to complete before opening the state
+                setTimeout(() => {
+                    // Close any other open states first
+                    const allStates = document.querySelectorAll('.state');
+                    allStates.forEach(state => {
+                        if (state !== element) {
+                            const otherList = state.querySelector('.school-list');
+                            otherList.style.maxHeight = '0';
+                            state.style.maxHeight = state.querySelector('h2').offsetHeight + 20 + 'px';
+                        }
+                    });
+
+                    // Open North Carolina's school list
+                    const schoolList = element.querySelector('.school-list');
+                    const totalHeight = getAllVisibleHeight(schoolList);
+                    schoolList.style.maxHeight = `${totalHeight}px`;
+                    
+                    // Set state height to accommodate header + school list + padding
+                    const stateHeight = element.querySelector('h2').offsetHeight + totalHeight + 40;
+                    element.style.maxHeight = `${stateHeight}px`;
+                }, 500); // Wait for 500ms to ensure smooth scrolling is complete
             }
         </script>
           
