@@ -28,532 +28,105 @@
     <div class="hero-overlay"></div>
     <div class="hero-text"><h1>Our Network</h1></div>
 </div>
-    <div class="content">
-        <img src="/Images/Display Photos/southeastbluebig.jpg" alt="Southeast Region" usemap="#image-map" style="display: block; width: 1000px; height: auto; margin: 0 auto;">
-
-        <!-- Define the image map with specific coordinates for the shape -->
-        <map name="image-map">
-            <area shape="poly" 
-                alt="North Carolina"
-                coords="785,171,952,169,960,169,958,173,965,182,959,182,944,188,941,187,936,190,939,194,949,193,955,190,957,191,960,194,963,192,967,196,967,204,963,203,956,213,946,212,940,209,939,215,945,217,942,225,941,228,947,226,952,229,948,233,944,240,941,238,924,240,907,254,899,269,883,269,841,230,814,232,807,223,796,223,767,220,755,220,738,228,701,226,701,219,709,218,716,216,713,211,724,206,730,206,739,201,742,198,747,197,748,193,752,193,752,189,758,192,769,182,774,186,782,176,783,177,783,165,783,169" 
-                onclick="stateFunction('north-carolina')">
-            <area shape="poly" 
-                alt="Virginia"
-                coords="890,64,900,78,911,71,913,78,925,84,921,91,915,100,919,107,927,105,950,120,949,127,935,117,934,122,949,134,943,142,933,142,934,147,944,157,959,158,960,165,738,165,754,155,753,151,771,140,786,148,800,147,829,136,833,125,850,100,860,103,867,90,874,87,884,79" 
-                onclick="stateFunction('virginia')">
-            <area shape="poly" 
-                alt="Maryland"
-                coords="854,50,854,66,865,57,870,57,872,53,876,52,881,56,886,51,897,51,904,53,910,64,920,69,917,72,925,78,929,76,936,83,924,98,929,97,942,106,947,107,944,99,941,96,942,79,945,76,941,72,942,68,955,59,957,55,962,55,964,65,955,71,957,74,958,86,959,91,954,98,956,103,960,98,967,102,964,105,966,106,968,112,983,112,986,101,974,101,966,97,965,53,932,52" 
-                onclick="stateFunction('maryland')">
-            <area shape="poly" 
-                alt="Delaware"
-                coords="975,47,968,50,968,55,971,72,972,95,977,97,987,99,988,91,982,84,978,74,975,66,974,57"
-                onclick="stateFunction('delaware')">
-            <!-- kentucky -->
-            <area shape="poly" 
-                alt="Kentucky"
-                coords="550,172,580,171,585,170,586,165,594,166,620,166,642,166,682,167,714,167,722,168,725,166,732,165,735,162,739,163,743,158,747,157,749,152,751,150,752,146,778,132,765,127,755,110,757,100,750,94,747,88,743,89,739,93,726,90,723,93,714,87,706,86,699,76,687,76,689,86,674,92,668,89,668,96,662,102,658,107,651,118,640,112,632,121,624,117,617,123,607,118,601,122,593,121,582,130,590,135,574,139,577,146,573,151,559,145,553,151,556,153,554,157,552,168,544,168,544,168"
-                onclick="stateFunction('kentucky')">
-            <!-- tennessee -->
-            <area shape="poly"
-                alt="Tennessee"
-                coords="519,228,703,228,702,221,706,217,711,217,713,211,721,205,727,205,738,199,743,198,748,191,753,187,757,192,766,185,774,186,776,179,781,177,784,169,590,167,587,173,546,172,541,177,541,179,539,183,538,188,535,192,538,194,534,199,532,206,528,207,525,210,522,213,523,222,519,228,519,228"
-                onclick="stateFunction('tennessee')">
-            <!-- south carolina -->
-            <area shape="poly"
-                alt="South Carolina"
-                coords="733,238,744,227,750,226,758,221,793,222,801,223,805,226,808,228,813,235,838,235,841,238,846,237,880,270,870,273,863,285,861,296,854,302,848,301,848,306,843,309,839,315,824,320,821,321,822,324,818,326,814,330,808,335,803,335,800,326,794,316,792,306,791,302,783,297,777,286,773,283,774,283,765,275,754,261,753,255,745,245,731,239,731,239"
-                onclick="stateFunction('south-carolina')">
-            <!-- georgia -->
-            <area shape="poly"
-                alt="Georgia"
-                coords="663,229,736,227,732,239,742,246,753,255,753,262,762,271,768,279,777,287,780,296,791,303,792,316,799,322,803,334,809,338,808,342,807,344,802,344,799,348,800,354,794,354,798,361,798,367,792,372,791,378,791,383,779,383,773,384,774,392,773,398,769,399,764,391,686,386,680,376,678,365,681,354,677,346,677,340,680,337,678,331,683,327,681,321,673,299,670,272,666,251,662,229,662,229"
-                onclick="stateFunction('georgia')">
-            <!-- alabama -->
-            <area shape="poly"
-                alt="Alabama"
-                coords="583,229,655,224,663,229,674,301,684,328,680,333,679,340,678,347,680,355,677,362,680,369,680,374,601,376,599,380,607,391,607,397,603,403,599,403,591,397,592,389,588,389,584,401,573,398,574,351,578,303,582,267,585,225,582,227"
-                onclick="stateFunction('alabama')">
-            <!-- mississippi -->
-            <area shape="poly"
-                alt="Mississippi"
-                coords="518,229,583,228,575,339,575,398,574,401,562,398,554,401,547,398,546,405,540,407,538,401,532,386,536,376,477,375,476,366,480,366,480,361,484,361,481,356,484,355,485,350,488,346,490,344,493,338,495,337,498,335,495,332,500,327,497,322,497,316,492,310,493,308,491,304,492,295,497,292,492,289,497,286,492,281,493,280,491,278,494,278,495,276,497,272,494,268,499,264,499,261,502,261,500,256,509,252,508,247,513,240,513,234,518,234,517,227,518,228"
-                onclick="stateFunction('mississippi')">
-            <!-- florida -->
-            <area shape="poly"
-                alt="Florida"
-                coords="779,616,789,608,798,612,804,611,816,606,829,584,831,573,836,532,821,491,817,477,820,468,803,440,798,419,793,400,791,385,774,384,773,397,769,399,765,393,687,387,680,375,597,377,608,391,608,399,605,404,616,401,639,400,650,404,669,416,669,423,682,430,691,421,696,417,701,417,702,412,711,411,721,415,728,423,732,427,733,432,738,437,744,448,749,445,755,457,754,475,749,492,752,505,753,513,759,518,765,532,771,549,775,544,782,563,784,571,795,569,799,587,800,592,811,593,818,593,822,593,814,607"
-                onclick="stateFunction('florida')">
-            <!-- louisiana -->
-            <area shape="poly"
-                alt="Louisiana"
-                coords="401,301,487,302,491,309,491,315,491,321,494,324,494,330,491,333,492,337,481,350,479,356,482,360,479,364,475,367,475,375,534,376,531,388,540,406,533,413,531,417,537,418,544,413,546,417,545,423,539,423,535,434,541,437,550,438,559,445,556,449,553,451,547,448,534,438,531,433,525,433,525,441,521,446,514,439,505,440,501,448,487,439,490,437,490,434,480,429,477,422,469,421,467,419,460,424,460,428,457,431,431,422,407,425,405,422,412,414,410,397,417,376,417,372,412,365,412,357,407,354,408,346,401,339,402,301,402,301"
-                onclick="stateFunction('louisiana')">
-            <!-- texas -->
-            <area shape="poly"
-                alt="Texas"
-                coords="123,171,217,172,217,243,224,249,233,251,238,249,242,252,243,257,251,258,254,259,261,259,265,264,268,260,274,261,275,265,280,265,280,269,285,271,290,266,292,269,296,268,297,271,304,269,305,273,309,274,311,267,317,270,321,269,326,273,331,275,335,272,337,269,347,270,354,267,360,270,367,267,378,274,392,281,400,280,402,341,410,347,410,352,408,353,412,357,413,363,418,371,418,384,410,397,413,411,406,424,391,430,381,431,381,423,380,421,372,426,376,438,362,455,341,465,334,463,327,464,320,460,320,467,326,472,323,475,319,473,315,480,307,483,304,491,297,495,299,499,301,505,296,513,288,517,296,521,294,527,294,537,297,547,303,565,298,567,286,560,273,559,258,553,247,547,242,536,236,526,236,517,231,513,235,508,231,502,225,498,214,480,207,475,206,467,198,452,198,449,187,434,175,426,174,421,152,420,145,417,143,421,132,422,126,442,119,451,106,444,99,439,89,437,85,432,76,425,76,422,72,413,73,407,66,396,67,391,57,383,49,381,45,373,35,364,25,359,20,349,13,342,12,338,122,339,124,173,124,173"
-                onclick="stateFunction('texas')">
-            <!-- oklahoma -->
-            <area shape="poly"
-                alt="Oklahoma"
-                coords="124,153,383,154,384,170,385,182,385,191,388,202,387,214,389,252,388,279,365,266,359,268,354,266,348,270,338,270,334,275,321,268,311,268,310,267,310,274,307,275,307,269,295,270,289,266,279,269,279,264,275,260,267,259,265,264,261,259,246,256,245,252,234,246,233,250,214,240,217,171,123,171,125,152,125,152"
-                onclick="stateFunction('oklahoma')">
-            <!-- arkansas -->
-            <area shape="poly"
-                alt="Arkansas"
-                coords="438,171,519,173,523,179,515,191,534,191,535,197,530,204,527,200,523,209,523,213,523,220,520,228,515,228,517,233,511,231,510,235,509,242,508,252,501,249,497,253,498,262,489,266,493,273,490,275,489,281,488,286,491,292,488,297,490,302,402,301,403,280,391,279,389,274,391,251,390,214,390,202,386,184,385,173,384,171,443,172,443,172"
-                onclick="stateFunction('arkansas')">
-            <!-- west virginia -->
-             <area shape="poly"
-                alt="West Virginia"
-                coords="819,18,816,47,819,51,851,52,854,72,863,64,869,62,874,57,882,59,888,56,895,53,902,56,907,67,903,72,889,63,885,71,871,86,868,83,858,100,848,94,841,106,838,113,831,122,828,127,829,132,827,137,820,137,819,134,814,140,810,137,808,141,801,145,794,139,788,144,775,136,773,133,756,110,757,101,766,98,766,94,769,94,768,85,773,79,776,79,777,83,785,80,784,73,785,68,790,69,790,66,797,65,811,52,810,49,812,45,814,36,818,33,816,13,816,13"
-                onclick="stateFunction('west-virginia')">
-        </map>
-
-        <style>
-            area {
-                cursor: pointer;
-            }
-        </style>
-
-        <script>
-            function stateFunction(stateID) {
-                // Existing scroll and state opening logic remains the same
-                const element = document.getElementById(stateID);
-                
-                const offset = 100;
-                const elementPosition = element.getBoundingClientRect().top;
-                const offsetPosition = elementPosition + window.pageYOffset - offset;
-
-                window.scrollTo({
-                    top: offsetPosition,
-                    behavior: "smooth"
-                });
-
-                setTimeout(() => {
-                    const allStates = document.querySelectorAll('.state');
-                    allStates.forEach(state => {
-                        if (state !== element) {
-                            const otherList = state.querySelector('.school-list');
-                            otherList.style.maxHeight = '0';
-                            state.style.maxHeight = state.querySelector('h2').offsetHeight + 20 + 'px';
-                        }
-                    });
-
-                    const schoolList = element.querySelector('.school-list');
-                    const totalHeight = getAllVisibleHeight(schoolList);
-                    schoolList.style.maxHeight = `${totalHeight}px`;
-                    
-                    const stateHeight = element.querySelector('h2').offsetHeight + totalHeight + 40;
-                    element.style.maxHeight = `${stateHeight}px`;
-                }, 500);
-            }
-        </script>
-          
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>State School Information</title>
-            <style>
-                body {
-                    font-family: Arial, sans-serif;
-                }
-                .state {
-                    border: 1px solid #ccc;
-                    margin: 10px;
-                    padding: 10px;
-                    cursor: pointer;
-                    transition: all 0.3s ease-out;
-                    overflow: hidden;
-                }
-                .state:hover {
-                    background-color: #f0f0f0;
-                }
-                .school-list {
-                    max-height: 0;
-                    overflow: hidden;
-                    margin-top: 10px;
-                    padding-left: 20px;
-                    transition: max-height 0.3s ease-out;
-                }
-                .school {
-                    border: 1px solid #ccc;
-                    padding: 5px;
-                    margin: 5px 0;
-                    cursor: pointer;
-                    transition: background-color 0.3s;
-                }
-                .school:hover {
-                    background-color: #f0f0f0;
-                }
-                .info-box {
-                    max-height: 0;
-                    overflow: hidden;
-                    margin-top: 5px;
-                    padding: 0 10px;
-                    transition: max-height 0.3s ease-out, padding 0.3s ease-out;
-                    background-color: #f9f9f9;
-                }
-                .info-box span {
-                    display: block;
-                    padding: 10px 0;
-                }
-            </style>
-        </head>
-        <body>
-        
-        <h1>State School Information</h1>
-
-        <div>
-            <div class="state" id="alabama" onclick="toggleSchools(this)">
-                <h2>Alabama</h2>
-                <div class="school-list">
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School C</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School C</span>
-                    </div>
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School D</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School D</span>
-                    </div>
-                </div>
+<body>
+    <div class="content" style="position: relative;">
+        <!-- Base Image -->
+        <img src="/Images/Display Photos/southeastbluebig.jpg" 
+             alt="Southeast Region" 
+             usemap="#image-map" 
+             style="display: block; width: 100%; height: auto; margin: 0 auto; opacity: 0.7;">
+    
+        <!-- Overlay Images -->
+        <a href="https://duke.edu/" target="duke" class="tooltip-container">
+            <div class="tooltip">
+                <img src="/Images/Logos/our_network/duke_logo.png"
+                     alt="Duke"
+                     style="
+                         position: absolute;
+                         top: 30%;
+                         left: 85%;
+                         transform: translate(-50%, -50%);
+                         width: 3%;
+                         height: auto;
+                         cursor: pointer;">
+                <span class="tooltiptext" style="top: 24%; left: 85%;">Duke University</span>
             </div>
-
-            <div class="state" id="arkansas" onclick="toggleSchools(this)">
-                <h2>Arkansas</h2>
-                <div class="school-list">
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School C</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School C</span>
-                    </div>
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School D</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School D</span>
-                    </div>
-                </div>
+        </a>
+        <a href="https://www.nccu.edu/" target="nccu" class="tooltip-container">
+            <div class="tooltip">
+                <img src="/Images/Logos/our_network/nccu_logo.gif" 
+                        alt="NCCU" 
+                        style="
+                        position: absolute; 
+                        top: 33%; 
+                        left: 86%; 
+                        transform: translate(-50%, -50%); 
+                        width: 3%; 
+                        height: auto; 
+                        cursor: pointer;">
+                <span class="tooltiptext" style="top: 35%; left: 86%;">NC Central University</span>
             </div>
-
-            <div class="state" id="delaware" onclick="toggleSchools(this)">
-                <h2>Delaware</h2>
-                <div class="school-list">
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School C</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School C</span>
-                    </div>
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School D</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School D</span>
-                    </div>
-                </div>
+        </a>
+        <a href="https://www.ecu.edu/" target="ecu" class="tooltip-container">
+            <div class="tooltip">
+                <img src="/Images/Logos/our_network/ecu.png" 
+                        alt="ECU" 
+                        style="
+                        position: absolute; 
+                        top: 32%; 
+                        left: 90%; 
+                        transform: translate(-50%, -50%); 
+                        width: 3%; 
+                        height: auto; 
+                        cursor: pointer;">
+                <span class="tooltiptext" style="top: 35%; left: 90%;">Eastern Carolina University</span>
             </div>
-
-            <div class="state" id="florida" onclick="toggleSchools(this)">
-                <h2>Florida</h2>
-                <div class="school-list">
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School C</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School C</span>
-                    </div>
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School D</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School D</span>
-                    </div>
-                </div>
+        </a>
+        <a href="https://www.ecsu.edu/" target="ecsu" class="tooltip-container">
+            <div class="tooltip">
+                <img src="/Images/Logos/our_network/ecsu.png" 
+                        alt="ECSU" 
+                        style="
+                        position: absolute; 
+                        top: 30%; 
+                        left: 93%; 
+                        transform: translate(-50%, -50%); 
+                        width: 3%; 
+                        height: auto; 
+                        cursor: pointer;">
+                <span class="tooltiptext" style="top: 23%; left: 93%;">Elizabeth City State University</span>
             </div>
-
-            <div class="state" id="georgia" onclick="toggleSchools(this)">
-                <h2>Georgia</h2>
-                <div class="school-list">
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School C</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School C</span>
-                    </div>
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School D</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School D</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="state" id="kentucky" onclick="toggleSchools(this)">
-                <h2>Kentucky</h2>
-                <div class="school-list">
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School C</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School C</span>
-                    </div>
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School D</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School D</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="state" id="louisiana" onclick="toggleSchools(this)">
-                <h2>Louisiana</h2>
-                <div class="school-list">
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School C</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School C</span>
-                    </div>
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School D</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School D</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="state" id="maryland" onclick="toggleSchools(this)">
-                <h2>Maryland</h2>
-                <div class="school-list">
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School C</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School C</span>
-                    </div>
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School D</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School D</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="state" id="mississippi" onclick="toggleSchools(this)">
-                <h2>Mississippi</h2>
-                <div class="school-list">
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School C</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School C</span>
-                    </div>
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School D</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School D</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="state" id="north-carolina" onclick="toggleSchools(this)">
-                <h2>North Carolina</h2>
-                <div class="school-list">
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">Duke</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School A</span>
-                    </div>
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">University of North Carolina Chapel</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School B</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="state" id="oklahoma" onclick="toggleSchools(this)">
-                <h2>Oklahoma</h2>
-                <div class="school-list">
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School C</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School C</span>
-                    </div>
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School D</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School D</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="state" id="south-carolina" onclick="toggleSchools(this)">
-                <h2>South Carolina</h2>
-                <div class="school-list">
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School C</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School C</span>
-                    </div>
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School D</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School D</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="state" id="tennessee" onclick="toggleSchools(this)">
-                <h2>Tennessee</h2>
-                <div class="school-list">
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School C</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School C</span>
-                    </div>
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School D</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School D</span>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="state" id="texas" onclick="toggleSchools(this)">
-                <h2>Texas</h2>
-                <div class="school-list">
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School C</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School C</span>
-                    </div>
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School D</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School D</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="state" id="virginia" onclick="toggleSchools(this)">
-                <h2>Virginia</h2>
-                <div class="school-list">
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School C</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School C</span>
-                    </div>
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School D</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School D</span>
-                    </div>
-                </div>
-            </div>
-
-            <div class="state" id="west-virginia" onclick="toggleSchools(this)">
-                <h2>West Virginia</h2>
-                <div class="school-list">
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School C</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School C</span>
-                    </div>
-                    <div class="school" onclick="event.stopPropagation(); toggleInfo(this)">School D</div>
-                    <div class="info-box" onclick="event.stopPropagation();">
-                        <span>Information for School D</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-        
-        <script>
-        function calculateTotalHeight(element) {
-            const style = window.getComputedStyle(element);
-            return element.scrollHeight + 
-                parseInt(style.marginTop || 0) + 
-                parseInt(style.marginBottom || 0) + 
-                parseInt(style.paddingTop || 0) + 
-                parseInt(style.paddingBottom || 0);
-        }
-
-        function getAllVisibleHeight(schoolList) {
-            let totalHeight = 0;
-            const children = Array.from(schoolList.children);
-            
-            for (let element of children) {
-                if (element.classList.contains('info-box')) {
-                    const computedStyle = window.getComputedStyle(element);
-                    const isOpen = computedStyle.maxHeight !== '0px';
-                    if (isOpen) {
-                        // Get the content height for open info boxes
-                        const content = element.querySelector('span');
-                        const contentHeight = content ? content.offsetHeight : 0;
-                        totalHeight += contentHeight + 20; // Add padding
-                    }
-                } else {
-                    totalHeight += element.offsetHeight;
-                }
-            }
-            
-            // Add school list's own spacing
-            const style = window.getComputedStyle(schoolList);
-            totalHeight += parseInt(style.marginTop || 0) + 
-                        parseInt(style.marginBottom || 0) + 
-                        parseInt(style.paddingTop || 0) + 
-                        parseInt(style.paddingBottom || 0);
-            
-            return totalHeight;
-        }
-
-        function adjustStateHeight(stateDiv) {
-            const schoolList = stateDiv.querySelector('.school-list');
-            const totalHeight = getAllVisibleHeight(schoolList);
-            schoolList.style.maxHeight = `${totalHeight}px`;
-            stateDiv.style.maxHeight = `${stateDiv.querySelector('h2').offsetHeight + totalHeight + 40}px`;
-        }
-
-        function toggleSchools(stateDiv) {
-            const schoolList = stateDiv.querySelector('.school-list');
-            const allStates = document.querySelectorAll('.state');
-            
-            // Reset all other states
-            allStates.forEach(state => {
-                if (state !== stateDiv) {
-                    const otherList = state.querySelector('.school-list');
-                    otherList.style.maxHeight = '0';
-                    state.style.maxHeight = state.querySelector('h2').offsetHeight + 20 + 'px';
-                }
-            });
-
-            // Check if we're opening or closing
-            const isOpen = schoolList.style.maxHeight !== '0px';
-            
-            if (isOpen) {
-                // Closing the school list
-                schoolList.style.maxHeight = '0';
-                stateDiv.style.maxHeight = stateDiv.querySelector('h2').offsetHeight + 20 + 'px';
-            } else {
-                // Opening the school list
-                const totalHeight = getAllVisibleHeight(schoolList);
-                schoolList.style.maxHeight = `${totalHeight}px`;
-                
-                // Set state height to accommodate header + school list + padding
-                const stateHeight = stateDiv.querySelector('h2').offsetHeight + totalHeight + 40;
-                stateDiv.style.maxHeight = `${stateHeight}px`;
-            }
-        }
-
-        function toggleInfo(schoolDiv) {
-            event.preventDefault();
-            const infoBox = schoolDiv.nextElementSibling;
-            const stateDiv = schoolDiv.closest('.state');
-            const schoolList = stateDiv.querySelector('.school-list');
-            
-            if (!infoBox || !stateDiv) return;
-            
-            const content = infoBox.querySelector('span');
-            const contentHeight = content ? content.offsetHeight : 0;
-            const isOpen = infoBox.style.maxHeight !== '0px';
-            
-            // Toggle info box
-            infoBox.style.maxHeight = isOpen ? '0' : `${contentHeight + 20}px`;
-            infoBox.style.padding = isOpen ? '0 10px' : '10px 10px';
-            
-            // Use setTimeout to ensure the transition has started
-            setTimeout(() => {
-                const totalHeight = getAllVisibleHeight(schoolList);
-                schoolList.style.maxHeight = `${totalHeight}px`;
-                stateDiv.style.maxHeight = `${stateDiv.querySelector('h2').offsetHeight + totalHeight + 40}px`;
-            }, 50);
-        }
-
-        // Initialize on page load
-        document.addEventListener('DOMContentLoaded', function() {
-            // Set initial heights for all states
-            document.querySelectorAll('.state').forEach(state => {
-                state.style.maxHeight = state.querySelector('h2').offsetHeight + 20 + 'px';
-            });
-            
-            // Initialize all school lists and info boxes
-            document.querySelectorAll('.school-list').forEach(list => {
-                list.style.maxHeight = '0';
-            });
-            
-            document.querySelectorAll('.info-box').forEach(box => {
-                box.style.maxHeight = '0';
-                box.style.padding = '0 10px';
-            });
-        });
-        </script>
-        </body>
-        
+        </a>
     </div>
-</div>
+    
+    <style>
+        .tooltip {
+            position: static;
+        }
+
+        .tooltip .tooltiptext {
+            visibility: hidden;
+            width: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            text-align: center;
+            border-radius: 5px;
+            padding: 5px;
+            position: absolute;
+            z-index: 2;
+            transform: translateX(-50%);
+            white-space: nowrap;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        .tooltip:hover .tooltiptext {
+            visibility: visible;
+            opacity: 1;
+        }
+    </style>
+          
+</body>
 <div class="footer">
     <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
 </div>
