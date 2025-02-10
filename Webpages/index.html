@@ -519,6 +519,7 @@
         <a href="index.html" class="current">Home</a>
         <a href="aboutus.html">About</a>
         <a href="uacs.html">UACS</a>
+        <a href="symposium.html">Symposium</a>
         <a href="news.html">News</a>
         <a href="join.html">Get Involved</a>
     </div>
@@ -530,6 +531,243 @@
             <i>Letter from Birmingham Jail</i>, 1963</div>
         <a href="aboutus.html" class="learn-more-btn">Learn More</a>
     </div>
+        <!-- Add the button and modal HTML -->
+        <div class="button-container" style="text-align: center; margin: 20px 0;">
+            <button id="openModalBtn" class="modal-button">Click for Symposium Information</button>
+        </div>
+        
+        <!-- The Modal -->
+        <div id="infoModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="event-header">
+                    <h1>Southern Roots: Growing University-Assisted Community School Partnerships</h1>
+                </div>
+                
+                <div class="event-details">
+                    <div class="detail-item">
+                        <strong>📅 Date:</strong> Thursday, April 10 and Friday, April 11, 2025
+                    </div>
+                    <div class="detail-item">
+                        <strong>📍 Location:</strong> NCCU (April 10) and Duke (April 11), Durham, NC
+                    </div>
+                    <div class="detail-item">
+                        <strong>💰 Cost:</strong> FREE
+                    </div>
+                    <div class="detail-item">
+                        <strong>✉️ Questions?</strong> Contact <a href="mailto:team@southeastuacs.org">team@southeastuacs.org</a> or <a href="mailto:alec.greenwald@duke.edu">alec.greenwald@duke.edu</a>
+                    </div>
+                </div>
+        
+                <div class="section">
+                    <h2>Introduction</h2>
+                    <p>We are excited to present the "Southern Roots: Growing University-Assisted Community School Partnerships" symposium taking place in Durham, NC on April 10th and 11th, 2025. This free, in-person event is co-sponsored by the Southeast Regional Coalition for University-Assisted Community Schools (SRCUACS), the Institute for Educational Leadership's Coalition for Community Schools, the NEA Foundation, the Netter Center for Community Partnerships, and Partners for Rural Impact.The goals are to strengthen relationships and to explore how the UACS strategy can contribute to the community schools movement.  Conversations will focus on practical examples of higher education partnerships that support teaching and learning, community development, advocacy, and coalition building. Attendees include representatives from nearly 20 institutions of higher education across the US South.</p>
+                </div>
+        
+                <div class="section">
+                    <h2>Accommodations</h2>
+                    <p>For out-of-town guests, hotel blocks have been reserved at the following locations. Please mention "Southern Regional UACS" when booking:</p>
+                    <ul>
+                        <li>Durham Marriott City Center (201 Foster Street, Durham, NC 27701)</li>
+                        <li>Hilton Durham Near Duke University (3800 Hillsborough Road, Durham, NC 27705)</li>
+                        <li>Hilton Garden Inn Durham/University Medical Center (2102 W. Main Street, Durham, NC 27705)</li>
+                    </ul>
+                </div>
+        
+                <div class="section">
+                    <h2>Schedule Overview</h2>
+                    <div class="schedule">
+                        <div class="day">
+                            <h3>Day 1</h3>
+                            <ul>
+                                <li>8:00 AM - Breakfast</li>
+                                <li>9:00 AM - 12:00 PM - Plenary Session and Breakouts</li>
+                                <li>12:00 PM - 1:00 PM - Lunch</li>
+                                <li>1:00 PM - 5:30 PM - Breakouts</li>
+                                <li>Evening - Social Event</li>
+                            </ul>
+                        </div>
+                        <div class="day">
+                            <h3>Day 2</h3>
+                            <ul>
+                                <li>8:00 AM - Breakfast</li>
+                                <li>8:30 AM - 12:00 PM - Site Visits</li>
+                                <li>12:00 PM - 1:30 PM - Lunch Downtown</li>
+                                <li>1:30 PM - 3:00 PM - Final Breakouts</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <style>
+        /* Existing styles */
+        .modal-button {
+            background-color: #880023;
+            color: white;
+            padding: 12px 24px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+        }
+        
+        .modal-button:hover {
+            background-color: #880023;
+        }
+        
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            overflow-y: auto;
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 30px;
+            border: 1px solid #888;
+            width: 90%;
+            max-width: 800px;
+            border-radius: 8px;
+            position: relative;
+        }
+        
+        /* New styles */
+        .event-header {
+            text-align: center;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #003366;
+            padding-bottom: 20px;
+        }
+        
+        .event-header h1 {
+            color: #2c3e50;
+            font-size: 24px;
+            margin: 0;
+        }
+        
+        .event-details {
+            background-color: #f8f9fa;
+            padding: 20px;
+            border-radius: 6px;
+            margin-bottom: 25px;
+        }
+        
+        .detail-item {
+            margin: 10px 0;
+            font-size: 16px;
+        }
+        
+        .section {
+            margin: 25px 0;
+        }
+        
+        .section h2 {
+            color: #2c3e50;
+            font-size: 20px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 8px;
+        }
+        
+        .schedule {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        
+        .day {
+            flex: 1;
+            min-width: 280px;
+        }
+        
+        .day h3 {
+            color: #003366;
+            margin-bottom: 15px;
+        }
+        
+        .day ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        .day li {
+            margin: 10px 0;
+            padding: 8px;
+            background-color: #f8f9fa;
+            border-radius: 4px;
+        }
+        
+        .close {
+            position: absolute;
+            right: 20px;
+            top: 15px;
+            color: #aaa;
+            font-size: 28px;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: #2c3e50;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .modal-content {
+                margin: 0;
+                width: 100%;
+                height: 100%;
+                border-radius: 0;
+            }
+            
+            .schedule {
+                flex-direction: column;
+            }
+        }
+        </style>
+        
+        <script>
+        // Get the modal
+        var modal = document.getElementById("infoModal");
+        
+        // Get the button that opens the modal
+        var btn = document.getElementById("openModalBtn");
+        
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+        
+        // Open the modal automatically when the page loads
+        window.onload = function() {
+            modal.style.display = "block";
+        }
+        
+        // When the user clicks the button, open the modal 
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        
+        // When the user clicks anywhere outside of the modal, close it
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        </script>
     <div class="content" data-aos="fade-up" data-aos-delay="100">
         <p><strong style="color: #880023;">The Southeast Regional Coalition for University-Assisted Community Schools (SRCUACS)</strong> is a
             collaborative of colleges and universities that are dedicated to promoting the development and sustainability
