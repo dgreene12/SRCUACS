@@ -7,7 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="application.css">
 </head>
-<body>
+<body style="background-color: white;">
     <div class="header">
         <a href="index.html">
             <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
@@ -30,8 +30,8 @@
     <div class="hero-text"><h1>Our Network</h1></div>
 </div>
 <body>
-    <div class="network-explanation" style="text-align: center; margin: 20px auto; width: 50%; font-size: 1.2em;">
-        <p>Our network is compromised of thirteen schools and counting across the southeast, each contributing to the promotion of University-Assisted Community Schools in their own way. Below we have mapped the approximate locations of each of the schools apart of our community.</p>
+    <div class="network-explanation" style="text-align: center; margin: 20px auto; width: 80%; font-size: 1.2em; padding: 15px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+        <p>Our network is comprised of a diverse and growing group of colleges and universities, each contributing to the promotion of university-assisted community schools in its own way. Network institutions are eager to provide technical assistance within their respective states, and our coalition is always seeking new members.</p>
     </div>
     <div class="content" style="position: relative;">
         <!-- Base Image -->
@@ -42,7 +42,7 @@
     
         <!-- Overlay Images -->
         <a href="https://duke.edu/" target="duke" class="tooltip-container">
-            <div class="tooltip2">
+            <div class="tooltip">
                 <img src="/Images/Logos/our_network/duke_logo.png"
                      alt="Duke"
                      style="
@@ -53,11 +53,11 @@
                          width: 3%;
                          height: auto;
                          cursor: pointer;">
-                <span class="tooltiptext2" style="top: 24%; left: 85%;">Duke University</span>
+                <span class="tooltiptext" style="top: 24%; left: 85%;">Duke University</span>
             </div>
         </a>
         <a href="https://www.nccu.edu/" target="nccu" class="tooltip-container">
-            <div class="tooltip2">
+            <div class="tooltip">
                 <img src="/Images/Logos/our_network/nccu_logo.gif" 
                         alt="NCCU" 
                         style="
@@ -68,11 +68,11 @@
                         width: 3%; 
                         height: auto; 
                         cursor: pointer;">
-                <span class="tooltiptext2" style="top: 35%; left: 86%;">NC Central University</span>
+                <span class="tooltiptext" style="top: 35%; left: 86%;">NC Central University</span>
             </div>
         </a>
         <a href="https://www.ecu.edu/" target="ecu" class="tooltip-container">
-            <div class="tooltip2">
+            <div class="tooltip">
                 <img src="/Images/Logos/our_network/ecu.png" 
                         alt="ECU" 
                         style="
@@ -83,7 +83,7 @@
                         width: 3%; 
                         height: auto; 
                         cursor: pointer;">
-                <span class="tooltiptext2" style="top: 35%; left: 90%;">Eastern Carolina University</span>
+                <span class="tooltiptext" style="top: 35%; left: 90%;">East Carolina University</span>
             </div>
         </a>
         <a href="https://www.ecsu.edu/" target="ecsu" class="tooltip-container">
@@ -148,7 +148,7 @@
                 <span class="tooltiptext" style="top: 6%; left: 91%;">Towson University</span>
             </div>
         </a>
-        <a href="https://www.jhu.edu/" target="jhu" class="tooltip-container">
+        <!--<a href="https://www.jhu.edu/" target="jhu" class="tooltip-container">
             <div class="tooltip">
                 <img src="/Images/Logos/our_network/jhu.png" 
                         alt="Johns Hopkins University" 
@@ -161,8 +161,8 @@
                         height: auto; 
                         cursor: pointer;">
                 <span class="tooltiptext" style="top: 15%; left: 92%;">Johns Hopkins University</span>
-            </div>
-        </a>
+            </div> 
+        </a> -->
         <!-- Florida-->
         <a href="https://www.ucf.edu/" target="ucf" class="tooltip-container">
             <div class="tooltip">
@@ -228,39 +228,52 @@
 </div>
     
     <style>
-        .university-table {
-            width: 100%;
-            border-collapse: collapse;
-            margin: 20px 0;
-            font-family: Arial, sans-serif;
-        }
+    .university-table {
+        width: 100%;
+        max-width: 1000px;
+        margin: auto;
+        margin-bottom: 20px; /* Add this line to create space between the table and footer */
+        border-collapse: collapse;
+        font-family: Arial, sans-serif;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        border-radius: 10px;
+        overflow: hidden;
+    }
 
-        .university-table th, 
-        .university-table td {
-            padding: 12px;
-            text-align: center;
-            border: 1px solid #ddd;
-        }
+    .university-table th, 
+    .university-table td {
+        padding: 12px;
+        text-align: center;
+        border: 1px solid #e0e0e0;
+    }
 
-        .university-table th {
-            background-color: #f4f4f4;
-            font-weight: bold;
-        }
+    .university-table th {
+        background-color: #ffffff;
+        font-weight: bold;
+        color: #333;
+    }
 
-        .university-table img {
-            width: 100%;
-            max-width: 100px;
-            height: auto;
-        }
+    .university-table img {
+        width: 100%;
+        max-width: 80px;
+        height: auto;
+        margin: 0 auto;
+    }
 
-        .university-table a {
-            color: #0066cc;
-            text-decoration: none;
-        }
+    .university-table a {
+        color: #0066cc;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
 
-        .university-table a:hover {
-            text-decoration: underline;
-        }
+    .university-table a:hover {
+        text-decoration: underline;
+        color: #004080;
+    }
+
+    .university-table tr:nth-child(even) {
+        background-color: #ffffff;
+    }
         .tooltip {
             position: static;
         }
@@ -312,7 +325,6 @@
             font-weight: bold;
             color: #333; /* Dark gray for good readability */
             text-align: center;
-            background-color: #f9f9f9; /* Light background to make it stand out */
             padding: 15px; /* Space around the text */
             margin-bottom: 20px; /* Space below the header */
         }
@@ -321,28 +333,26 @@
             font-weight: bold;
         }
     </style>
-    <div class="header-text">
-        Listed Below are our affiliated schools. Our anchor institutions are highlighted in 
-        <span class="header-highlight">gold</span>:
+<div class="header-text" style="text-align: center; margin: 20px auto; width: 80%; padding: 15px; border: 1px solid #e0e0e0; border-radius: 8px; background-color: #ffffff; box-shadow: 0 2px 4px rgba(0,0,0,0.05);">
+    Listed below are our network institutions:
     </div>      <table class="university-table">
-        <thead>
+        <thead style="background-color: white;">
             <tr>
                 <th>Our Partners</th>
                 <th>University Name</th>
                 <th>Website</th>
                 <th>Contact</th>
-                <th>Speciality</th>
             </tr>
         </thead>
         <tbody>
-            <tr style="background-color: #FFD700;">
+            <tr>
                 <td><img src="/Images/Logos/our_network/duke_logo.png" alt="Duke Logo"></td>
                 <td style="color: #000;">Duke University</td>
                 <td><a href="https://duke.edu/" target="_blank">duke.edu</a></td>
             </tr>
-            <tr style="background-color: #FFD700;">
+            <tr>
                 <td><img src="/Images/Logos/our_network/ecu.png" alt="ECU Logo"></td>
-                <td style="color: #000;">Eastern Carolina University</td>
+                <td style="color: #000;">East Carolina University</td>
                 <td><a href="https://www.ecu.edu/" target="_blank">ecu.edu</a></td>
             </tr>
             <tr>
@@ -360,12 +370,12 @@
                 <td>Florida International University</td>
                 <td><a href="https://www.fiu.edu/" target="_blank">fiu.edu</a></td>
             </tr>
-            <tr>
+            <!--<tr>
                 <td><img src="/Images/Logos/our_network/jhu.png" alt="JHU Logo"></td>
                 <td>Johns Hopkins University</td>
                 <td><a href="https://www.jhu.edu/" target="_blank">jhu.edu</a></td>
-            </tr>
-            <tr style="background-color: #FFD700;">
+            </tr> -->
+            <tr>
                 <td><img src="/Images/Logos/our_network/nccu_logo.gif" alt="NCCU Logo"></td>
                 <td style="color: #000;">NC Central University</td>
                 <td><a href="https://www.nccu.edu/" target="_blank">nccu.edu</a></td>
@@ -387,7 +397,7 @@
             </tr>
             <tr>
                 <td><img src="/Images/Logos/our_network/utknox_logo.png" alt="UTK Logo"></td>
-                <td>UT Knoxville</td>
+                <td>University of Tennessee Knoxville</td>
                 <td><a href="https://www.utk.edu/" target="_blank">utk.edu</a></td>
             </tr>
             <tr>
