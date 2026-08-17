@@ -176,18 +176,18 @@
             max-height: 200px;
         }
 
-    .two-columns {
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 30px; 
-    }
+        .two-columns {
+            display: flex;
+            flex-direction: column;   /* was row via default */
+            align-items: center;      /* center each column horizontally */
+            gap: 40px;                /* space between the two sections now that they stack */
+        }
 
-    .column {
-        flex-basis: 48%; 
-        max-width: 48%;
-        box-sizing: border-box;
-    }
+        .column {
+            width: 100%;
+            max-width: 500px;         /* matches your form's max-width so things line up */
+            box-sizing: border-box;
+        }
 
     .partnership-form, .contact-info {
         display: flex;
@@ -495,7 +495,7 @@
             <h2>Sign up for our newsletter!</h2>
             <br>
             <a href="https://duke.qualtrics.com/jfe/form/SV_4Zbq8OGZfuGRSce" target="_blank" class="newsletter-btn">Click here!</a>
-            <hr class="section-divider">
+            <!--<hr class="section-divider">
         <h2>Network Calls<br>(Noon - 1:15PM ET)</h2>
             <div class="large-font"> 
                 <p>We will be implementing a new coalition meeting format for the 2025-2026 academic year. Coalition calls will be held between 12pm and 1:15pm ET:</p> 
@@ -514,13 +514,14 @@
                     </li>
                     <a href=https://duke.box.com/s/e9nllummfewm1zx06nljl1ks3h8rvuvn target="_blank">View the previous meetings here!</a><br><br>
                 </ul>
-    </div>
+            </div> -->
         </div>
         </div>
+        <hr class="section-divider">
     </div>
     </div>
     <div class="footer">
-        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/c3d0152a0524fc8ac1bbada518b521b5637237e1/Images/Logos/srcuacslogo2.png" alt="Logo">
+        <img src="https://raw.githubusercontent.com/dgreene12/SRCUACS/main/Images/Logos/srcuacslogo2.png" alt="Logo">
     </div>
     <script>
     function toggleMenu() {
